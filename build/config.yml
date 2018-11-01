@@ -1,0 +1,17 @@
+# This is the central configuration for all tools we use/execute. It is parsed inside
+# the Taskfile, too. See $CONFIG_application_web_path for example.
+project:
+  name: Projekt Name
+  key: sitename
+  url: https://sitename.tld/
+paths:
+  web: ../
+  db: ../_db
+  docker_data: ../_docker_data
+  site_theme: ../src/sitename.sitetheme/sitename/sitetheme/resources
+modules:
+  virtualenv:
+    python_bin: python2
+  docker:
+      data_path: ../_docker_data
+      docker_compose_config_overrides: localhost

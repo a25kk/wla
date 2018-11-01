@@ -1,0 +1,16 @@
+<configure
+        xmlns="http://namespaces.zope.org/zope"
+        xmlns:browser="http://namespaces.zope.org/browser"
+        xmlns:z3c="http://namespaces.zope.org/z3c"
+        i18n_domain="wla.sitetheme">
+
+    <browser:page
+            for="plone.app.layout.navigation.interfaces.INavigationRoot"
+            name="front-page-view"
+            class=".front-page.FrontPageView"
+            template="front-page.pt"
+            permission="zope2.View"
+            layer="wla.sitetheme.interfaces.IWlaSiteThemeLayer"
+    />
+
+</configure>

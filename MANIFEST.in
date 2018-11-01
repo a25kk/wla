@@ -1,0 +1,2 @@
+graft src/wla
+include *.cfg *.rst *.in

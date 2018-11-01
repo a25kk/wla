@@ -1,0 +1,41 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="wla.sitetheme">
+
+    <!-- Zope2 initialization -->
+    <five:registerPackage package="." initialize=".initialize" />
+
+    <!-- Include configuration for dependencies listed in setup.py -->
+    <includeDependencies package="." />
+
+    <include package=".browser" />
+
+    <!-- Register the installation GenericSetup extension profile -->
+    <genericsetup:registerProfile
+        name="default"
+        title="wla.sitetheme"
+        directory="profiles/default"
+        description="Install wla.sitetheme package."
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+    <!-- Uninstall -->
+    <genericsetup:registerProfile
+            name="uninstall"
+            title="Uninstall wla.sitetheme"
+            directory="profiles/uninstall"
+            description="Uninstall site theme and associated views"
+            provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
+    <plone:static
+        directory="resources"
+        type="theme"
+    />
+
+</configure>
