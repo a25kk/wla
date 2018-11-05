@@ -1,14 +1,12 @@
-<header class="app-header" id="app-header" role="banner">
-  <div class="app-header__content">
-      <section class="app-header__section">
-          <div class="app-header-panels">
-              <div class="app-header-panel app-header-brandbar">
-                  {% include components/brandpanel.html %}
-              </div>
-          </div>
-      </section>
-      <section class="app-header__section">
-          {% include components/navbar.html %}
-      </section>
+<header class="app-header sticky-top" id="app-header" role="banner">
+  <div class="app-header-content">
+    <div class="app-header-panels">
+      <div class="app-header-panel app-header-brandbar">
+        {% include components/brandpanel.html %}
+      </div>
+      <div class="app-header-panel app-header-navbar">
+        {% include components/navbar.html %}
+      </div>
+    </div>
   </div>
 </header>

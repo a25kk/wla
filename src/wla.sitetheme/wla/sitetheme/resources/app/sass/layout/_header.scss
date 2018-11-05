@@ -4,19 +4,96 @@
 
 
 .app-header {
-  padding-top: 3rem;
-  @include media-breakpoint-up(md) {
-      margin-bottom: 1rem;
-      border-bottom: 1px solid gray("200");
-  }
+    //background: $app-primary;
+    padding-bottom: 0;
+    @include media-breakpoint-up(sm) {
+       padding-bottom: 3rem; 
+    }
+    @include when-inside('.template-frontpage-view') {
+        padding-bottom: 0;
+        @include media-breakpoint-up(md) {
+        background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(0,0,0,0.01) 99%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.01) 99%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.01) 99%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+        margin-bottom: 1rem;
+        padding-bottom: 5rem;
+        }
+    }
 }
 
-.app-header__content {
-  @include make-container();
-  @include make-container-max-widths();
+.app-header-content {
+    @include make-container();
+    @include make-container-max-widths();
+    @include when-inside('.template-frontpage-view') {
+        position: relative;
+        z-index: 1000000000;
+    }
+    
 }
 
-.app-header__section {
-    display: block;
-    position: relative;
+
+// Header panels
+.app-header-panels {
+    // Fallback for browsers lacking flexbox support
+    @include when-inside('.no-flexbox') {
+        display: table;
+    }
+    @include make-row();
+    flex-wrap: wrap;
 }
+
+//** Base card styles
+.app-header-panel {
+    @include when-inside('.no-flexbox') {
+        display: table-cell;
+    }
+    @include when-inside('.app-header-panels') {
+        @include make-col(12);
+        @include media-breakpoint-up(sx) {
+            @include make-col(6);
+        }
+        @include media-breakpoint-up(sx) {
+            @include make-col(6);
+        }
+    }
+    &.app-header-brandbar {
+        display: none;
+        //min-height: 50px;
+        @include media-breakpoint-up(md) {
+            display: block;
+            //min-height: 200px;
+            @include make-col(3);
+            @include when-inside('.template-frontpage-view') {
+                @include make-col(5);
+            }
+        }
+        
+    }
+
+    &.app-header-navbar {
+        @include media-breakpoint-up(sx) {
+            @include make-col(12);
+        }
+
+        @include media-breakpoint-up(md) {
+            @include make-col(9);
+            @include when-inside('.template-frontpage-view') {
+                @include make-col(7);
+            }
+        }
+    }
+}
+
+.app-header-navbar {
+    @include media-breakpoint-up(sx) {
+        //margin-top: 5.5rem;
+    }
+}
+
+.sticky-top {
+    @include when-inside('.userrole-authenticated') {
+       z-index: 1; 
+    }
+}
+
