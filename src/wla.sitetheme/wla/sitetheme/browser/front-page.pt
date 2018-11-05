@@ -11,6 +11,19 @@
             <metal:content-core define-macro="main">
                 <section class="app-front-page" id="app-front-page">
 
+                  <div class="app-intro" id="app-intro">
+                    <div class="app-page__header">
+                      <div class="app-page__title">
+                        <h1 class="app-page-headline">Herzlich willkommen im Wittelsbacher Land</h1>
+                      </div>
+                      <p class="app-page-abstract">Reizvolle Natur trifft altbairische Kultur und Lebensart</p>
+                    </div>
+                    <div class="app-intro-content">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    </div>
+                  </div>
+
                     <div class="app-page-body app-page__teasers" id="front-page-teasers">
                         <tal:block tal:condition="view/has_preview_cards">
                             <div class="app-teaser-boxes" tal:define="preview_cards python:view.cards(search_limit=3)">
