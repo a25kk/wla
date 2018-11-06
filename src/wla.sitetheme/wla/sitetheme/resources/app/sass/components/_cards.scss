@@ -39,7 +39,7 @@
     @include when-inside('.app-cards') {
         @include make-col(12);
         @include media-breakpoint-up(sm) {
-            @include make-col(3);
+            @include make-col(4);
         }
     }
 
@@ -54,16 +54,10 @@
 //
 //## Reflow card contents based on viewport size
 .app-card__header {
-    //margin-bottom: 1rem;
+    margin-bottom: 1rem;
     &--hidden {
         @include sr-only();
     }
-}
-
-.app-card__main {
-    background: $gray-200;
-    padding: 1rem;
-    min-height: 150px;
 }
 // DEPRECATED
 .app-card-header {
@@ -75,6 +69,17 @@
     }
 }
 
+.app-card__figure {
+    transition: all 0.2s linear;
+    background: $app-gray;
+    a:hover {
+        .app-figure__content {
+           opacity: 0.7;
+        }
+        
+    }
+}
+
 //== Card title
 //
 //## Title is used inside the card header
@@ -83,8 +88,9 @@
     font-size: 1rem;
     text-transform: uppercase;
     line-height: 1.2rem;
+    margin-bottom: .5rem;
     @include media-breakpoint-up(sm) {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     a {
         color: $app-primary;
@@ -94,8 +100,6 @@
 
 .app-card__abstract {
     color: $black;
-    text-transform: uppercase;
-    font-size: .8rem;
 }
 
 .app-card__footer {
@@ -112,45 +116,41 @@
     &:hover {
         text-decoration: none;
         color: darken($app-gray, 15%);
-        .app-page__figure {
-            transition: all 0.5s ease;
-            opacity:0.5;
-        }
     }
 }
 
-// Compute Card title spacers from list
-$card-title-spacers: (
-    spacer1: .5rem,
-    spacer2: 1rem,
-    spacer3: 1.5rem,
-    spacer4: 2rem,
-    spacer5: 2.5rem,
-    spacer6: 3rem,
-    spacer7: 3.5rem,
-    spacer8: 4rem,
-    spacer9: 4.5rem,
-    spacer10: 5rem,
-    spacer11: 5.5rem,
-    spacer12: 6rem,
-    spacer13: 6.5rem,
-    spacer14: 7rem,
-    spacer15: 7.5rem,
-    spacer16: 8rem,
-    spacer17: 8.5rem,
-    spacer18: 9rem,
-    spacer19: 9.5rem,
-    spacer20: 10rem,
-    spacer21: 10.5rem,
-    spacer22: 11rem,
-    spacer23: 11.5rem,
-    spacer24: 12rem,
-    spacer25: 12.5rem,
-    spacer26: 13rem,
+// Compute Card title fpacers from list
+$card-title-fpacers: (
+    fpacer1: .5rem,
+    fpacer2: 1rem,
+    fpacer3: 1.5rem,
+    fpacer4: 2rem,
+    fpacer5: 2.5rem,
+    fpacer6: 3rem,
+    fpacer7: 3.5rem,
+    fpacer8: 4rem,
+    fpacer9: 4.5rem,
+    fpacer10: 5rem,
+    fpacer11: 5.5rem,
+    fpacer12: 6rem,
+    fpacer13: 6.5rem,
+    fpacer14: 7rem,
+    fpacer15: 7.5rem,
+    fpacer16: 8rem,
+    fpacer17: 8.5rem,
+    fpacer18: 9rem,
+    fpacer19: 9.5rem,
+    fpacer20: 10rem,
+    fpacer21: 10.5rem,
+    fpacer22: 11rem,
+    fpacer23: 11.5rem,
+    fpacer24: 12rem,
+    fpacer25: 12.5rem,
+    fpacer26: 13rem,
 );
 
-@each $card-spacer, $spacer-value in $card-title-spacers {
-    .app-card-title-#{$card-spacer} {
+@each $card-fpacer, $spacer-value in $card-title-fpacers {
+    .app-card-title-#{$card-fpacer} {
         padding-right: $spacer-value;
     }
 }
@@ -187,7 +187,7 @@ $card-title-spacers: (
 
 //== Gutter
 //
-//## Add spacing to cards
+//## Add fpacing to cards
 .app-card-gutter {
     margin-right: -.5rem;
     margin-left: -.5rem;
@@ -228,10 +228,10 @@ $card-title-spacers: (
         background-image: url("../assets/img/card-01-bg.jpg");
     }
     &-02 {
-        background-image: url("../assets/img/card-02-bg.jpg");
+        background-image: url("../assets/img/card-01-bg.jpg");
     }
     &-03 {
-        background-image: url("../assets/img/card-03-bg.jpg");
+        background-image: url("../assets/img/card-01-bg.jpg");
     }
     &-04 {
         background-image: url("../assets/img/card-04-bg.jpg");
@@ -334,7 +334,7 @@ $card-title-spacers: (
 
 //== Embedded card
 //
-//## Remove spacing for card inside card usecase
+//## Remove fpacing for card inside card usecase
 
 .app-subcards {
     display: flex;

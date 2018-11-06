@@ -114,7 +114,7 @@
         }
     }
     &--level-1 {
-        height: 0;
+        //height: 0;
         overflow-y: scroll;
     }
 }
@@ -124,7 +124,7 @@
     right: -100%;
     @include media-breakpoint-up(lg) {
         right: 0;
-        display: none;
+        //display: none;
     }
 }
 

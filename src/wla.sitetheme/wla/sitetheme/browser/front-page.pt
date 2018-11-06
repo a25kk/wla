@@ -26,7 +26,7 @@
 
                     <div class="app-page-body app-page__teasers" id="front-page-teasers">
                         <tal:block tal:condition="view/has_preview_cards">
-                            <div class="app-teaser-boxes" tal:define="preview_cards python:view.cards(search_limit=3)">
+                            <div class="app-teaser-boxes" tal:define="preview_cards python:view.cards(search_limit=12)">
                                 <tal:teasers tal:repeat="item preview_cards">
                                     <div class="app-teaser-box teaser-box teaser-box--${item/item_size}">
                                         <span tal:replace="structure python:item['template']" />

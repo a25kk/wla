@@ -1,46 +1,92 @@
 //
 // Main site theme
 // --------------------------------------
-
-
 //== Main content area
 //
 //## Provides optional fullscreen layouts
 .app-main {
   @include make-container();
-  &-fullscreen {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  @include make-container-max-widths();
 }
 
 .app-content {
-  @extend .container;
-  &-centerstage {
-    @extend .container-fluid;
-    margin: 0 auto;
-    max-width: 480px;
-  }
+    @include make-row();
 }
 
 //** Add full height to layout components
-.app-section {
-    @include make-row()
+.app-aside,
+.app-content-main {
+    @include make-col-ready();
+    @include make-col(12)
 }
 
-.app-section-aside {
-    @include make-col(12);
-    @include media-breakpoint-up(md) {
-        @include make-col(3);
+.app-aside {
+    @include media-breakpoint-up(lg) {
+        @include make-col(4);
         padding: 0 1rem 1rem 1rem;
     }
 }
 
-.app-section-main {
-    @include make-col(12);
-    @include media-breakpoint-up(md) {
-        @include make-col(9);
+.app-content-main,
+.app-content--main {
+  padding: 0 1rem 0 1rem;
+  &-sm {
+    @include media-breakpoint-up(lg) {
+      @include make-col(8);
+    }
+  }
+}
+
+.app-content-main-full {
+  @include make-col(12);
+    @include media-breakpoint-up(lg) {
+        @include make-col(12);
         padding: 0 1rem 0 0;
     }
 }
+
+// Basic grid
+.app-grid {
+    margin-bottom: 1rem;
+    @include make-row();
+}
+//== Teaser grid column sizes
+$grid-item-sizes: (
+    w12: 1,
+    w16: 2,
+    w25: 3,
+    w33: 4,
+    w50: 6,
+    w66: 8,
+    w75: 9,
+    w100: 12,
+);
+
+@each $grid-item-size, $size-value in $grid-item-sizes {
+    .app-grid__item--#{$grid-item-size} {
+        @include when-inside('.app-grid') {
+            @include make-col-ready();
+            @include make-col(12);
+            @include media-breakpoint-up(lg) {
+                @include make-col($size-value);
+            }
+        }
+    }
+}
+
+//.app-aside {
+//  flex: 0 0 100%;
+//    @include media-breakpoint-up(sm) {
+//        flex: 0 0 15rem;
+//        width: 15rem;
+//        padding: 1rem 1rem 1rem 0;
+//        &-inverse {
+//          position: absolute;
+//          top: 0;
+//          right: 0;
+//          border: 1px solid blue;
+//        }
+//    }
+//}
+
+
