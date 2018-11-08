@@ -21,7 +21,7 @@ a25.navbar = (function($, undefined) {
 
     function init(_options) {
         // Responsive breakpoint
-        var $mq = window.matchMedia("(max-width: 992px)");
+        var $mq = window.matchMedia("(max-width: 998px)");
 
         toggleNavigation(_options);
 

@@ -9684,12 +9684,14 @@ body.template-front-page-view .app-pathbar {
   background-color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25), 0 0.65rem 0.65rem rgba(0, 0, 0, 0.22);
   transition: right .5s linear;
-  padding: 4rem;
+  padding: 1rem;
+  overflow: scroll;
 }
 
 @media (min-width: 768px) {
   .app-nav-bar--overlay {
     width: 100vw;
+    padding: 1rem 3rem;
   }
 }
 
@@ -9697,11 +9699,13 @@ body.template-front-page-view .app-pathbar {
   .app-nav-bar {
     display: block;
     right: 0;
+    padding: 1rem 10rem;
   }
 }
 
 .app-nav-bar--hidden {
   height: 0;
+  padding: 0;
 }
 
 .app-nav-bar__header {
@@ -9772,7 +9776,6 @@ body.template-front-page-view .app-pathbar {
       flex-wrap: no-wrap;
   -ms-flex-align: end;
       align-items: flex-end;
-  margin-top: 4.2rem;
   margin-bottom: 0;
   padding-left: .5rem;
   -ms-flex-pack: end;
@@ -9786,13 +9789,11 @@ body.template-front-page-view .app-pathbar {
 }
 
 .app-nav--level-1 {
-  height: 0;
   overflow-y: scroll;
 }
 
 .app-nav--level-1 {
   position: relative;
-  right: -100%;
 }
 
 .app-nav__item {
@@ -9807,9 +9808,12 @@ body.template-front-page-view .app-pathbar {
 
 .app-nav__item--back-link {
   background-color: #dee2e6;
-  display: -ms-flexbox;
-  display: flex;
   padding: 0;
+  display: none;
+}
+
+.app-nav__item:last-child {
+  border: none;
 }
 
 .app-nav__item--has-children {
@@ -9819,7 +9823,7 @@ body.template-front-page-view .app-pathbar {
 .app-nav__link {
   display: block;
   text-decoration: none;
-  color: #000;
+  color: #009966;
   font-family: "Open Sans";
   text-transform: none;
   font-weight: 400;
@@ -9837,11 +9841,13 @@ body.template-front-page-view .app-pathbar {
 .app-nav__link:hover {
   text-decoration: none;
   background: transparent;
+  color: #005faa;
 }
 
 .app-nav__link--active, .app-nav__link--open {
   text-decoration: none;
   background: transparent;
+  color: #005faa;
 }
 
 .app-nav--level-1 .app-nav__link:after {
@@ -9891,13 +9897,21 @@ body.template-front-page-view .app-pathbar {
   padding: 0;
   width: 2rem;
   height: 2rem;
+  display: none;
 }
 
 .app-nav__link--back-link .app-nav__tab--action {
   display: inline-block;
 }
 
+.app-nav__tab--trigger {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-top: 3rem;
+}
+
 .app-nav__dropdown {
+  display: none;
   position: fixed;
   top: 4rem;
   right: 0;
@@ -9908,18 +9922,6 @@ body.template-front-page-view .app-pathbar {
   background-color: #fff;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   transition: right .25s linear;
-}
-
-@media (min-width: 992px) {
-  .app-nav__dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    float: left;
-    width: 50vw;
-  }
 }
 
 .app-nav__dropdown--hidden {
