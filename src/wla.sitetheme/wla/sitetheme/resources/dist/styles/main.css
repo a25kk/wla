@@ -9679,16 +9679,17 @@ body.template-front-page-view .app-pathbar {
   top: 0;
   right: 0;
   z-index: 1001;
-  width: 90vw;
+  width: 100vw;
   height: 100vh;
   background-color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25), 0 0.65rem 0.65rem rgba(0, 0, 0, 0.22);
   transition: right .5s linear;
+  padding: 4rem;
 }
 
 @media (min-width: 768px) {
   .app-nav-bar--overlay {
-    width: 50vw;
+    width: 100vw;
   }
 }
 
@@ -9762,7 +9763,7 @@ body.template-front-page-view .app-pathbar {
   list-style: none;
   padding: 0;
   background-color: #fff;
-  text-align: right;
+  text-align: left;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
@@ -9863,11 +9864,9 @@ body.template-front-page-view .app-pathbar {
   height: 3rem;
 }
 
-@media (max-width: 1199.98px) {
-  .app-nav__link--has-icon {
-    display: -ms-flexbox;
-    display: flex;
-  }
+.app-nav__link--has-icon {
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .app-nav__tab {
@@ -9878,12 +9877,6 @@ body.template-front-page-view .app-pathbar {
 
 .app-nav__link--has-icon .app-nav__tab {
   display: block;
-}
-
-@media (min-width: 992px) {
-  .app-nav__link--has-icon .app-nav__tab {
-    display: inline-block;
-  }
 }
 
 .app-nav__tab--hide-text {
@@ -9900,20 +9893,8 @@ body.template-front-page-view .app-pathbar {
   height: 2rem;
 }
 
-@media (min-width: 992px) {
-  .app-nav__tab--action {
-    display: none;
-  }
-}
-
 .app-nav__link--back-link .app-nav__tab--action {
   display: inline-block;
-}
-
-@media (min-width: 992px) {
-  .app-nav__tab {
-    padding: 0;
-  }
 }
 
 .app-nav__dropdown {
