@@ -8,7 +8,7 @@
     margin-top: 0;
     @include when-inside('.template-front-page-view') {
         @include media-breakpoint-up(md) {
-        //margin-top: -215px;
+        margin-top: -215px;
         }
     }
 }
@@ -25,6 +25,8 @@
         height:100vh;
         }
 }
+
+
 
 .app-banner-image {
     @extend.img-fluid;
@@ -60,6 +62,7 @@
     margin: 0 auto;
     color: #fff;
     padding: 2rem 2rem 1rem 2rem;
+    //background: url("../assets/images/wave.svg") 0 0 no-repeat;
         @include make-container();
         @include make-container-max-widths();
             @include media-breakpoint-up(sm) {
@@ -92,6 +95,22 @@
         color: #fff;
     }
 }
+
+/* ---- flickity transform overrides ---- */
+
+.flickity-slider { 
+    transform: none !important; 
+}
+
+.app-banner-item {
+    left: 0 !important;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.app-banner-item.is-selected {
+    opacity: 1;
+}
+
 
 
 /* ---- flickity overrides ---- */

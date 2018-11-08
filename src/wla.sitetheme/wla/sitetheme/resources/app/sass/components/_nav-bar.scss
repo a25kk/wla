@@ -10,8 +10,8 @@
         z-index: 1001;
         width: 100vw;
         height: 100vh;
-        background-color: #fff;
-        box-shadow: 0 1rem 2rem rgba(0,0,0,0.25), 0 .65rem .65rem rgba(0,0,0,0.22);
+        background-color: rgba(255,255,255,1);
+        //box-shadow: 0 1rem 2rem rgba(0,0,0,0.25), 0 .65rem .65rem rgba(0,0,0,0.22);
         transition:right .5s linear;
         padding: 1rem;
         overflow: scroll;
@@ -38,9 +38,10 @@
     background: transparent;
     color: #000;
     text-align: right;
-    //@include media-breakpoint-up(lg) {
-    //    display: none;
-    //}
+    padding-top: 0;
+    @include media-breakpoint-up(md) {
+        padding: 3rem;
+    }
 }
 
 .app-nav-bar__title {
@@ -56,14 +57,15 @@
     background: transparent; // remove default button style
     border: 1px solid transparent; // remove default button style
     font-size: 3rem;
-    color: #000;
     text-align: right;
     padding: 0;
+    color: $app-primary;
 }
 
 .app-nav__toggle {
     display: block;
     width: 3rem;
+    color: $app-primary;
     &--close {
         display: none;
         height: 0;
@@ -74,6 +76,7 @@
     }
     &--open {
         height: 3rem;
+        color: #fff;
         @include when-inside('.app-nav-bar--overlay') {
             display: none;
             height: 0;
@@ -82,8 +85,8 @@
 }
 
 .app-nav__toggle-icon {
-    fill: #000;
-    stroke: #000;
+    fill: $app-primary;
+    stroke: $app-primary;
 }
 .app-nav {
     width: 100%;
@@ -128,7 +131,7 @@
     margin: 0;
     padding: 0;
     border-bottom: 1px solid $gray-300;
-    background-color: #fff;
+    background-color: transparent;
     //@include media-breakpoint-up(lg) {
     //    width: auto;
     //    flex: 1 0 0%;

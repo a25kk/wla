@@ -7,7 +7,10 @@
     position: relative;
     overflow: visible;
     z-index: 50;
-    background: transparent;
+    background: $app-primary;
+    @include when-inside('.template-front-page-view') {
+        background-color: rgba(0,153,102,0.7);
+    }
 }
 
 .app-header-content {
@@ -80,25 +83,25 @@
 //    }
 //}
 
-.app-header__section {
-    @include make-container();
-    @include make-container-max-widths();
-    text-align: right;
-    &--burger {
-        // TODO: remove when switching implementation to default
-        display: block;
-        padding-top: .5rem;
-        margin-bottom: 1rem;
-        background: $app-primary;
-        color: #fff;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        padding-right: 0;
-        padding-bottom: .5rem;
-        text-transform: uppercase;
-        @include media-breakpoint-up(lg) {
-            display: none;
-        }
-    }
-}
+//.app-header__section {
+//    @include make-container();
+//    @include make-container-max-widths();
+//    text-align: right;
+//    &--burger {
+//        // TODO: remove when switching implementation to default
+//        display: block;
+//        padding-top: .5rem;
+//        margin-bottom: 1rem;
+//        background: $app-primary;
+//        color: #fff;
+//        margin-left: 1rem;
+//        margin-right: 1rem;
+//        padding-right: 0;
+//        padding-bottom: .5rem;
+//        text-transform: uppercase;
+//        @include media-breakpoint-up(lg) {
+//            display: none;
+//        }
+//    }
+//}
 

@@ -5,6 +5,10 @@
 .app-footer {
     padding-top: $spacer;
     padding-bottom: $spacer;
+    background: url("../assets/images/wave.svg") no-repeat;
+    background-size: cover !important;
+    background-position: bottom center;
+    min-height: 20rem;
 }
 
 .app-footer__content {
