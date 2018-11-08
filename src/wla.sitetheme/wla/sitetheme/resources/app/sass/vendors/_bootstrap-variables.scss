@@ -23,14 +23,16 @@ $theme-colors: (
 );
 
 // Custom webfonts
-// $app-font-family-light:     "DINRoundWeb-Light";
-// $app-font-family-medium:    "DINRoundWeb-Medium";
-// $app-font-family-strong:    "DINRoundWeb";
+$app-font-family-light:     "Open Sans Condensed";
+$app-font-family-medium:    "Open Sans Condensed";
+$app-font-family-strong:    "Open Sans Condensed";
 
 
 // $font-family-base:            $app-font-family-light, Arial, sans-serif;
 // $headings-font-family:        $app-font-family-medium, $font-family-base;
 // $headings-font-weight:        normal;
+
+$font-family-base:              $app-font-family-base, $font-family-sans-serif;
 
 //## Reset and adjust existing variables
 $brand-primary:                 $app-primary;

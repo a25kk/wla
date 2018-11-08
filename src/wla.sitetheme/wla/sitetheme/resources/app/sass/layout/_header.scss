@@ -4,32 +4,15 @@
 
 
 .app-header {
-    //background: $app-primary;
-    padding-bottom: 0;
-    @include media-breakpoint-up(sm) {
-       padding-bottom: 3rem; 
-    }
-    @include when-inside('.template-frontpage-view') {
-        padding-bottom: 0;
-        @include media-breakpoint-up(md) {
-        background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(0,0,0,0.01) 99%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.01) 99%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.01) 99%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
-        margin-bottom: 1rem;
-        padding-bottom: 5rem;
-        }
-    }
+    position: relative;
+    overflow: visible;
+    z-index: 50;
+    background: transparent;
 }
 
 .app-header-content {
     @include make-container();
     @include make-container-max-widths();
-    @include when-inside('.template-frontpage-view') {
-        position: relative;
-        z-index: 1000000000;
-    }
-    
 }
 
 
@@ -50,50 +33,72 @@
     }
     @include when-inside('.app-header-panels') {
         @include make-col(12);
-        @include media-breakpoint-up(sx) {
-            @include make-col(6);
-        }
-        @include media-breakpoint-up(sx) {
+        //@include media-breakpoint-up(sm) {
+        //    @include make-col(6);
+        //}
+        //@include media-breakpoint-up(md) {
+        //    @include make-col(6);
+        //}
+        //@include media-breakpoint-up(lg) {
+        //    &:nth-of-type(1) {
+        //        order: 3;
+        //    }
+        //}
+    }
+    &.app-header-brandbar {
+        @include media-breakpoint-up(md) {
             @include make-col(6);
         }
     }
-    &.app-header-brandbar {
-        display: none;
-        //min-height: 50px;
-        @include media-breakpoint-up(md) {
-            display: block;
-            //min-height: 200px;
-            @include make-col(3);
-            @include when-inside('.template-frontpage-view') {
-                @include make-col(5);
-            }
+
+    &.app-header-brandbar-secondary {
+        //max-width: 200px;
+        @include media-breakpoint-down(lg) {
+            //display: none;
         }
-        
+        @include media-breakpoint-up(md) {
+            @include make-col(2);
+        }
+        //min-height: 50px;
     }
 
     &.app-header-navbar {
-        @include media-breakpoint-up(sx) {
-            @include make-col(12);
-        }
-
         @include media-breakpoint-up(md) {
-            @include make-col(9);
-            @include when-inside('.template-frontpage-view') {
-                @include make-col(7);
-            }
+            @include make-col(6);
+        }
+    }
+    &.app-header__social-bar {
+        @include media-breakpoint-up(md) {
+            @include make-col(2);
         }
     }
 }
 
-.app-header-navbar {
-    @include media-breakpoint-up(sx) {
-        //margin-top: 5.5rem;
-    }
-}
+//.app-header-navbar {
+//    @include media-breakpoint-up(xl) {
+//        margin-top: 2rem;
+//    }
+//}
 
-.sticky-top {
-    @include when-inside('.userrole-authenticated') {
-       z-index: 1; 
+.app-header__section {
+    @include make-container();
+    @include make-container-max-widths();
+    text-align: right;
+    &--burger {
+        // TODO: remove when switching implementation to default
+        display: block;
+        padding-top: .5rem;
+        margin-bottom: 1rem;
+        background: $app-primary;
+        color: #fff;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding-right: 0;
+        padding-bottom: .5rem;
+        text-transform: uppercase;
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
     }
 }
 

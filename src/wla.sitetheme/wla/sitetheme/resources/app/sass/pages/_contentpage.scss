@@ -15,9 +15,11 @@
     border-bottom: 1px solid gray('400');
 }
 
-.app-page-title,
-.app-page-headline {
+.app-page__title,
+.app-page__headline {
     font-size: 2rem;
+    font-family: $app-font-family-strong;
+    font-weight: 700;
 }
 
 

@@ -19,8 +19,8 @@ requirejs(['require',
 
 
         // Trigger font face observer protection
-        var fontPrimary = new FontFaceObserver('PTSansNarrowRegular');
-        var fontSecondary = new FontFaceObserver('PTSansNarrowBold');
+        var fontPrimary = new FontFaceObserver('Open Sans');
+        var fontSecondary = new FontFaceObserver('Open Sans Condensed');
 
         fontPrimary.load().then(function () {
             document.documentElement.className += " font__primary--loaded";

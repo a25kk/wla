@@ -8,7 +8,7 @@
     margin-top: 0;
     @include when-inside('.template-front-page-view') {
         @include media-breakpoint-up(md) {
-        margin-top: -215px;
+        //margin-top: -215px;
         }
     }
 }
