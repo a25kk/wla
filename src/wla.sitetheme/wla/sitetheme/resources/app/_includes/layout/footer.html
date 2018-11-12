@@ -1,7 +1,61 @@
-<footer class="app-footer" id="app-footer" role="contentinfo">
+<footer class="app-footer" id="app-footer" role="contentinfo"> 
     <section class="app-footer__content">
-      <p class="app-copyright">
-        <strong>&copy; {{ site.time | date: '%Y' }} Portal Title</strong><br class="visible-xs">
-      </p>
+        <div class="app-footer-cards-wrapper"> 
+            <div class="app-footer-cards"> 
+                <div class="app-footer-card"> 
+                    <h3><img class="app-svg-icon-heading" src="/assets/images/location.svg" border="0" alt="" /> Kontakt</h3>
+                    <p>Rechtsanwalt Andreas Thomalla<br />
+                    Apothekergässchen 4<br />
+                    86150 Augsburg</p>
+                    <p><img class="app-svg-icon" src="/assets/images/phone.svg" border="0" alt="" /> Telefon: 0821 508 361 50<br />
+                    <img class="app-svg-icon" src="/assets/images/fax.svg" border="0" alt="" /> Telefax: 0821 508 361 51<br />
+                    <img class="app-svg-icon" src="/assets/images/mail.svg" border="0" alt="" />  E-Mail: <a href="mailto:mail@kanzlei-thomalla.de ">mail@kanzlei-thomalla.de </a></p>
+                </div>
+                 
+                <div class="app-footer-card">
+                <h3><img class="app-svg-icon-heading" src="/assets/images/location.svg" border="0" alt="" /> Sitemap</h3> 
+                    <p>&middot; <a href="{{ page.base_url }}">Startseite<br />
+                    &middot; <a href="{{ page.base_url }}ueber-die-kanzlei">Über die Kanzlei<br />
+                    &middot; <a href="{{ page.base_url }}rechtsgebiete">Rechtsgebiete<br />
+                    &middot; <a href="{{ page.base_url }}kosten">Kosten<br />
+                    &middot; <a href="{{ page.base_url }}kontakt">Kontakt<br />
+                    &middot; <a href="{{ page.base_url }}blog">Blog<br />
+                    </p>
+                </div>
+                <div class="app-footer-card">
+                    <h3><img class="app-svg-icon-heading" src="/assets/images/location.svg" border="0" alt="" /> Folgen Sie uns</h3>
+                    <p>
+                        <a class="social-bar__link" href="https://www.facebook.com/kanzleithomalla" target="_blank">
+                            <i class="ion ion-logo-facebook" aria-hidden="true"></i>
+                        </a>
+                    <br />
+
+                        <a class="social-bar__link" href="https://twitter.com/KanzleiThomalla" target="_blank" >
+                            <i class="ion ion-logo-twitter"></i>
+                        </a>
+                    <br />
+                        <a class="social-bar__link" href="https://plus.google.com/111411427130807209549" target="_blank">
+                            <i class="ion ion-logo-google"></i>
+                        </a>
+                    <br />
+                        <a class="social-bar__link" href="mailto:mail@kanzlei-thomalla.de" target="_blank">
+                            <i class="ion ion-md-mail"></i>
+                        </a>
+                    </p>
+                </div>
+            </div> 
+        </div> 
+    </div>  
+
+    </section>
+    <section class="app-copyright-wrapper"> 
+        <div class="app-copyright"> 
+            <div class="app-copyright-signature"> 
+                &copy; 2018 Wittelsbacher Land &middot; Alle Rechte vorbehalten &middot; <a class="app-card__link" href="{{ page.base_url }}impressum">Impressum</a> &middot; <a class="app-card__link" href="{{ page.base_url }}datenschutzerklaerung">Datenschutz</a> &middot; <a class="app-card__link" href="{{ page.base_url }}kontakt">Kontakt</a>
+            </div> 
+            <div class="app-copyright-info"> 
+                Site by <a href="https://kreativkombinat.de">KK</a>
+            </div> 
+        </div>
     </section>
 </footer>

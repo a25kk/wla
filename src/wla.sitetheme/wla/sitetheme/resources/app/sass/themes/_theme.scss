@@ -74,19 +74,23 @@ $grid-item-sizes: (
     }
 }
 
-//.app-aside {
-//  flex: 0 0 100%;
-//    @include media-breakpoint-up(sm) {
-//        flex: 0 0 15rem;
-//        width: 15rem;
-//        padding: 1rem 1rem 1rem 0;
-//        &-inverse {
-//          position: absolute;
-//          top: 0;
-//          right: 0;
-//          border: 1px solid blue;
-//        }
-//    }
-//}
+.app-svg-icon {
+  display: inline;
+  width: 25px;
+  height: 25px;
+  @include when-inside('.app-footer') {
+      width: 15px;
+      height: 15px;
+  }
+}
 
+.app-svg-icon-heading {
+    display: inline;
+    width: 25px;
+    height: 25px;
+    margin-right: .5rem;
 
+    svg {
+      fill: $app-primary;
+    }
+}
