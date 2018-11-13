@@ -9,7 +9,7 @@
     z-index: 50;
     background: $app-primary;
     @include when-inside('.template-front-page-view') {
-        background-color: rgba(0,153,102,0.7);
+        background-color: rgba(141,192,67,0.7);
     }
 }
 
