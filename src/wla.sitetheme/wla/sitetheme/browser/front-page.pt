@@ -24,6 +24,13 @@
                     </div>
                   </div>
 
+                  <div class="app-page__header">
+                      <div class="app-page__title">
+                        <h1 class="app-page-headline">Unsere Schwerpunkte sind </h1>
+                      </div>
+                      <p class="app-page-abstract">Stet clita kasd gubergren, no sea takimata sanctus est Lorem</p>
+                    </div>
+
                     <div class="app-page-body app-page__teasers" id="front-page-teasers">
                         <tal:block tal:condition="view/has_preview_cards">
                             <div class="app-teaser-boxes" tal:define="preview_cards python:view.cards(search_limit=12)">

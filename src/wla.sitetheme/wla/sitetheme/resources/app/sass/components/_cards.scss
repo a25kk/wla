@@ -32,6 +32,7 @@
 
 //** Base card styles
 .app-card {
+    background: $app-primary;
     @include when-inside('.no-flexbox') {
         // Fallback
         display: table-cell;
@@ -53,8 +54,13 @@
 //== Card layout
 //
 //## Reflow card contents based on viewport size
+
+.app-card__main {
+    padding: 2rem;
+}
+
 .app-card__header {
-    margin-bottom: 1rem;
+    //margin-bottom: 1rem;
     &--hidden {
         @include sr-only();
     }
@@ -93,7 +99,7 @@
         font-size: 1.3rem;
     }
     a {
-        color: $app-primary;
+        color: #fff;
         font-weight: 400;
     }
 }

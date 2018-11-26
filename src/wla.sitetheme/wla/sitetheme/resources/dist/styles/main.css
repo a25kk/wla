@@ -10287,6 +10287,10 @@ body.template-front-page-view .app-pathbar {
   margin-top: 2rem;
 }
 
+.app-card {
+  background: #8dc043;
+}
+
 .no-flexbox .app-card {
   display: table-cell;
 }
@@ -10310,8 +10314,8 @@ body.template-front-page-view .app-pathbar {
   position: relative;
 }
 
-.app-card__header {
-  margin-bottom: 1rem;
+.app-card__main {
+  padding: 2rem;
 }
 
 .app-card__header--hidden {
@@ -10359,7 +10363,7 @@ body.template-front-page-view .app-pathbar {
 
 .app-card-title a,
 .app-card__title a {
-  color: #8dc043;
+  color: #fff;
   font-weight: 400;
 }
 
