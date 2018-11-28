@@ -9,7 +9,15 @@
     z-index: 50;
     background: $app-primary;
     @include when-inside('.template-front-page-view') {
-        background-color: rgba(141,192,67,0.7);
+        background: $app-primary;
+        @include media-breakpoint-up(sm) {
+        //background-color: rgba(141,192,67,0.7);
+        background: -moz-linear-gradient(top,  rgba(141,192,67,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgba(141,192,67,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  rgba(141,192,67,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a68dc043', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+        }
+        
     }
 }
 

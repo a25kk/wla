@@ -24,7 +24,7 @@
 .app-newsletter {
 	@extend .container;
 	color: #fff;
-	background: $app-secondary;
+	//background: $app-secondary;
 	padding: 2rem;
 	@include media-breakpoint-up(md) {
 		padding: 2rem;

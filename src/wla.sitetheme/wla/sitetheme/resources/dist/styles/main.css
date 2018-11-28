@@ -8389,7 +8389,18 @@ div.riform .label {
 }
 
 .template-front-page-view .app-header {
-  background-color: rgba(141, 192, 67, 0.7);
+  background: #8dc043;
+}
+
+@media (min-width: 576px) {
+  .template-front-page-view .app-header {
+    /* FF3.6-15 */
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(141, 192, 67, 0.65) 0%, transparent 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a68dc043', endColorstr='#00000000',GradientType=0 );
+    /* IE6-9 */
+  }
 }
 
 .app-header-content {
@@ -10754,7 +10765,6 @@ input[type="color"] {
 
 .app-newsletter {
   color: #fff;
-  background: #0099ff;
   padding: 2rem;
 }
 
