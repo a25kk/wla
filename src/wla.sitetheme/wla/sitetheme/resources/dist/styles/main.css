@@ -8500,6 +8500,12 @@ div.riform .label {
   min-height: 15rem;
 }
 
+@media (min-width: 1200px) {
+  .app-footer {
+    min-height: 25rem;
+  }
+}
+
 .app-footer__content {
   width: 100%;
   padding-right: 15px;
@@ -8609,9 +8615,11 @@ div.riform .label {
 
 .app-footer-card h3 {
   color: #000;
-  font-size: 1.1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
   margin-bottom: 2rem;
   text-transform: uppercase;
+  font-family: "Open Sans Condensed";
 }
 
 .app-footer-card a {
@@ -9808,11 +9816,30 @@ body.template-front-page-view .app-pathbar {
   font-size: .8rem;
 }
 
+/* make keyframes that tell the start state and the end state of our object */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .app-nav-bar {
   position: relative;
 }
 
 .app-nav-bar--overlay {
+  opacity: 0;
+  /* make things invisible upon start */
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  animation: fadeIn ease-in 1;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 0.7s;
   pointer-events: all;
   position: fixed;
   top: 0;
@@ -10165,7 +10192,7 @@ body.template-front-page-view .app-pathbar {
 
 @media (min-width: 576px) {
   .app-banner-item-body {
-    padding: 1rem;
+    padding: 2rem;
     bottom: 3rem;
   }
 }
@@ -10173,8 +10200,9 @@ body.template-front-page-view .app-pathbar {
 .app-baner-item-title,
 .app-banner-item-headline {
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
+  font-family: "Open Sans Condensed";
 }
 
 @media (min-width: 576px) {
@@ -10359,23 +10387,31 @@ body.template-front-page-view .app-pathbar {
 
 .app-card-title,
 .app-card__title {
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 1.3rem;
   text-transform: uppercase;
   line-height: 1.2rem;
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
+  font-family: "Open Sans Condensed";
 }
 
 @media (min-width: 576px) {
   .app-card-title,
   .app-card__title {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
   }
 }
 
 .app-card-title a,
 .app-card__title a {
   color: #fff;
-  font-weight: 400;
+}
+
+.app-card-title a:hover,
+.app-card__title a:hover {
+  transition: color 0.5s linear;
+  color: #0099ff;
+  text-decoration: none;
 }
 
 .app-card__abstract {
@@ -10392,13 +10428,14 @@ body.template-front-page-view .app-pathbar {
 }
 
 .app-card__link {
-  color: #edeaea;
+  color: #fff;
   line-height: 1.5rem;
 }
 
 .app-card__link:hover {
+  transition: none;
+  color: #fff;
   text-decoration: none;
-  color: #cac1c1;
 }
 
 .app-card-title-fpacer1 {
@@ -11100,10 +11137,15 @@ input[type="color"] {
 
 .app-teaser-boxes {
   width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .teaser-box {
-  float: left;
   width: 100%;
   padding: 10px;
 }
@@ -11155,15 +11197,6 @@ input[type="color"] {
 
 .teaser-box__section {
   font-size: 12px;
-}
-
-.app-intro {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
 }
 
 @media (min-width: 1200px) {
@@ -11489,8 +11522,8 @@ input[type="color"] {
 
 .app-svg-icon-heading {
   display: inline;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   margin-right: .5rem;
 }
 

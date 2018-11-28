@@ -91,16 +91,22 @@
 //## Title is used inside the card header
 .app-card-title,
 .app-card__title {
-    font-size: 1rem;
+    font-weight: 700;
+    font-size: 1.3rem;
     text-transform: uppercase;
     line-height: 1.2rem;
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
+    font-family: $app-font-family-strong;
     @include media-breakpoint-up(sm) {
-        font-size: 1.3rem;
+        font-size: 1.8rem;
     }
     a {
         color: #fff;
-        font-weight: 400;
+    }
+    a:hover {
+        transition: color 0.5s linear;
+        color: $app-secondary;
+        text-decoration: none;
     }
 }
 
@@ -117,11 +123,12 @@
 }
 
 .app-card__link {
-    color: $app-gray;
+    color: #fff;
     line-height: 1.5rem;
     &:hover {
+        transition: none;
+        color: #fff;
         text-decoration: none;
-        color: darken($app-gray, 15%);
     }
 }
 

@@ -66,7 +66,7 @@
         @include make-container();
         @include make-container-max-widths();
             @include media-breakpoint-up(sm) {
-            padding: 1rem;
+            padding: 2rem;
             bottom: 3rem;
         }
 }
@@ -74,8 +74,9 @@
 .app-baner-item-title,
 .app-banner-item-headline {
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 700;
     text-transform: uppercase;
+    font-family: $app-font-family-strong;
         @include media-breakpoint-up(sm) {
         font-size: 2rem;
     }
