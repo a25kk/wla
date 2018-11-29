@@ -61,7 +61,11 @@
 .app-card__main {
     padding: 2rem;
     @include when-inside('.app-content-aside') {
-        padding: 2rem 0;
+        padding: 1rem;
+        @include media-breakpoint-up(sm) {
+            padding: 2rem 0;
+        }
+        
     }
 }
 

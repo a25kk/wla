@@ -57,8 +57,10 @@
         //}
     }
     &.app-header-brandbar {
+        @include make-col(12);
         @include media-breakpoint-up(md) {
-            @include make-col(6);
+            @include make-col(10);
+            
         }
     }
 
@@ -74,8 +76,11 @@
     }
 
     &.app-header-navbar {
+        @include make-col(12);
+        min-height: 4rem;
         @include media-breakpoint-up(md) {
-            @include make-col(6);
+            @include make-col(2);
+
         }
     }
     &.app-header__social-bar {

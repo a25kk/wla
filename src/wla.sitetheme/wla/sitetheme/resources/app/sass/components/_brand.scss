@@ -33,7 +33,7 @@
     .app-brand-panel & {
         @include make-col(6);
         @include media-breakpoint-up(xl) {
-            @include make-col(4);
+            @include make-col(2);
         }
     }
 }
@@ -76,7 +76,7 @@
     font-family: $app-font-family-light;
     @include make-col(6);
         @include media-breakpoint-up(xl) {
-            @include make-col(8);
+            @include make-col(10);
         }
     @include media-breakpoint-up(sm) {
         font-size: 1.5rem;

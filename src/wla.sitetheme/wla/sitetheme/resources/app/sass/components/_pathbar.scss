@@ -4,6 +4,10 @@
 
 
 .app-pathbar {
+    display: none;
+    @include media-breakpoint-up(md) {
+        display: block;
+    }
     @include when-inside('.template-search') {
         display: none;
     }
