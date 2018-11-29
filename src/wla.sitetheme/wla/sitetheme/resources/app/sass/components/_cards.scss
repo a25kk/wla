@@ -33,6 +33,9 @@
 //** Base card styles
 .app-card {
     background: $app-primary;
+    @include when-inside('.app-content-aside') {
+        background: #fff;
+    }
     @include when-inside('.no-flexbox') {
         // Fallback
         display: table-cell;
@@ -57,6 +60,9 @@
 
 .app-card__main {
     padding: 2rem;
+    @include when-inside('.app-content-aside') {
+        padding: 2rem 0;
+    }
 }
 
 .app-card__header {

@@ -8497,7 +8497,7 @@ div.riform .label {
   background: url("../assets/images/wave.svg") no-repeat;
   background-size: content !important;
   background-position: bottom center;
-  min-height: 15rem;
+  min-height: 25rem;
 }
 
 @media (min-width: 1200px) {
@@ -9743,7 +9743,6 @@ body.template-front-page-view .app-pathbar {
 }
 
 .app-nav-tree {
-  display: none;
   background-color: transparent;
   font-weight: 500;
 }
@@ -9763,6 +9762,10 @@ body.template-front-page-view .app-pathbar {
   margin-left: .5rem;
 }
 
+.app-nav-list .app-card__header {
+  display: none;
+}
+
 .app-nav-tree-list {
   padding-left: 0;
   list-style: none;
@@ -9773,22 +9776,18 @@ body.template-front-page-view .app-pathbar {
 }
 
 .app-nav__list-item {
-  text-transform: uppercase;
   margin-left: 0;
-  padding: .5rem .25rem;
 }
 
 .app-nav__list-item:not(last) {
   margin-bottom: .25rem;
-  border-bottom: 1px solid #edeaea;
-}
-
-.app-nav__list-item:last-of-type {
-  border-bottom: 0px;
+  border-bottom: 1px solid #000;
 }
 
 .app-nav__list-link {
   color: #000;
+  line-height: 2rem;
+  font-size: 1rem;
 }
 
 .app-nav__list-link:hover {
@@ -9797,6 +9796,11 @@ body.template-front-page-view .app-pathbar {
 
 .app-nav__list-link.navTreeCurrentNode {
   color: #edeaea;
+}
+
+.app-nav__list-link:after {
+  content: ">";
+  float: right;
 }
 
 .app-nav__list-link--open {
@@ -9811,9 +9815,16 @@ body.template-front-page-view .app-pathbar {
   margin-bottom: 0;
 }
 
-.app-nav__list---level-1 {
+.app-nav__list--level-1 {
   margin-left: 1rem;
-  font-size: .8rem;
+}
+
+.section-news .app-nav__list--level-1 {
+  display: none;
+}
+
+.contenttype-plone-site {
+  display: none;
 }
 
 /* make keyframes that tell the start state and the end state of our object */
@@ -10330,6 +10341,10 @@ body.template-front-page-view .app-pathbar {
   background: #8dc043;
 }
 
+.app-content-aside .app-card {
+  background: #fff;
+}
+
 .no-flexbox .app-card {
   display: table-cell;
 }
@@ -10355,6 +10370,10 @@ body.template-front-page-view .app-pathbar {
 
 .app-card__main {
   padding: 2rem;
+}
+
+.app-content-aside .app-card__main {
+  padding: 2rem 0;
 }
 
 .app-card__header--hidden {

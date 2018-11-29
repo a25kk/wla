@@ -8,7 +8,7 @@
     background: url("../assets/images/wave.svg") no-repeat;
     background-size: content !important;
     background-position: bottom center;
-    min-height: 15rem;
+    min-height: 25rem;
     @include media-breakpoint-up(xl) {
         min-height: 25rem;
     }
