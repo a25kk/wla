@@ -13,7 +13,7 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #8dc043;
+  --primary: #8dbf42;
   --secondary: #0099ff;
   --danger: darkred;
   --breakpoint-xs: 0;
@@ -150,7 +150,7 @@ sup {
 }
 
 a {
-  color: #8dc043;
+  color: #8dbf42;
   text-decoration: none;
   background-color: transparent;
 }
@@ -2669,36 +2669,36 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #212529;
-  background-color: #8dc043;
-  border-color: #8dc043;
+  background-color: #8dbf42;
+  border-color: #8dbf42;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #78a537;
-  border-color: #729c34;
+  background-color: #78a337;
+  border-color: #719a34;
 }
 
 .btn-primary:focus, .btn-primary.focus {
-  box-shadow: 0 0 0 0.2rem rgba(141, 192, 67, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(141, 191, 66, 0.5);
 }
 
 .btn-primary.disabled, .btn-primary:disabled {
   color: #212529;
-  background-color: #8dc043;
-  border-color: #8dc043;
+  background-color: #8dbf42;
+  border-color: #8dbf42;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #729c34;
-  border-color: #6b9231;
+  background-color: #719a34;
+  border-color: #6a9031;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(141, 192, 67, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(141, 191, 66, 0.5);
 }
 
 .btn-secondary {
@@ -2770,35 +2770,35 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary {
-  color: #8dc043;
-  border-color: #8dc043;
+  color: #8dbf42;
+  border-color: #8dbf42;
 }
 
 .btn-outline-primary:hover {
   color: #212529;
-  background-color: #8dc043;
-  border-color: #8dc043;
+  background-color: #8dbf42;
+  border-color: #8dbf42;
 }
 
 .btn-outline-primary:focus, .btn-outline-primary.focus {
-  box-shadow: 0 0 0 0.2rem rgba(141, 192, 67, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(141, 191, 66, 0.5);
 }
 
 .btn-outline-primary.disabled, .btn-outline-primary:disabled {
-  color: #8dc043;
+  color: #8dbf42;
   background-color: transparent;
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
 .show > .btn-outline-primary.dropdown-toggle {
   color: #212529;
-  background-color: #8dc043;
-  border-color: #8dc043;
+  background-color: #8dbf42;
+  border-color: #8dbf42;
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(141, 192, 67, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(141, 191, 66, 0.5);
 }
 
 .btn-outline-secondary {
@@ -2867,7 +2867,7 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #8dc043;
+  color: #8dbf42;
 }
 
 .btn-link:hover {
@@ -4342,13 +4342,13 @@ input[type="color"],
 }
 
 .bg-primary {
-  background-color: #8dc043 !important;
+  background-color: #8dbf42 !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
-  background-color: #729c34 !important;
+  background-color: #719a34 !important;
 }
 
 .bg-secondary {
@@ -4420,7 +4420,7 @@ button.bg-danger:focus {
 }
 
 .border-primary {
-  border-color: #8dc043 !important;
+  border-color: #8dbf42 !important;
 }
 
 .border-secondary {
@@ -7584,11 +7584,11 @@ button.bg-danger:focus {
 }
 
 .text-primary {
-  color: #8dc043 !important;
+  color: #8dbf42 !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
-  color: #729c34 !important;
+  color: #719a34 !important;
 }
 
 .text-secondary {
@@ -13081,18 +13081,18 @@ div.riform .label {
 }
 
 .app-default {
-  color: #8dc043;
+  color: #8dbf42;
 }
 
 .app-header {
   position: relative;
   overflow: visible;
   z-index: 50;
-  background: #8dc043;
+  background: #8dbf42;
 }
 
 .template-front-page-view .app-header {
-  background: #8dc043;
+  background: #8dbf42;
 }
 
 @media (min-width: 576px) {
@@ -13208,17 +13208,11 @@ div.riform .label {
 }
 
 .app-footer {
-  padding-top: 1rem;
+  padding-top: 10rem;
   padding-bottom: 1rem;
-  background: url("../assets/images/wave.svg") no-repeat;
+  background: url("../assets/images/wave.svg") no-repeat #8dbf42;
   background-size: content !important;
-  background-position: bottom center;
-}
-
-@media (min-width: 1200px) {
-  .app-footer {
-    min-height: 25rem;
-  }
+  background-position: top center;
 }
 
 .app-footer__content {
@@ -13250,12 +13244,6 @@ div.riform .label {
 @media (min-width: 1200px) {
   .app-footer__content {
     max-width: 1140px;
-  }
-}
-
-@media (min-width: 576px) {
-  .app-footer__content {
-    margin-bottom: 10rem;
   }
 }
 
@@ -13326,7 +13314,6 @@ div.riform .label {
     -ms-flex: 0 0 33.3333333333%;
         flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
-    border-left: 1px solid #e9ecef;
     padding: .5rem .5rem .5rem 1rem;
   }
 }
@@ -13341,7 +13328,7 @@ div.riform .label {
 }
 
 .app-footer-card a {
-  color: #0099ff;
+  color: #fff;
 }
 
 .app-copyright-wrapper {
@@ -13391,7 +13378,7 @@ div.riform .label {
 }
 
 .app-copyright a {
-  color: #0099ff;
+  color: #fff;
 }
 
 .app-copyright-signature {
@@ -13464,7 +13451,7 @@ fonts--loaded .form__help-block {
 }
 
 .error {
-  color: #8dc043;
+  color: #8dbf42;
   font-weight: 500;
 }
 
@@ -13474,7 +13461,7 @@ fonts--loaded .form__help-block {
 }
 
 code {
-  color: #8dc043;
+  color: #8dbf42;
 }
 
 [id="form-widgets-groups"] .option {
@@ -13559,7 +13546,7 @@ fonts--loaded .form__field--checkbox > .option > label {
 }
 
 .form__control--checkbox:checked + label:before {
-  background-image: linear-gradient(135deg, #8dc043, #8dc043);
+  background-image: linear-gradient(135deg, #8dbf42, #8dbf42);
 }
 
 /* disabled checkbox */
@@ -14516,7 +14503,7 @@ body.template-front-page-view .app-pathbar {
 }
 
 .app-nav__list-link:hover {
-  color: #729c34;
+  color: #719a34;
 }
 
 .app-nav__list-link.navTreeCurrentNode {
@@ -14529,11 +14516,11 @@ body.template-front-page-view .app-pathbar {
 }
 
 .app-nav__list-link--open {
-  color: #8dc043;
+  color: #8dbf42;
 }
 
 .app-nav__list-link--active {
-  color: #8dc043;
+  color: #8dbf42;
 }
 
 .app-nav__list--level-0 {
@@ -14651,7 +14638,7 @@ body.template-front-page-view .app-pathbar {
 .app-nav__toggle {
   display: block;
   width: 3rem;
-  color: #8dc043;
+  color: #8dbf42;
 }
 
 .app-nav__toggle--close {
@@ -14675,8 +14662,8 @@ body.template-front-page-view .app-pathbar {
 }
 
 .app-nav__toggle-icon {
-  fill: #8dc043;
-  stroke: #8dc043;
+  fill: #8dbf42;
+  stroke: #8dbf42;
 }
 
 .app-nav {
@@ -14740,7 +14727,7 @@ body.template-front-page-view .app-pathbar {
 .app-nav__link {
   display: block;
   text-decoration: none;
-  color: #8dc043;
+  color: #8dbf42;
   font-family: "Open Sans";
   text-transform: none;
   font-weight: 400;
@@ -15070,7 +15057,7 @@ body.template-front-page-view .app-pathbar {
 }
 
 .app-card {
-  background: #8dc043;
+  background: #8dbf42;
 }
 
 .app-content-aside .app-card {
@@ -15180,7 +15167,7 @@ body.template-front-page-view .app-pathbar {
 }
 
 .app-card__footer a {
-  color: #8dc043;
+  color: #8dbf42;
   font-weight: 400;
 }
 
@@ -15528,7 +15515,7 @@ body.template-front-page-view .app-pathbar {
   margin-top: 2rem;
   padding: 2rem 0;
   width: 100%;
-  background: #8dc043;
+  background: #8dbf42;
 }
 
 .app-newsletterbar .form-control, .app-newsletterbar select, .app-newsletterbar
@@ -15552,7 +15539,7 @@ input[type="color"] {
 }
 
 .app-newsletterbar .input-group-addon {
-  background: #8dc043;
+  background: #8dbf42;
   color: #fff;
   border: 0;
 }
@@ -15622,7 +15609,7 @@ input[type="color"] {
   text-align: center;
   color: #fff;
   border: 0;
-  background-color: #8dc043;
+  background-color: #8dbf42;
   width: 100% !important;
   display: block;
 }
@@ -15653,7 +15640,7 @@ input[type="color"] {
 
 .app-signin-title {
   font-weight: 400;
-  color: #8dc043;
+  color: #8dbf42;
 }
 
 .app-signin-content {
@@ -16285,5 +16272,5 @@ input[type="color"] {
 }
 
 .app-svg-icon-heading svg {
-  fill: #8dc043;
+  fill: #8dbf42;
 }

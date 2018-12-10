@@ -3,14 +3,14 @@
 // -----------------------------------
 
 .app-footer {
-    padding-top: $spacer;
+    padding-top: 10rem;
     padding-bottom: $spacer;
-    background: url("../assets/images/wave.svg") no-repeat;
+    background: url("../assets/images/wave.svg") no-repeat $app-primary;
     background-size: content !important;
-    background-position: bottom center;
-    @include media-breakpoint-up(xl) {
-        min-height: 25rem;
-    }
+    background-position: top center;
+    //@include media-breakpoint-up(xl) {
+    //    min-height: 25rem;
+    //}
 }
 
 .app-footer__content {
@@ -31,7 +31,7 @@
     //box-shadow: inset 0px 11px 10px -10px rgba(0, 0, 0, 0.8);  
     //color: #fff;
     @include media-breakpoint-up(sm) {
-        margin-bottom: 10rem;
+        //margin-bottom: 10rem;
     }
 }
 
@@ -60,7 +60,7 @@
     padding: 0 0 1rem 0;
     @include media-breakpoint-up(lg) {
     @include make-col(4);
-        border-left: 1px solid $gray-200;
+        //border-left: 1px solid $gray-200;
         padding: .5rem .5rem .5rem 1rem;
     }
     h3 {
@@ -72,7 +72,7 @@
         font-family: $app-font-family-strong;
     }
     a {
-        color: $app-secondary;
+        color: #fff;
     }
 }
 
@@ -89,7 +89,7 @@
     text-transform: uppercase;
     font-size: 1rem;
     a {
-        color: $app-secondary;
+        color: #fff;
     }
 }
 
