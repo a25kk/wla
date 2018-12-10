@@ -13088,10 +13088,14 @@ div.riform .label {
   position: relative;
   overflow: visible;
   z-index: 50;
-  background: #8dbf42;
+  background: url("../assets/images/wave-top.svg") no-repeat #8dbf42;
+  background-size: contain !important;
+  background-position: bottom center;
+  min-height: 360px;
 }
 
 .template-front-page-view .app-header {
+  min-height: 0;
   background: #8dbf42;
 }
 
@@ -13211,7 +13215,7 @@ div.riform .label {
   padding-top: 10rem;
   padding-bottom: 1rem;
   background: url("../assets/images/wave.svg") no-repeat #8dbf42;
-  background-size: content !important;
+  background-size: contain !important;
   background-position: top center;
 }
 

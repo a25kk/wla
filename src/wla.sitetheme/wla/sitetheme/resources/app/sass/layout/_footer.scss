@@ -6,7 +6,7 @@
     padding-top: 10rem;
     padding-bottom: $spacer;
     background: url("../assets/images/wave.svg") no-repeat $app-primary;
-    background-size: content !important;
+    background-size: contain !important;
     background-position: top center;
     //@include media-breakpoint-up(xl) {
     //    min-height: 25rem;
@@ -16,23 +16,6 @@
 .app-footer__content {
     @include make-container();
     @include make-container-max-widths();
-}
-
-
-//
-// Footer
-// -----------------------------------
-
-.app-footer { 
-}
-
-
-.app-footer__content {
-    //box-shadow: inset 0px 11px 10px -10px rgba(0, 0, 0, 0.8);  
-    //color: #fff;
-    @include media-breakpoint-up(sm) {
-        //margin-bottom: 10rem;
-    }
 }
 
 .app-footer-cards-wrapper {
