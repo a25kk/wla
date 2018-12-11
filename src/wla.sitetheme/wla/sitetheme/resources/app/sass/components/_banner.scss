@@ -7,7 +7,7 @@
     padding-top: 0;
     margin-top: 0;
     @include when-inside('.template-front-page-view') {
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up(sm) {
         margin-top: -215px;
         }
     }
@@ -66,18 +66,18 @@
         @include make-container();
         @include make-container-max-widths();
             @include media-breakpoint-up(sm) {
-            padding: 2rem;
+            padding: 2rem 2rem 0 2rem;
             bottom: 3rem;
         }
 }
 
 .app-baner-item-title,
 .app-banner-item-headline {
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 2rem;
+    //font-weight: 400;
     font-family: $app-font-family-strong;
-        @include media-breakpoint-up(sm) {
-        font-size: 2rem;
+        @include media-breakpoint-up(md) {
+        font-size: 4rem;
     }
 }
 
@@ -86,7 +86,7 @@
 }
 
 .app-banner-item-abstract {
-    text-transform: uppercase;
+    //text-transform: uppercase;
 }
 
 .app-banner-text {
@@ -136,7 +136,7 @@
 }
 
 .flickity-page-dots {
-    display: none;
+    //display: none;
         @include media-breakpoint-up(sm) {
         display: block;
         text-align: right;

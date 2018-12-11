@@ -14,8 +14,7 @@
 
     h3 {
         color: #000;
-        font-size: 1.8rem;
-        font-weight: 700;
+        font-size: 2.5rem;
         margin-bottom: 2rem;
         font-family: $app-font-family-strong;
     }
@@ -48,11 +47,10 @@
 
 .app-footer-card {
     @include make-col(12);
-    padding: 0 0 1rem 0;
-    @include media-breakpoint-up(sm) {
+    padding: 1rem;
+    @include media-breakpoint-up(md) {
     @include make-col(4);
-        //border-left: 1px solid $gray-200;
-        //padding: .5rem .5rem .5rem 1rem;
+        padding: 0;
     }
 
     ul {
@@ -75,11 +73,21 @@
     a   {
         color: #fff;
     }
+
+    a:hover {
+        transition: color 0.5s linear;
+        color: #000;
+        text-decoration: none;
+    }
 }
 
 
 .app-partner {
     margin-top: 2rem;
+    padding: 1rem;
+    @include media-breakpoint-up(sm) {
+        padding: 0;
+    }
 }
 
 .app-copyright-wrapper {
