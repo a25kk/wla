@@ -20,7 +20,7 @@ requirejs(['require',
 
         // Trigger font face observer protection
         var fontPrimary = new FontFaceObserver('Open Sans');
-        var fontSecondary = new FontFaceObserver('Open Sans Condensed');
+        var fontSecondary = new FontFaceObserver('Great Vibes');
 
         fontPrimary.load().then(function () {
             document.documentElement.className += " font__primary--loaded";

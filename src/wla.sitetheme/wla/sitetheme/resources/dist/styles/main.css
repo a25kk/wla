@@ -12979,6 +12979,17 @@ https://flickity.metafizzy.co
   /* Legacy iOS */
 }
 
+/* great-vibes-regular - latin */
+@font-face {
+  font-family: 'Great Vibes';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/great-vibes-v5-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Great Vibes"), local("GreatVibes-Regular"), url("../assets/fonts/great-vibes-v5-latin-regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/great-vibes-v5-latin-regular.woff2") format("woff2"), url("../assets/fonts/great-vibes-v5-latin-regular.woff") format("woff"), url("../assets/fonts/great-vibes-v5-latin-regular.ttf") format("truetype"), url("../assets/fonts/great-vibes-v5-latin-regular.svg#GreatVibes") format("svg");
+  /* Legacy iOS */
+}
+
 .fonts--loaded body {
   font-weight: 300;
 }
@@ -13224,8 +13235,7 @@ div.riform .label {
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 2rem;
-  text-transform: uppercase;
-  font-family: "Open Sans Condensed";
+  font-family: "Great Vibes";
 }
 
 .app-footer__content {
@@ -14944,8 +14954,7 @@ body.template-front-page-view .app-pathbar {
 .app-banner-item-headline {
   font-size: 1.2rem;
   font-weight: 700;
-  text-transform: uppercase;
-  font-family: "Open Sans Condensed";
+  font-family: "Great Vibes";
 }
 
 @media (min-width: 576px) {
@@ -15114,6 +15123,10 @@ body.template-front-page-view .app-pathbar {
   }
 }
 
+.template-front-page-view .app-card__main {
+  min-height: 250px;
+}
+
 .app-card__header--hidden {
   position: absolute;
   width: 1px;
@@ -15146,16 +15159,15 @@ body.template-front-page-view .app-pathbar {
 .app-card__title {
   font-weight: 700;
   font-size: 1.3rem;
-  text-transform: uppercase;
   line-height: 1.2rem;
   margin-bottom: 1rem;
-  font-family: "Open Sans Condensed";
+  font-family: "Great Vibes";
 }
 
 @media (min-width: 576px) {
   .app-card-title,
   .app-card__title {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }
 
@@ -15828,7 +15840,7 @@ input[type="color"] {
 .app-page__title,
 .app-page__headline {
   font-size: 2rem;
-  font-family: "Open Sans Condensed";
+  font-family: "Great Vibes";
   font-weight: 700;
 }
 

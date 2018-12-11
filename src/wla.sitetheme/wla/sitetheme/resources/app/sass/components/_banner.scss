@@ -75,7 +75,6 @@
 .app-banner-item-headline {
     font-size: 1.2rem;
     font-weight: 700;
-    text-transform: uppercase;
     font-family: $app-font-family-strong;
         @include media-breakpoint-up(sm) {
         font-size: 2rem;

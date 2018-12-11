@@ -64,8 +64,11 @@
         padding: 1rem;
         @include media-breakpoint-up(sm) {
             padding: 2rem 0;
-        }
-        
+        }   
+    }
+
+    @include when-inside('.template-front-page-view') {
+        min-height: 250px;
     }
 }
 
@@ -103,12 +106,11 @@
 .app-card__title {
     font-weight: 700;
     font-size: 1.3rem;
-    text-transform: uppercase;
     line-height: 1.2rem;
     margin-bottom: 1rem;
     font-family: $app-font-family-strong;
     @include media-breakpoint-up(sm) {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
     a {
         color: #fff;
