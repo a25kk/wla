@@ -13301,18 +13301,7 @@ div.riform .label {
       flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
-  margin-right: -15px;
-  margin-left: -15px;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
   flex-wrap: wrap;
-}
-
-@media (min-width: 992px) {
-  .app-footer-cards {
-    padding-right: 1rem;
-    padding-left: 1rem;
-  }
 }
 
 .app-footer-card {
@@ -13322,17 +13311,37 @@ div.riform .label {
   padding: 0 0 1rem 0;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 576px) {
   .app-footer-card {
     -ms-flex: 0 0 33.3333333333%;
         flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
-    padding: .5rem .5rem .5rem 1rem;
   }
+}
+
+.app-footer-card ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.58rem;
+}
+
+.app-footer-card ol {
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+.app-footer-card li:before {
+  content: "• ";
+  display: inline;
+  color: #fff;
 }
 
 .app-footer-card a {
   color: #fff;
+}
+
+.app-partner {
+  margin-top: 2rem;
 }
 
 .app-copyright-wrapper {
