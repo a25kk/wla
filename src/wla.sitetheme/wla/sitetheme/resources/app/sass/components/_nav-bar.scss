@@ -73,7 +73,7 @@
     width: 100%;
     padding: 1rem;
     text-transform: uppercase;
-    font-size: 1.25rem;
+    font-size: 1rem;
     @include media-breakpoint-up(sm) {
         padding: 2rem 0 1rem 1rem;
     }
@@ -84,7 +84,7 @@
     line-height: 1;
     background: transparent; // remove default button style
     border: 1px solid transparent; // remove default button style
-    font-size: 3rem;
+    font-size: 2rem;
     color: #fff;
     text-align: right;
     padding: 0;
@@ -103,7 +103,7 @@
         }
     }
     &--open {
-        height: 3rem;
+        height: 1.5rem;
         color: #fff;
         //@include when-inside('.template-content-page-view') {
         //    color: $app-primary;

@@ -1,0 +1,25 @@
+.quickbar {
+    //display: none;
+    @include media-breakpoint-up(lg) {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+}
+
+.quickbar__item {
+    padding: 1rem;
+}
+
+.quickbar__link {
+	color: #fff;
+	font-size: 1rem;
+    text-transform: uppercase;
+
+	&:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+

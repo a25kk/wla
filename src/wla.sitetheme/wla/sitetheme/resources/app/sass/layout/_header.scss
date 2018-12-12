@@ -63,7 +63,7 @@
     &.app-header-brandbar {
         @include make-col(12);
         @include media-breakpoint-up(md) {
-            @include make-col(10);
+            @include make-col(5);
             
         }
     }
@@ -87,9 +87,10 @@
 
         }
     }
-    &.app-header__social-bar {
+    &.app-header-quickbar {
+        @include make-col(12);
         @include media-breakpoint-up(md) {
-            @include make-col(2);
+            @include make-col(5);
         }
     }
 }

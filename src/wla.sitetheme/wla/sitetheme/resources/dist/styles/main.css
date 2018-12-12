@@ -13185,9 +13185,9 @@ div.riform .label {
 
 @media (min-width: 768px) {
   .app-header-panel.app-header-brandbar {
-    -ms-flex: 0 0 83.3333333333%;
-        flex: 0 0 83.3333333333%;
-    max-width: 83.3333333333%;
+    -ms-flex: 0 0 41.6666666667%;
+        flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
   }
 }
 
@@ -13214,11 +13214,17 @@ div.riform .label {
   }
 }
 
+.app-header-panel.app-header-quickbar {
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+  max-width: 100%;
+}
+
 @media (min-width: 768px) {
-  .app-header-panel.app-header__social-bar {
-    -ms-flex: 0 0 16.6666666667%;
-        flex: 0 0 16.6666666667%;
-    max-width: 16.6666666667%;
+  .app-header-panel.app-header-quickbar {
+    -ms-flex: 0 0 41.6666666667%;
+        flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
   }
 }
 
@@ -14425,9 +14431,9 @@ body.template-front-page-view .app-pathbar {
 
 @media (min-width: 1200px) {
   .app-brand-panel .app-brand-img {
-    -ms-flex: 0 0 16.6666666667%;
-        flex: 0 0 16.6666666667%;
-    max-width: 16.6666666667%;
+    -ms-flex: 0 0 33.3333333333%;
+        flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
   }
 }
 
@@ -14462,9 +14468,9 @@ body.template-front-page-view .app-pathbar {
 
 @media (min-width: 1200px) {
   .app-brandname {
-    -ms-flex: 0 0 83.3333333333%;
-        flex: 0 0 83.3333333333%;
-    max-width: 83.3333333333%;
+    -ms-flex: 0 0 66.6666666667%;
+        flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
   }
 }
 
@@ -14651,7 +14657,7 @@ body.template-front-page-view .app-pathbar {
   width: 100%;
   padding: 1rem;
   text-transform: uppercase;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 @media (min-width: 576px) {
@@ -14665,7 +14671,7 @@ body.template-front-page-view .app-pathbar {
   line-height: 1;
   background: transparent;
   border: 1px solid transparent;
-  font-size: 3rem;
+  font-size: 2rem;
   color: #fff;
   text-align: right;
   padding: 0;
@@ -14688,7 +14694,7 @@ body.template-front-page-view .app-pathbar {
 }
 
 .app-nav__toggle--open {
-  height: 3rem;
+  height: 1.5rem;
   color: #fff;
 }
 
@@ -15640,6 +15646,31 @@ input[type="color"] {
   background-color: #8dbf42;
   width: 100% !important;
   display: block;
+}
+
+@media (min-width: 992px) {
+  .quickbar {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    margin-top: 2rem;
+  }
+}
+
+.quickbar__item {
+  padding: 1rem;
+}
+
+.quickbar__link {
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.quickbar__link:hover {
+  text-decoration: none;
+  color: #fff;
 }
 
 .app-layout-simple {
