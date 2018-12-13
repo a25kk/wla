@@ -8,7 +8,10 @@
 }
 
 .quickbar__item {
-    padding: 1rem;
+    padding: .5rem 2rem;
+    @include media-breakpoint-up(md) {
+        padding: .5rem 1rem;
+    }
 }
 
 .quickbar__link {

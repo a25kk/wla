@@ -10,7 +10,7 @@
     background: url("../assets/images/wave-top.svg") no-repeat $app-primary;
     background-size: contain !important;
     background-position: bottom center;
-    min-height: 360px;
+    min-height: 400px;
     @include when-inside('.template-front-page-view') {
         min-height: 0;
         background: $app-primary;
@@ -90,7 +90,7 @@
     &.app-header-quickbar {
         @include make-col(12);
         @include media-breakpoint-up(md) {
-            @include make-col(5);
+            @include make-col(7);
         }
     }
 }
