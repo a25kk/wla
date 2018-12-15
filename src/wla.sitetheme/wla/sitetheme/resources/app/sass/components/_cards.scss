@@ -109,7 +109,8 @@
     margin-bottom: 1rem;
     font-family: $app-font-family-strong;
     @include media-breakpoint-up(sm) {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
+        line-height: 2.5rem;
     }
     a {
         color: #fff;

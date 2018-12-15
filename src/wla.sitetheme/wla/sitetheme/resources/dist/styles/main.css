@@ -14538,6 +14538,10 @@ body.template-front-page-view .app-pathbar {
   border-bottom: 1px solid #000;
 }
 
+.app-nav__list-item:last-of-type {
+  border-bottom: 0px;
+}
+
 .app-nav__list-link {
   color: #000;
   line-height: 2rem;
@@ -14567,10 +14571,12 @@ body.template-front-page-view .app-pathbar {
 
 .app-nav__list--level-0 {
   margin-bottom: 0;
+  text-transform: uppercase;
 }
 
 .app-nav__list--level-1 {
   margin-left: 1rem;
+  text-transform: none;
 }
 
 .section-news .app-nav__list--level-1 {
@@ -14876,7 +14882,7 @@ body.template-front-page-view .app-pathbar {
 }
 
 .template-front-page-view .app-bannerbar {
-  margin-top: -215px;
+  margin-top: -150px;
 }
 
 .app-banner {
@@ -15169,7 +15175,8 @@ body.template-front-page-view .app-pathbar {
 @media (min-width: 576px) {
   .app-card-title,
   .app-card__title {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
+    line-height: 2.5rem;
   }
 }
 
