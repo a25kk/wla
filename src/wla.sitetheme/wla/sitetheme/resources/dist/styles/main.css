@@ -13105,8 +13105,13 @@ div.riform .label {
   position: relative;
   overflow: visible;
   z-index: 50;
-  min-height: 300px !important;
-  min-height: 400px;
+  min-height: 300px;
+}
+
+@media (min-width: 1200px) {
+  .app-header {
+    min-height: 400px;
+  }
 }
 
 .template-front-page-view .app-header {
@@ -13233,7 +13238,7 @@ div.riform .label {
 }
 
 .app-footer {
-  padding-top: 10rem;
+  padding-top: 14rem;
   padding-bottom: 1rem;
   background: url("../assets/images/wave.svg") no-repeat #8dbf42;
   background-size: contain !important;
