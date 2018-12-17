@@ -15681,6 +15681,115 @@ input[type="color"] {
   color: #fff;
 }
 
+.app-gallery {
+  height: 213px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 576px) {
+  .app-gallery {
+    height: 315px;
+  }
+}
+
+@media (min-width: 768px) {
+  .app-gallery {
+    height: 435px;
+  }
+}
+
+@media (min-width: 992px) {
+  .app-gallery {
+    height: 360px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .app-gallery {
+    height: 464px;
+  }
+}
+
+.app-gallery .flickity-page-dots {
+  display: none;
+}
+
+.project-gallery {
+  position: relative;
+}
+
+.app-gallery-caption {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .app-gallery-caption {
+    position: absolute;
+    top: 2rem;
+    left: 4rem;
+    z-index: 1001;
+    width: 35%;
+    padding: 4rem 2rem 2rem 2rem;
+    background: #8dbf42;
+  }
+}
+
+.app-gallery-cell {
+  width: 100%;
+  height: 213px;
+  overflow: hidden;
+}
+
+@media (min-width: 576px) {
+  .app-gallery-cell {
+    height: 315px;
+  }
+}
+
+@media (min-width: 768px) {
+  .app-gallery-cell {
+    height: 435px;
+  }
+}
+
+@media (min-width: 992px) {
+  .app-gallery-cell {
+    height: 360px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .app-gallery-cell {
+    height: 464px;
+  }
+}
+
+.app-gallery-cell img {
+  width: 100%;
+}
+
+/* ---- flickity overrides ---- */
+.flickity-prev-next-button {
+  background: transparent;
+}
+
+.flickity-prev-next-button .arrow {
+  fill: #fff;
+}
+
+.flickity-prev-next-button:hover {
+  background: none;
+}
+
+.flickity-page-dots {
+  bottom: 20px !important;
+}
+
+.flickity-page-dots .dot {
+  background: #fff;
+}
+
 .app-layout-simple {
   background: #343a40;
 }
