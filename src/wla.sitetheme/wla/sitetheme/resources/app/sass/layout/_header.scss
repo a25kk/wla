@@ -7,9 +7,6 @@
     position: relative;
     overflow: visible;
     z-index: 50;
-    background: url("../assets/images/wave-top.svg") no-repeat $app-primary;
-    background-size: contain !important;
-    background-position: bottom center;
     min-height: 400px;
     @include when-inside('.template-front-page-view') {
         min-height: 0;

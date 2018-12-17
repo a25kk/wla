@@ -12990,6 +12990,12 @@ https://flickity.metafizzy.co
   /* Legacy iOS */
 }
 
+body {
+  background: url("../assets/images/wave-top.svg") no-repeat transparent;
+  background-size: contain !important;
+  background-position: top center;
+}
+
 .fonts--loaded body {
   font-weight: 300;
 }
@@ -13099,9 +13105,6 @@ div.riform .label {
   position: relative;
   overflow: visible;
   z-index: 50;
-  background: url("../assets/images/wave-top.svg") no-repeat #8dbf42;
-  background-size: contain !important;
-  background-position: bottom center;
   min-height: 400px;
 }
 

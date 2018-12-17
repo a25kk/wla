@@ -5,6 +5,9 @@
 
 //** Adjust font weight for initialized webfonts
 body {
+    background: url("../assets/images/wave-top.svg") no-repeat transparent;
+    background-size: contain !important;
+    background-position: top center;
     @include when-inside('.fonts--loaded') {
         font-weight: 300;
     }
