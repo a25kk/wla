@@ -13105,7 +13105,7 @@ div.riform .label {
   position: relative;
   overflow: visible;
   z-index: 50;
-  min-height: 400px;
+  min-height: 300px;
 }
 
 .template-front-page-view .app-header {
@@ -14887,6 +14887,10 @@ body.template-front-page-view .app-pathbar {
   margin-top: -150px;
 }
 
+.template-search .app-bannerbar {
+  display: none;
+}
+
 .app-banner {
   overflow: hidden;
   margin-bottom: 2rem;
@@ -16197,6 +16201,147 @@ input[type="color"] {
 .app-intro-right .app-intro-right-content {
   background: #dee2e6;
   padding: 1rem;
+}
+
+.actionMenu {
+  display: none;
+}
+
+.searchPage .input-group {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 767.98px) {
+  .searchPage .input-group {
+    display: none;
+  }
+}
+
+.searchResults {
+  padding-left: 1rem;
+}
+
+.searchResults > li {
+  border-bottom: 1px solid #ccc;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  list-style-position: outside;
+}
+
+.searchResults > li > cite {
+  display: block;
+  font-size: 0.875rem;
+}
+
+.pat-livesearch {
+  min-width: 230px;
+  position: relative;
+}
+
+.pat-livesearch .livesearch-results {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  z-index: 100;
+  border-right: 1px solid #64bee8;
+  border-bottom: 1px solid #64bee8;
+  border-left: 1px solid #64bee8;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(100, 190, 232, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(100, 190, 232, 0.6);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pat-livesearch .livesearch-results .results-summary {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.pat-livesearch .livesearch-results li {
+  white-space: normal;
+  margin: 0;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.pat-livesearch .livesearch-results li .title {
+  font-size: 1rem;
+}
+
+.pat-livesearch .livesearch-results li .description {
+  font-size: .8rem;
+}
+
+.pat-livesearch .livesearch-results li.load-more .next {
+  float: right;
+}
+
+.pat-livesearch .livesearch-results li.load-more .prev {
+  float: left;
+}
+
+.pat-livesearch .livesearch-results li.load-more .page {
+  text-align: center;
+}
+
+.pat-livesearch .livesearch-results li:hover, .pat-livesearch .livesearch-results li.selected {
+  background-color: #e6e4e4;
+}
+
+.pagination {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+#search-results .pagination {
+  background-color: #e9ecef;
+}
+
+.pagination ul {
+  margin-bottom: 0;
+}
+
+.pagination li {
+  display: inline;
+}
+
+.pagination .active {
+  font-weight: 700;
+}
+
+.pagination .active span:after {
+  content: "]";
+  display: inline;
+  color: #8dbf42;
+}
+
+.pagination .active span:before {
+  content: "[";
+  display: inline;
+  color: #8dbf42;
+}
+
+#sorting-options {
+  display: block;
+  margin-top: 1rem;
+}
+
+#sorting-options a {
+  background-color: #6c757d;
+  color: #fff;
+  padding: .5rem;
+  font-size: .8rem;
+}
+
+#sorting-options .active {
+  background-color: #8dbf42;
+}
+
+.autotab-heading {
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .app-main {

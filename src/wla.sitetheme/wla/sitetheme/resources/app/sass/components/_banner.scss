@@ -12,6 +12,9 @@
         //margin-top: -215px;
         //}
     }
+    @include when-inside('.template-search') {
+        display: none;
+    }
 }
 
 .app-banner {

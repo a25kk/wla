@@ -7,7 +7,7 @@
     position: relative;
     overflow: visible;
     z-index: 50;
-    min-height: 400px;
+    min-height: 300px;
     @include when-inside('.template-front-page-view') {
         min-height: 0;
         background: $app-primary;
