@@ -13105,7 +13105,8 @@ div.riform .label {
   position: relative;
   overflow: visible;
   z-index: 50;
-  min-height: 300px;
+  min-height: 300px !important;
+  min-height: 400px;
 }
 
 .template-front-page-view .app-header {
@@ -13186,11 +13187,11 @@ div.riform .label {
   max-width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .app-header-panel.app-header-brandbar {
-    -ms-flex: 0 0 41.6666666667%;
-        flex: 0 0 41.6666666667%;
-    max-width: 41.6666666667%;
+    -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+    max-width: 50%;
   }
 }
 
@@ -13223,11 +13224,11 @@ div.riform .label {
   max-width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .app-header-panel.app-header-quickbar {
-    -ms-flex: 0 0 58.3333333333%;
-        flex: 0 0 58.3333333333%;
-    max-width: 58.3333333333%;
+    -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+    max-width: 50%;
   }
 }
 
@@ -14884,7 +14885,17 @@ body.template-front-page-view .app-pathbar {
 }
 
 .template-front-page-view .app-bannerbar {
-  margin-top: -150px;
+  margin-top: 0px;
+}
+
+@media (min-width: 576px) {
+  .template-front-page-view .app-bannerbar {
+    margin-top: -300px;
+  }
+}
+
+.userrole-authenticated .app-bannerbar {
+  margin-top: -300px;
 }
 
 .template-search .app-bannerbar {
