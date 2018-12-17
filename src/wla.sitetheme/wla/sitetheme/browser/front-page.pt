@@ -14,7 +14,7 @@
                   <div class="app-intro" id="app-intro">
                     <div class="app-page__header">
                       <div class="app-page__title">
-                        <h1 class="app-page-headline">Herzlich willkommen im Wittelsbacher Land</h1>
+                        <h1 class="app-page-headline">Der Landkreis Aichach-Friedberg</h1>
                       </div>
                       <p class="app-page-abstract">Reizvolle Natur trifft altbairische Kultur und Lebensart</p>
                     </div>
@@ -25,9 +25,8 @@
 
                   <div class="app-page__header">
                       <div class="app-page__title">
-                        <h1 class="app-page-headline">Unsere Schwerpunkte sind </h1>
+                        <h1 class="app-page-headline">Das können Sie bei uns erleben!</h1>
                       </div>
-                      <p class="app-page-abstract">Stet clita kasd gubergren, no sea takimata sanctus est Lorem</p>
                     </div>
 
                     <div class="app-page-body app-page__teasers" id="front-page-teasers">
