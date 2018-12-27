@@ -12,9 +12,9 @@
         margin-top: -300px;
         }
     }
-    @include when-inside('.userrole-authenticated') {
-        margin-top: -300px;
-    }
+    //@include when-inside('.userrole-authenticated') {
+    //    margin-top: -300px;
+    //}
     @include when-inside('.template-search') {
         display: none;
     }

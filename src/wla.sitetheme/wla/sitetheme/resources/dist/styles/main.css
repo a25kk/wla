@@ -14899,10 +14899,6 @@ body.template-front-page-view .app-pathbar {
   }
 }
 
-.userrole-authenticated .app-bannerbar {
-  margin-top: -300px;
-}
-
 .template-search .app-bannerbar {
   display: none;
 }
