@@ -9,7 +9,7 @@
     @include when-inside('.template-front-page-view') {
         margin-top: 0px;
         @include media-breakpoint-up(sm) {
-        margin-top: -300px;
+        margin-top: -130px;
         }
     }
     //@include when-inside('.userrole-authenticated') {
