@@ -15057,7 +15057,6 @@ body.template-front-page-view .app-pathbar {
 }
 
 .app-page-cards {
-  border: 1px solid red;
   margin-top: 2rem;
 }
 
@@ -15100,7 +15099,15 @@ body.template-front-page-view .app-pathbar {
   max-width: 100%;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
+  .app-cards .app-card {
+    -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
   .app-cards .app-card {
     -ms-flex: 0 0 33.3333333333%;
         flex: 0 0 33.3333333333%;
@@ -15162,28 +15169,23 @@ body.template-front-page-view .app-pathbar {
   min-height: 250px;
 }
 
-.app-card-title,
 .app-card__title {
-  font-size: 1.3rem;
-  line-height: 1.2rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
   margin-bottom: 1rem;
   font-family: "Allura";
 }
 
 @media (min-width: 576px) {
-  .app-card-title,
   .app-card__title {
     font-size: 2.3rem;
-    line-height: 2.5rem;
   }
 }
 
-.app-card-title a,
 .app-card__title a {
   color: #fff;
 }
 
-.app-card-title a:hover,
 .app-card__title a:hover {
   transition: color 0.5s linear;
   color: #000;
@@ -15642,7 +15644,7 @@ input[type="color"] {
 
 .app-page-header {
   margin: 2rem 0;
-  border-bottom: 1px solid #ced4da;
+  border-bottom: 1px solid #8dbf42;
 }
 
 .app-page__title,
