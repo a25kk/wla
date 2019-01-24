@@ -76,6 +76,7 @@
     <theme href="dist/signin/index.html" css:if-content="body.template-mail_password_response" />
     <theme href="dist/signin/index.html" css:if-content="body.template-pwreset_form" />
     <theme href="dist/signin/index.html" css:if-content="body.template-pwreset_finish" />
+    <theme href="dist/full/index.html" css:if-content="body.subsection-radfahren" />
 
     <!--<theme href="dist/frontpage/index.html" css:if-content="body.template-front-page-view" />-->
 

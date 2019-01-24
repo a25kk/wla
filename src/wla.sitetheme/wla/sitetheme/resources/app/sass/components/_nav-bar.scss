@@ -204,13 +204,13 @@
     &:hover {
         text-decoration: none;
         background: transparent;
-        color: $app-secondary;
+        color: #000;
     }
     &--active,
     &--open {
         text-decoration: none;
         background: transparent;
-        color: $app-secondary;
+        color: #000;
     }
     @include when-inside('.app-nav--level-1') {
         &:after {

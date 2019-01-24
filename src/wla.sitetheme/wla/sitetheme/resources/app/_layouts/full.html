@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    {% include base/head.html %}
+  </head>
+  <body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    {% include components/toolbar.html %}
+    {% include layout/header.html %}
+    {% include components/banner.html %}
+    {% include components/pathbar.html %}
+    <main class="app-main" role="main">
+        <section class="app-content">
+            <article class="app-content-main-full" id="app-content-main-full">
+                {{ content }}
+            </article>
+        </section>
+    </main>
+    {% include layout/footer.html %}
+  </body>
+</html>
+

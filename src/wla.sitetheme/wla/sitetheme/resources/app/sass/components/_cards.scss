@@ -6,29 +6,39 @@
 //== Card lists
 //
 //## Use a grid layout for card listings
+
+.app-page-cards {
+    border: 1px solid red;
+    margin-top: 2rem;
+}
+
 .app-cards {
     display: flex;
     flex-wrap: wrap;
-    @include media-breakpoint-up(lg) {
-            // flex-wrap: nowrap;
+}
+
+//== Gutter
+//
+//## Add fpacing to cards
+.app-card-gutter {
+    margin-right: -.5rem;
+    margin-left: -.5rem;
+    .app-card {
+        border: .5rem solid #fff;
+        &-featured {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
         }
-}
-
-// Adjust frontpage cards block for usage inside the content row
-.app-front-page-cards {
-    @include make-container();
-    @include make-container-max-widths();
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-}
-
-.app-content-cards {
-    margin-bottom: 1rem;
+    }
 }
 
 .app-cards-page-previews {
-    margin-top: 2rem;
+
 }
+
+//== Card layout
+//
+//## Reflow card contents based on viewport size
 
 //** Base card styles
 .app-card {
@@ -54,9 +64,46 @@
     }
 }
 
-//== Card layout
-//
-//## Reflow card contents based on viewport size
+.app-card__header {
+    &--hidden {
+        @include sr-only();
+    }
+}
+
+.app-card__figure {
+    transition: all 0.2s linear;
+    background: $app-gray;
+    a:hover {
+        .app-figure__content {
+           opacity: 0.7;
+        }   
+    }
+}
+
+.app-card__link {
+    color: #fff;
+    line-height: 1.5rem;
+    &:hover {
+        transition: none;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.app-card__link {
+    &--figure {
+
+    }
+}
+
+.app-page__figure {
+
+}
+
+.app-figure {
+
+}
+
 
 .app-card__main {
     padding: 2rem;
@@ -72,31 +119,8 @@
     }
 }
 
-.app-card__header {
-    //margin-bottom: 1rem;
-    &--hidden {
-        @include sr-only();
-    }
-}
-// DEPRECATED
-.app-card-header {
-    @include when-inside('.app-cards-front-page') {
-        height: 10rem;
-        min-height: 10rem;
-        padding: 1.5rem 1rem 1rem 2rem;
-        @include gradient-y(#000, transparent, 0%, 100%);
-    }
-}
+.app-card__section {
 
-.app-card__figure {
-    transition: all 0.2s linear;
-    background: $app-gray;
-    a:hover {
-        .app-figure__content {
-           opacity: 0.7;
-        }
-        
-    }
 }
 
 //== Card title
@@ -134,255 +158,276 @@
     }
 }
 
-.app-card__link {
-    color: #fff;
-    line-height: 1.5rem;
-    &:hover {
-        transition: none;
-        color: #fff;
-        text-decoration: none;
-    }
-}
-
-// Compute Card title fpacers from list
-$card-title-fpacers: (
-    fpacer1: .5rem,
-    fpacer2: 1rem,
-    fpacer3: 1.5rem,
-    fpacer4: 2rem,
-    fpacer5: 2.5rem,
-    fpacer6: 3rem,
-    fpacer7: 3.5rem,
-    fpacer8: 4rem,
-    fpacer9: 4.5rem,
-    fpacer10: 5rem,
-    fpacer11: 5.5rem,
-    fpacer12: 6rem,
-    fpacer13: 6.5rem,
-    fpacer14: 7rem,
-    fpacer15: 7.5rem,
-    fpacer16: 8rem,
-    fpacer17: 8.5rem,
-    fpacer18: 9rem,
-    fpacer19: 9.5rem,
-    fpacer20: 10rem,
-    fpacer21: 10.5rem,
-    fpacer22: 11rem,
-    fpacer23: 11.5rem,
-    fpacer24: 12rem,
-    fpacer25: 12.5rem,
-    fpacer26: 13rem,
-);
-
-@each $card-fpacer, $spacer-value in $card-title-fpacers {
-    .app-card-title-#{$card-fpacer} {
-        padding-right: $spacer-value;
-    }
-}
-
-.app-card-description {
-    font-size: .8rem;
-    font-weight: 300;
-}
 
 
-.app-card-icon {
-    flex: 0 1 5%;
-    padding: 0rem 1rem 2rem 1rem;
-}
 
-//** Card content
-.app-card-main {
-    display: block;
-    color: #fff;
-    &-plain {
-        padding-top: .5rem;
-        background: $gray-400;
-    }
-}
 
-//** Card footer
-.app-card-footer {
-    padding: 1rem;
-    //flex: 0 0 33.3333%;
-    img {
-      width: 100%;
-    }
-}
 
-//== Gutter
+
+
+
+
+//// Adjust frontpage cards block for usage inside the content row
+//.app-front-page-cards {
+//    @include make-container();
+//    @include make-container-max-widths();
+//    margin-bottom: 1rem;
+//    margin-top: 1rem;
+//}
 //
-//## Add fpacing to cards
-.app-card-gutter {
-    margin-right: -.5rem;
-    margin-left: -.5rem;
-    .app-card {
-        padding-right: .5rem;
-        padding-left: .5rem;
-        margin-bottom: 1rem;
-        &-featured {
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-        }
-    }
-}
-
-
-//** Set card content specific styles
-.app-card-content {
-    position: relative;
-    margin: 0 .5rem;
-    overflow: hidden;
-    font-size: 1rem;
-    &-default {
-        background: $app-gray;
-    }
-}
-
-//== Front page cards
+//.app-content-cards {
+//    margin-bottom: 1rem;
+//}
 //
-//## Full background image and covering link
-.app-card-bg {
-    position: relative;
-    background: transparent no-repeat scroll top center;
-    background-size: cover;
-    overflow: hidden;
-    min-height: 266px;
-    transition: all 0.2s linear;
-    &-01 {
-        background-image: url("../assets/img/card-01-bg.jpg");
-    }
-    &-02 {
-        background-image: url("../assets/img/card-01-bg.jpg");
-    }
-    &-03 {
-        background-image: url("../assets/img/card-01-bg.jpg");
-    }
-    &-04 {
-        background-image: url("../assets/img/card-04-bg.jpg");
-    }
-    &-05 {
-        background-image: url("../assets/img/card-05-bg.jpg");
-    }
-    &-06 {
-        background-image: url("../assets/img/card-06-bg.jpg");
-    }
-    &-07 {
-        background-image: url("../assets/img/card-07-bg.jpg");
-    }
-    &-08 {
-        background-image: url("../assets/img/card-08-bg.jpg");
-    }
-    &-09 {
-        background-image: url("../assets/img/card-09-bg.jpg");
-    }
-}
-.app-card-cover {
-    width: auto;
-    //min-height: 358px;
-    &:hover {
-        color: #fff;
-        .app-card-bg {
-            transform: scale(1.1);
-        }
-    }
-}
-.app-card-mask {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: transparent no-repeat scroll top center;
-    background-size: cover;
-    width: 100%;
-    //min-height: 358px;
-}
-.app-card-caption-content {
-    display: block;
-    position: relative;
-    padding: 1rem;
-    z-index: 1001;
-    width: auto;
-    min-height: 6rem;
-    text-transform: uppercase;
-    @include gradient-y(#333, transparent, 0%, 100%);
-    &:before {
-        content: "\203A";
-        display: block;
-        position: absolute;
-        top: 12px;
-        right: -20px;
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-        font-weight: 100;
-    }
-}
-.app-card-caption {
-
-}
-.app-card-caption-title {
-    font-weight: 500;
-    @include when-inside('.app-fonts-loaded') {
-        font-size: 1.2rem;
-    }
-    @include when-inside('.section-releases') {
-        font-size: 1rem;
-    }
-}
-.app-card-caption-teaser {
-    font-size: .7rem;
-}
-
-//== Placeholder for missing card content
 //
-//## Provide call to actions and descriptions on empty cards
-//## by providing highlighted card content
-.app-card-placeholder {
-    margin: 0.5rem auto;
-    padding: 1rem;
-    text-align: center;
-    @include media-breakpoint-up(md) {
-        padding: 2rem 3rem;
-        width: 66.66%;
-    }
-}
-
-//** Round hellip sign
-.app-card-placeholder-sign {
-    @include size(4rem);
-    padding-top: 0.5rem;
-    border-radius: 50%;
-    border: 1px solid $gray-300;
-    color: $gray-300;
-    font-size: 2rem;
-}
-
-//== Embedded card
 //
-//## Remove fpacing for card inside card usecase
-
-.app-subcards {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.app-subcard {
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    flex: 0 1 50%;
-    max-width: 50%;
-    padding: 3.6rem;
-    min-height: 11rem;
-        @include media-breakpoint-down(md) {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-        @include media-breakpoint-down(sm) {
-            flex: 0 0 100%;
-            max-width: 100%;
-        }
-    path {
-        fill: #fff;
-    }
-}
+//
+//
+//
+//
+//
+//// DEPRECATED
+//.app-card-header {
+//    @include when-inside('.app-cards-front-page') {
+//        height: 10rem;
+//        min-height: 10rem;
+//        padding: 1.5rem 1rem 1rem 2rem;
+//        @include gradient-y(#000, transparent, 0%, 100%);
+//    }
+//}
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//// Compute Card title fpacers from list
+//$card-title-fpacers: (
+//    fpacer1: .5rem,
+//    fpacer2: 1rem,
+//    fpacer3: 1.5rem,
+//    fpacer4: 2rem,
+//    fpacer5: 2.5rem,
+//    fpacer6: 3rem,
+//    fpacer7: 3.5rem,
+//    fpacer8: 4rem,
+//    fpacer9: 4.5rem,
+//    fpacer10: 5rem,
+//    fpacer11: 5.5rem,
+//    fpacer12: 6rem,
+//    fpacer13: 6.5rem,
+//    fpacer14: 7rem,
+//    fpacer15: 7.5rem,
+//    fpacer16: 8rem,
+//    fpacer17: 8.5rem,
+//    fpacer18: 9rem,
+//    fpacer19: 9.5rem,
+//    fpacer20: 10rem,
+//    fpacer21: 10.5rem,
+//    fpacer22: 11rem,
+//    fpacer23: 11.5rem,
+//    fpacer24: 12rem,
+//    fpacer25: 12.5rem,
+//    fpacer26: 13rem,
+//);
+//
+//@each $card-fpacer, $spacer-value in $card-title-fpacers {
+//    .app-card-title-#{$card-fpacer} {
+//        padding-right: $spacer-value;
+//    }
+//}
+//
+//.app-card-description {
+//    font-size: .8rem;
+//    font-weight: 300;
+//}
+//
+//
+//.app-card-icon {
+//    flex: 0 1 5%;
+//    padding: 0rem 1rem 2rem 1rem;
+//}
+//
+////** Card content
+//.app-card-main {
+//    display: block;
+//    color: #fff;
+//    &-plain {
+//        padding-top: .5rem;
+//        background: $gray-400;
+//    }
+//}
+//
+////** Card footer
+//.app-card-footer {
+//    padding: 1rem;
+//    //flex: 0 0 33.3333%;
+//    img {
+//      width: 100%;
+//    }
+//}
+//
+//
+//
+////** Set card content specific styles
+//.app-card-content {
+//    position: relative;
+//    margin: 0 .5rem;
+//    overflow: hidden;
+//    font-size: 1rem;
+//    &-default {
+//        background: $app-gray;
+//    }
+//}
+//
+////== Front page cards
+////
+////## Full background image and covering link
+//.app-card-bg {
+//    position: relative;
+//    background: transparent no-repeat scroll top center;
+//    background-size: cover;
+//    overflow: hidden;
+//    min-height: 266px;
+//    transition: all 0.2s linear;
+//    &-01 {
+//        background-image: url("../assets/img/card-01-bg.jpg");
+//    }
+//    &-02 {
+//        background-image: url("../assets/img/card-01-bg.jpg");
+//    }
+//    &-03 {
+//        background-image: url("../assets/img/card-01-bg.jpg");
+//    }
+//    &-04 {
+//        background-image: url("../assets/img/card-04-bg.jpg");
+//    }
+//    &-05 {
+//        background-image: url("../assets/img/card-05-bg.jpg");
+//    }
+//    &-06 {
+//        background-image: url("../assets/img/card-06-bg.jpg");
+//    }
+//    &-07 {
+//        background-image: url("../assets/img/card-07-bg.jpg");
+//    }
+//    &-08 {
+//        background-image: url("../assets/img/card-08-bg.jpg");
+//    }
+//    &-09 {
+//        background-image: url("../assets/img/card-09-bg.jpg");
+//    }
+//}
+//.app-card-cover {
+//    width: auto;
+//    //min-height: 358px;
+//    &:hover {
+//        color: #fff;
+//        .app-card-bg {
+//            transform: scale(1.1);
+//        }
+//    }
+//}
+//.app-card-mask {
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+//    background: transparent no-repeat scroll top center;
+//    background-size: cover;
+//    width: 100%;
+//    //min-height: 358px;
+//}
+//.app-card-caption-content {
+//    display: block;
+//    position: relative;
+//    padding: 1rem;
+//    z-index: 1001;
+//    width: auto;
+//    min-height: 6rem;
+//    text-transform: uppercase;
+//    @include gradient-y(#333, transparent, 0%, 100%);
+//    &:before {
+//        content: "\203A";
+//        display: block;
+//        position: absolute;
+//        top: 12px;
+//        right: -20px;
+//        width: 40px;
+//        height: 40px;
+//        font-size: 1.2rem;
+//        font-weight: 100;
+//    }
+//}
+//.app-card-caption {
+//
+//}
+//.app-card-caption-title {
+//    font-weight: 500;
+//    @include when-inside('.app-fonts-loaded') {
+//        font-size: 1.2rem;
+//    }
+//    @include when-inside('.section-releases') {
+//        font-size: 1rem;
+//    }
+//}
+//.app-card-caption-teaser {
+//    font-size: .7rem;
+//}
+//
+////== Placeholder for missing card content
+////
+////## Provide call to actions and descriptions on empty cards
+////## by providing highlighted card content
+//.app-card-placeholder {
+//    margin: 0.5rem auto;
+//    padding: 1rem;
+//    text-align: center;
+//    @include media-breakpoint-up(md) {
+//        padding: 2rem 3rem;
+//        width: 66.66%;
+//    }
+//}
+//
+////** Round hellip sign
+//.app-card-placeholder-sign {
+//    @include size(4rem);
+//    padding-top: 0.5rem;
+//    border-radius: 50%;
+//    border: 1px solid $gray-300;
+//    color: $gray-300;
+//    font-size: 2rem;
+//}
+//
+////== Embedded card
+////
+////## Remove fpacing for card inside card usecase
+//
+//.app-subcards {
+//    display: flex;
+//    flex-wrap: wrap;
+//}
+//
+//.app-subcard {
+//    margin-left: 0;
+//    margin-right: 0;
+//    margin-bottom: 0;
+//    flex: 0 1 50%;
+//    max-width: 50%;
+//    padding: 3.6rem;
+//    min-height: 11rem;
+//        @include media-breakpoint-down(md) {
+//        flex: 0 0 50%;
+//        max-width: 50%;
+//    }
+//        @include media-breakpoint-down(sm) {
+//            flex: 0 0 100%;
+//            max-width: 100%;
+//        }
+//    path {
+//        fill: #fff;
+//    }
+//}
+//
