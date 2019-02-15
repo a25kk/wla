@@ -12990,6 +12990,17 @@ https://flickity.metafizzy.co
   /* Legacy iOS */
 }
 
+/* marck-script-regular - latin */
+@font-face {
+  font-family: 'Marck Script';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/marck-script-v9-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Marck Script"), local("MarckScript-Regular"), url("../assets/fonts/marck-script-v9-latin-regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/marck-script-v9-latin-regular.woff2") format("woff2"), url("../assets/fonts/marck-script-v9-latin-regular.woff") format("woff"), url("../assets/fonts/marck-script-v9-latin-regular.ttf") format("truetype"), url("../assets/fonts/marck-script-v9-latin-regular.svg#MarckScript") format("svg");
+  /* Legacy iOS */
+}
+
 body {
   background: url("../assets/images/wave-top.svg") no-repeat transparent;
   background-size: contain !important;
@@ -14989,13 +15000,13 @@ body.template-front-page-view .app-pathbar {
 .app-baner-item-title,
 .app-banner-item-headline {
   font-size: 2rem;
-  font-family: "Allura";
+  font-family: "Marck Script";
 }
 
 @media (min-width: 768px) {
   .app-baner-item-title,
   .app-banner-item-headline {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 
@@ -15173,7 +15184,7 @@ body.template-front-page-view .app-pathbar {
   font-size: 2rem;
   line-height: 2.5rem;
   margin-bottom: 1rem;
-  font-family: "Allura";
+  font-family: "Marck Script";
 }
 
 @media (min-width: 576px) {
@@ -15617,7 +15628,7 @@ input[type="color"] {
 .app-page__title,
 .app-page__headline {
   font-size: 3rem;
-  font-family: "Allura";
+  font-family: "Marck Script";
 }
 
 .app-page-lead,
