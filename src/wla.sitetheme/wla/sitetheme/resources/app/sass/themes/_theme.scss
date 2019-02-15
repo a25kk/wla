@@ -7,29 +7,31 @@
 .app-main {
   @include make-container();
   @include make-container-max-widths();
+  //border: 1px solid red;
 }
 
 .app-content {
-    @include make-row();
+    //border: 1px solid green;
 }
 
 //** Add full height to layout components
 .app-aside,
 .app-content-main {
-    @include make-col-ready();
-    @include make-col(12)
+    //@include make-col-ready();
+    //@include make-col(12)
+    width: 100%;
 }
 
 .app-aside {
     @include media-breakpoint-up(lg) {
         @include make-col(4);
-        padding: 0 1rem 1rem 1rem;
+        //padding: 0 1rem 1rem 1rem;
     }
 }
 
 .app-content-main,
 .app-content--main {
-  padding: 0 1rem 0 1rem;
+  //padding: 0 1rem 0 1rem;
   &-sm {
     @include media-breakpoint-up(lg) {
       @include make-col(8);
@@ -41,7 +43,7 @@
   @include make-col(12);
     @include media-breakpoint-up(lg) {
         @include make-col(12);
-        padding: 0 1rem 0 0;
+        //padding: 0 1rem 0 0;
     }
 }
 
