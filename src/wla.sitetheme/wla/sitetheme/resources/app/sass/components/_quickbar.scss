@@ -1,6 +1,5 @@
 .quickbar {
-    //display: none;
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(sm) {
         display: flex;
         justify-content: center;
         margin-top: 2rem;
@@ -8,9 +7,18 @@
 }
 
 .quickbar__item {
+    flex: 1;
     padding: .5rem 2rem;
     @include media-breakpoint-up(md) {
-        padding: .5rem 1rem;
+        padding: .5rem 0;
+        text-align: center;
+    }
+    &--events {
+        padding: .5rem 2rem;
+        @include media-breakpoint-up(md) {
+            padding: .5rem 0;
+        }
+        
     }
 }
 
@@ -18,6 +26,7 @@
 	color: #fff;
 	font-size: 1rem;
     text-transform: uppercase;
+    font-weight: 400;
 
 	&:hover {
         text-decoration: none;
