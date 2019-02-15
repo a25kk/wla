@@ -15360,13 +15360,13 @@ input[type="color"] {
 
 @media (min-width: 992px) {
   .app-gallery {
-    height: 360px;
+    height: 574px;
   }
 }
 
 @media (min-width: 1200px) {
   .app-gallery {
-    height: 464px;
+    height: 716px;
   }
 }
 
@@ -15414,13 +15414,13 @@ input[type="color"] {
 
 @media (min-width: 992px) {
   .app-gallery-cell {
-    height: 360px;
+    height: 574px;
   }
 }
 
 @media (min-width: 1200px) {
   .app-gallery-cell {
-    height: 464px;
+    height: 716px;
   }
 }
 
