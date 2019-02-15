@@ -4,6 +4,7 @@
 
 
 .app-header {
+    width: 100%;
     position: relative;
     overflow: visible;
     z-index: 50;
@@ -11,9 +12,9 @@
     background: url("../assets/images/wave-top.svg") no-repeat $app-primary;
     background-size: contain !important;
     background-position: bottom center;
-    //@include media-breakpoint-up(sm) {
-    //    min-height: 100px;
-    //}
+    @include media-breakpoint-up(lg) {
+        background-size: cover !important;
+    }
     @include when-inside('.template-front-page-view') {
         min-height: 320px;
         background: $app-primary;
