@@ -17,9 +17,13 @@
 }
 
 .app-page__title,
-.app-page__headline {
-    font-size: 3rem;
+.app-page__headline,
+.app-page-headline {
+    font-size: 2rem;
     font-family: $app-font-family-strong;
+    @include media-breakpoint-up(lg) {
+      font-size: 3.6rem;
+    }
 }
 
 

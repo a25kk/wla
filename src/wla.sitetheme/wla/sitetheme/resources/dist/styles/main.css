@@ -15050,7 +15050,7 @@ body.template-front-page-view .app-pathbar {
 @media (min-width: 768px) {
   .app-baner-item-title,
   .app-banner-item-headline {
-    font-size: 3rem;
+    font-size: 3.6rem;
   }
 }
 
@@ -15221,7 +15221,7 @@ body.template-front-page-view .app-pathbar {
 }
 
 .template-front-page-view .app-card__main {
-  min-height: 250px;
+  min-height: 220px;
 }
 
 .app-card__title {
@@ -15684,9 +15684,18 @@ input[type="color"] {
 }
 
 .app-page__title,
-.app-page__headline {
-  font-size: 3rem;
+.app-page__headline,
+.app-page-headline {
+  font-size: 2rem;
   font-family: "Marck Script";
+}
+
+@media (min-width: 992px) {
+  .app-page__title,
+  .app-page__headline,
+  .app-page-headline {
+    font-size: 3.6rem;
+  }
 }
 
 .app-page-lead,
