@@ -15123,12 +15123,12 @@ body.template-front-page-view .app-pathbar {
 }
 
 .app-card-gutter {
-  margin-right: -.5rem;
-  margin-left: -.5rem;
+  margin-right: -1rem;
+  margin-left: -1rem;
 }
 
 .app-card-gutter .app-card {
-  border: .5rem solid #fff;
+  border: 1rem solid #fff;
 }
 
 .app-card-gutter .app-card-featured {
@@ -15196,7 +15196,7 @@ body.template-front-page-view .app-pathbar {
 }
 
 .app-card__link {
-  color: #585858;
+  color: #fff;
   line-height: 1.5rem;
 }
 
@@ -15207,7 +15207,7 @@ body.template-front-page-view .app-pathbar {
 }
 
 .app-card__main {
-  padding: 2rem;
+  padding: 0 2rem 1rem 2rem;
 }
 
 .app-content-aside .app-card__main {
@@ -15221,7 +15221,7 @@ body.template-front-page-view .app-pathbar {
 }
 
 .template-front-page-view .app-card__main {
-  min-height: 220px;
+  min-height: 120px;
 }
 
 .app-card__title {
@@ -15784,7 +15784,7 @@ input[type="color"] {
 
 @media (min-width: 768px) {
   .teaser-box {
-    padding: 10px;
+    padding: 15px;
   }
 }
 
