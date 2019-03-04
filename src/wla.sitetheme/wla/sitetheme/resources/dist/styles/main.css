@@ -14894,9 +14894,11 @@ body.template-front-page-view .app-pathbar {
 .app-bannerbar {
   padding-top: 0;
   margin-top: 0;
+  display: none;
 }
 
 .template-front-page-view .app-bannerbar {
+  display: block;
   margin-top: 0px;
 }
 
@@ -14904,10 +14906,6 @@ body.template-front-page-view .app-pathbar {
   .template-front-page-view .app-bannerbar {
     margin-top: -130px;
   }
-}
-
-.template-search .app-bannerbar {
-  display: none;
 }
 
 .app-banner {
