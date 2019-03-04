@@ -13185,6 +13185,8 @@ div.riform .label {
   margin-right: -15px;
   margin-left: -15px;
   flex-wrap: wrap;
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
 }
 
 .no-flexbox .app-header-panels {
@@ -13209,17 +13211,9 @@ div.riform .label {
 
 @media (min-width: 768px) {
   .app-header-panel.app-header-brandbar {
-    -ms-flex: 0 0 25%;
-        flex: 0 0 25%;
-    max-width: 25%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .app-header-panel.app-header-brandbar {
-    -ms-flex: 0 0 50%;
-        flex: 0 0 50%;
-    max-width: 50%;
+    -ms-flex: 0 0 16.6666666667%;
+        flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
   }
 }
 
@@ -13230,14 +13224,6 @@ div.riform .label {
 }
 
 @media (min-width: 768px) {
-  .app-header-panel.app-header-quickbar {
-    -ms-flex: 0 0 75%;
-        flex: 0 0 75%;
-    max-width: 75%;
-  }
-}
-
-@media (min-width: 1200px) {
   .app-header-panel.app-header-quickbar {
     -ms-flex: 0 0 50%;
         flex: 0 0 50%;
@@ -14445,14 +14431,6 @@ body.template-front-page-view .app-pathbar {
   max-width: 100%;
 }
 
-@media (min-width: 1200px) {
-  .app-brand-panel .app-brand-img {
-    -ms-flex: 0 0 50%;
-        flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
 .app-brandname-logo {
   position: relative;
   top: 0;
@@ -15142,6 +15120,10 @@ body.template-front-page-view .app-pathbar {
   background: #fff;
 }
 
+.template-overview-controlpanel .app-card {
+  background: #fff;
+}
+
 .no-flexbox .app-card {
   display: table-cell;
 }
@@ -15510,6 +15492,40 @@ input[type="color"] {
 
 .flickity-page-dots .dot {
   background: #fff;
+}
+
+.configlets {
+  list-style: none;
+}
+
+.inner-configlet {
+  margin-bottom: .5rem;
+  padding: .25rem;
+  border: 1px solid #8dbf42;
+  background: #8dbf42;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.inner-configlet a {
+  color: #fff;
+  font-size: .8rem;
+}
+
+.inner-configlet > a > span {
+  display: block;
+  color: #fff;
+}
+
+.template-overview-controlpanel ul {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  list-style: none !important;
+}
+
+.template-overview-controlpanel ul li {
+  display: inline;
+  width: 25%;
 }
 
 .app-layout-simple {

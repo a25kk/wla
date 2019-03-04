@@ -45,6 +45,11 @@
     @include when-inside('.app-content-aside') {
         background: #fff;
     }
+
+    @include when-inside('.template-overview-controlpanel') {
+        background: #fff;
+    }
+
     @include when-inside('.no-flexbox') {
         // Fallback
         display: table-cell;

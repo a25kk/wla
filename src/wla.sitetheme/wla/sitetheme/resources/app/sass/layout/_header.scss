@@ -48,6 +48,7 @@
     }
     @include make-row();
         flex-wrap: wrap;
+        flex-direction: row-reverse
 }
 
 //** Base card styles
@@ -61,22 +62,24 @@
     &.app-header-brandbar {
         @include make-col(12);
         @include media-breakpoint-up(md) {
-            @include make-col(3);
+            @include make-col(2);
+            //border: 1px solid red;
             
         }
-        @include media-breakpoint-up(xl) {
-            @include make-col(6);
-            
-        }
+        //@include media-breakpoint-up(xl) {
+        //    @include make-col(6);
+        //    
+        //}
     }
     &.app-header-quickbar {
         @include make-col(12);
         @include media-breakpoint-up(md) {
-            @include make-col(9);
-        }
-        @include media-breakpoint-up(xl) {
             @include make-col(6);
-            
+            //border: 1px solid blue;
         }
+        //@include media-breakpoint-up(xl) {
+        //    @include make-col(6);
+        //    
+        //}
     }
 }
