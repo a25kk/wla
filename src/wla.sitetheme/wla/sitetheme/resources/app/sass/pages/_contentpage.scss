@@ -26,6 +26,14 @@
     }
 }
 
+.app-page-sub-headline {
+    font-size: 1.5rem;
+    font-family: $app-font-family-strong;
+    @include media-breakpoint-up(lg) {
+      font-size: 3rem;
+    }
+}
+
 
 // Use custom lead element for page desciptions
 // that has proper line-height on all media types

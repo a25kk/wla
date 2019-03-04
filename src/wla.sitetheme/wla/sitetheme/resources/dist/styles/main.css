@@ -15137,7 +15137,7 @@ body.template-front-page-view .app-pathbar {
 }
 
 .app-card {
-  background: #afd27b;
+  background: #92c93a;
 }
 
 .app-content-aside .app-card {
@@ -15233,7 +15233,7 @@ body.template-front-page-view .app-pathbar {
 
 @media (min-width: 576px) {
   .app-card__title {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -15695,6 +15695,17 @@ input[type="color"] {
   .app-page__headline,
   .app-page-headline {
     font-size: 3.6rem;
+  }
+}
+
+.app-page-sub-headline {
+  font-size: 1.5rem;
+  font-family: "Marck Script";
+}
+
+@media (min-width: 992px) {
+  .app-page-sub-headline {
+    font-size: 3rem;
   }
 }
 

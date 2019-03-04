@@ -41,7 +41,7 @@
 
 //** Base card styles
 .app-card {
-    background: $app-primary-lighter;
+    background: #92c93a;
     @include when-inside('.app-content-aside') {
         background: #fff;
     }
@@ -134,7 +134,7 @@
     margin-bottom: 1rem;
     font-family: $app-font-family-strong;
     @include media-breakpoint-up(sm) {
-        font-size: 2.3rem;
+        font-size: 2.2rem;
     }
     a:hover {
         transition: color 0.5s linear;
