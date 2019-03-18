@@ -67,6 +67,12 @@
     @include media-breakpoint-up(sm) {
         //margin-top: 1rem;
     }
+
+    @include when-inside('.app-nav-bar--overlay') {
+        display: block;
+        text-align: right;
+        width: 100%;
+    }
 }
 
 .app-nav-bar__title {
