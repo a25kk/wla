@@ -1,0 +1,44 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="example.dexterityforms"
+      metal:use-macro="context/main_template/macros/master">
+
+    <metal:block fill-slot="main">
+
+         <h1 class="documentFirstHeading" tal:content="here/Title | nothing" />
+
+
+        <div id="content-core" tal:define="publications view/getList">
+
+        	<table class="publications-list">
+        		<tr tal:repeat="item publications" >
+            <tal:x tal:define="obj item/getObject">
+        			<td><input class="qty" type="number" value="0" tal:attributes="data-id python:item.UID" size="5"/></td>
+        			<td>
+              <tal:check tal:define="has_img obj/image|nothing;
+                   scales obj/@@images|nothing;
+                   leadsize python:'mini'"
+                    tal:condition="python:has_img and scales and leadsize and leadsize != 'none'" >
+                <div tal:attributes="class python:'leadimage image-' + leadsize">
+                  <img  tal:replace="structure python: scales.scale('image', scale=leadsize).tag(css_class='newsImage')" />
+                </div>
+              </tal:check>
+        				<h3 tal:content="item/Title"></h3>
+        				<div class="description" tal:content="item/Description"></div>
+        				<div class="link" tal:condition="obj/remoteUrl"><a href="" tal:attributes="href obj/remoteUrl" tal:content="obj/remoteUrl"></a></div>
+        			</td>
+            </tal:x>
+        		</tr>
+        	</table>
+            <metal:block use-macro="context/@@ploneform-macros/titlelessform" />
+        </div>
+
+    </metal:block>
+
+</html>
+
+
+

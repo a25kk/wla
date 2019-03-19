@@ -1,0 +1,32 @@
+<tal:x tal:define="data python:options['data'];" i18n:domain="wla.publications">
+	<p i18n:translate="greeting">
+		Dear, <span tal:content="data/firstname" i18n:name="firstname"></span> <span i18n:name="lastname" tal:content="data/lastname"></span> 
+	</p>
+	<p i18n:translate="thank_you">
+		Thank you for yout order! 
+	</p>
+    <ul>
+	<li tal:repeat = "p data/publications">
+	    quantity: <tal:x tal:content="python:p[1]"></tal:x>
+		<a href="" tal:attributes="href python:p[0].absolute_url()" tal:content="python:p[0].Title()"></a>
+	</li>
+	</ul>
+	<p><b i18n:translate="data">Your data:</b></p>
+
+	<p><b i18n:translate="">Greeting</b><b>:</b> <span tal:content="data/greeting"></span></p>
+	<p><b i18n:translate="">Title</b><b>:</b> <span tal:content="data/titles"></span></p>
+	<p><b i18n:translate="">Firstname</b><b>:</b> <span tal:content="data/firstname"></span></p>
+    <p><b i18n:translate="">Lastname</b><b>:</b> <span tal:content="data/firstname"></span></p>
+	<p><b i18n:translate="">Organization</b><b>:</b> <span tal:content="data/organization"></span></p>
+	<p><b i18n:translate="">Phone</b><b>:</b> <span tal:content="data/phone"></span></p>
+	<p><b i18n:translate="">Email</b><b>:</b> <span tal:content="data/email"></span></p>
+	<p><b i18n:translate="">Street</b><b>:</b> <span tal:content="data/street"></span></p>
+	<p><b i18n:translate="">Number</b><b>:</b> <span tal:content="data/number"></span></p>
+	<p><b i18n:translate="">Zipcode</b><b>:</b> <span tal:content="data/zipcode"></span></p>
+	<p><b i18n:translate="">City</b><b>:</b> <span tal:content="data/city"></span></p>
+	<p><b i18n:translate="">Country</b><b>:</b> <span tal:content="data/country"></span></p>
+
+
+<p i18n:translate="regards">king regards</p>
+<p i18n:translate="">Your Team</p>
+</tal:x>
