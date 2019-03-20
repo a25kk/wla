@@ -1,0 +1,67 @@
+// Publications extra staff
+
+.publications-list {
+	background: #efefef;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	@include when-inside('.no-flexbox') {
+        display: table;
+    }
+	@include make-row();
+	margin-left: 0;
+	margin-right: 0;
+	flex-wrap: wrap;
+}
+
+.publications-list-quantity {
+	padding: 1rem;
+	background: #fff;
+	@include make-col(12);
+    @include media-breakpoint-up(md) {
+    @include make-col(1); 
+    }
+}
+
+.publications-list-info {
+	padding: 1rem;
+	background: #fff;
+	@include make-col(12);
+    @include media-breakpoint-up(md) {
+    @include make-col(11); 
+    }
+    @include make-row();
+	flex-wrap: wrap;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.publications-list-info-image {
+	@include make-col(12);
+    @include media-breakpoint-up(md) {
+    @include make-col(4);
+    //min-height: 300px;
+    }
+
+    .product-image-preview {
+    	width: 100%;
+    	display: block;
+    }
+}
+
+.publications-list-info-content {
+	padding: 1rem;
+	@include make-col(12);
+    @include media-breakpoint-up(md) {
+    @include make-col(8);
+    display: flex;
+    flex-flow: column nowrap;
+    }
+
+    .description {
+    	margin-bottom: 2rem;
+    }
+}
+
+.publications-link {
+	margin-top:auto;
+}

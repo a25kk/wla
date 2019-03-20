@@ -34,6 +34,7 @@ from Products.CMFCore.interfaces import ISiteRoot
 
 from plone.app.uuid.utils import uuidToObject
 
+
 greetings = SimpleVocabulary(
     [
      SimpleTerm(value='--NOVALUE--', title=_(u'select value')),

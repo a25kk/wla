@@ -1,5 +1,6 @@
 (function($) {
      $(document).ready(function() {
+          
 
      	$("#formfield-form-widgets-publications").hide(); 
      	if ($("#form-widgets-publications").text()) {

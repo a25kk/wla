@@ -16070,6 +16070,112 @@ input[type="color"] {
   font-weight: 700;
 }
 
+.publications-list {
+  background: #efefef;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-left: 0;
+  margin-right: 0;
+  flex-wrap: wrap;
+}
+
+.no-flexbox .publications-list {
+  display: table;
+}
+
+.publications-list-quantity {
+  padding: 1rem;
+  background: #fff;
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .publications-list-quantity {
+    -ms-flex: 0 0 8.3333333333%;
+        flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%;
+  }
+}
+
+.publications-list-info {
+  padding: 1rem;
+  background: #fff;
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+  max-width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  flex-wrap: wrap;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media (min-width: 768px) {
+  .publications-list-info {
+    -ms-flex: 0 0 91.6666666667%;
+        flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%;
+  }
+}
+
+.publications-list-info-image {
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .publications-list-info-image {
+    -ms-flex: 0 0 33.3333333333%;
+        flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+}
+
+.publications-list-info-image .product-image-preview {
+  width: 100%;
+  display: block;
+}
+
+.publications-list-info-content {
+  padding: 1rem;
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .publications-list-info-content {
+    -ms-flex: 0 0 66.6666666667%;
+        flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+  }
+}
+
+.publications-list-info-content .description {
+  margin-bottom: 2rem;
+}
+
+.publications-link {
+  margin-top: auto;
+}
+
 .app-main {
   width: 100%;
   padding-right: 15px;

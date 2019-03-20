@@ -3,36 +3,64 @@
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      i18n:domain="example.dexterityforms"
+      i18n:domain="wla.publications"
       metal:use-macro="context/main_template/macros/master">
 
     <metal:block fill-slot="main">
 
-         <h1 class="documentFirstHeading" tal:content="here/Title | nothing" />
+         <div class="app-page-header app-page__header">
+            <div class="app-page__title">
+                <h1 class="app-page__headline">
+                        ${context/Title}
+                </h1>
+            </div>
+            <p class="app-page__abstract" tal:condition="context/Description">
+                    ${context/Description}
+            </p>
+        </div>
 
 
         <div id="content-core" tal:define="publications view/getList">
 
-        	<table class="publications-list">
-        		<tr tal:repeat="item publications" >
+        		<div class="publications-list" tal:repeat="item publications" >
             <tal:x tal:define="obj item/getObject">
-        			<td><input class="qty" type="number" value="0" tal:attributes="data-id python:item.UID" size="5"/></td>
-        			<td>
+
+        			<div class="publications-list-quantity">
+                <input class="qty" type="number" value="0" tal:attributes="data-id python:item.UID" size="5"/>
+              </div>
+
+        			<div class="publications-list-info">
+                <div class="publications-list-info-image">
               <tal:check tal:define="has_img obj/image|nothing;
                    scales obj/@@images|nothing;
-                   leadsize python:'mini'"
+                   leadsize python:'large'"
                     tal:condition="python:has_img and scales and leadsize and leadsize != 'none'" >
-                <div tal:attributes="class python:'leadimage image-' + leadsize">
-                  <img  tal:replace="structure python: scales.scale('image', scale=leadsize).tag(css_class='newsImage')" />
-                </div>
+
+                <a class="pat-plone-modal" data-pat-plone-modal="image: true" data-modal-srcset="" tal:attributes="href string:${obj/absolute_url}/@@images/image/large">
+
+                  <img class="product-image-preview" alt="" tal:attributes="src string:${obj/absolute_url}/@@images/image/large" />
+                </a>
+
               </tal:check>
+            </div>
+            <div class="publications-list-info-content">
         				<h3 tal:content="item/Title"></h3>
-        				<div class="description" tal:content="item/Description"></div>
-        				<div class="link" tal:condition="obj/remoteUrl"><a href="" tal:attributes="href obj/remoteUrl" tal:content="obj/remoteUrl"></a></div>
-        			</td>
+
+        				<div class="publications-description" tal:content="item/Description"></div>
+                <div class="publications-link">
+                <tal:if define="pdf_file nocall:obj/file"
+                        tal:condition="nocall:pdf_file">
+                  <a class="" 
+                     tal:attributes="href string:${obj/absolute_url}/@@download/file/${obj/file/filename}">
+                     <p> Download als PDF</p>
+                      <!--<tal:name tal:content="obj/file/filename" >Filename</tal:name>-->
+                  </a>
+                </tal:if> 
+              </div>
+                </div>				
+        			</div>
             </tal:x>
-        		</tr>
-        	</table>
+        		</div>
             <metal:block use-macro="context/@@ploneform-macros/titlelessform" />
         </div>
 
