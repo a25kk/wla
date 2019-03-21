@@ -16,7 +16,7 @@
 	<p><b i18n:translate="">Greeting</b><b>:</b> <span tal:content="data/greeting"></span></p>
 	<p><b i18n:translate="">Title</b><b>:</b> <span tal:content="data/titles"></span></p>
 	<p><b i18n:translate="">Firstname</b><b>:</b> <span tal:content="data/firstname"></span></p>
-    <p><b i18n:translate="">Lastname</b><b>:</b> <span tal:content="data/laststname"></span></p>
+    <p><b i18n:translate="">Lastname</b><b>:</b> <span tal:content="data/lastname"></span></p>
 	<p><b i18n:translate="">Organization</b><b>:</b> <span tal:content="data/organization"></span></p>
 	<p><b i18n:translate="">Phone</b><b>:</b> <span tal:content="data/phone"></span></p>
 	<p><b i18n:translate="">Email</b><b>:</b> <span tal:content="data/email"></span></p>
