@@ -26,7 +26,8 @@
 	<p><b i18n:translate="">City</b><b>:</b> <span tal:content="data/city"></span></p>
 	<p><b i18n:translate="">Country</b><b>:</b> <span tal:content="data/country"></span></p>
 
-
+<p>--</p>
 <p i18n:translate="regards">king regards</p>
 <p i18n:translate="">Your Team</p>
+<p><a href="https://wittelsbacherland.de/>https://wittelsbacherland.de</a></p>
 </tal:x>
