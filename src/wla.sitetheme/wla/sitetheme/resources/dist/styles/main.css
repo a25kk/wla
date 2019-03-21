@@ -15529,6 +15529,82 @@ input[type="color"] {
   width: 25%;
 }
 
+.app-callout {
+  padding: 0.5rem 1rem 1rem;
+  margin: 1rem 0;
+  border-left: 5px solid #eee;
+}
+
+.app-callout-title {
+  margin-top: 0;
+  margin-bottom: .25rem;
+}
+
+.app-callout p:last-child {
+  margin-bottom: 0;
+}
+
+.app-callout-btn {
+  float: right;
+  margin-bottom: .5rem;
+}
+
+.app-callout-default {
+  color: #000;
+  background-color: #dee2e6;
+  border-color: #adb5bd;
+}
+
+.app-callout-default hr {
+  border-top-color: #9fa8b2;
+}
+
+.app-callout-default .alert-link {
+  color: black;
+}
+
+.app-callout-success {
+  color: #28a745;
+  background-color: #e9ecef;
+  border-color: #28a745;
+}
+
+.app-callout-success hr {
+  border-top-color: #23923d;
+}
+
+.app-callout-success .alert-link {
+  color: #1e7e34;
+}
+
+.app-callout-danger {
+  color: #dc3545;
+  background-color: #e9ecef;
+  border-color: #dc3545;
+}
+
+.app-callout-danger hr {
+  border-top-color: #d32535;
+}
+
+.app-callout-danger .alert-link {
+  color: #bd2130;
+}
+
+.app-callout-warning {
+  color: #ffc107;
+  background-color: #f8f9fa;
+  border-color: #ffc107;
+}
+
+.app-callout-warning hr {
+  border-top-color: #edb100;
+}
+
+.app-callout-warning .alert-link {
+  color: #d39e00;
+}
+
 .app-layout-simple {
   background: #343a40;
 }
