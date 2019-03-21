@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2019-03-21 09:57+0000\n"
-"PO-Revision-Date: 2019-03-21 11:48+0100\n"
+"PO-Revision-Date: 2019-03-21 12:19+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -146,7 +146,7 @@ msgstr "Titel"
 #: ../skins/wla_publications/order_email.pt:31
 #: ../skins/wla_publications/order_email2.pt:31
 msgid "Your Team"
-msgstr "Ihr Team"
+msgstr "Ihr Wittelsbacherland-Team"
 
 #: ../browser/form.py:73 ../skins/wla_publications/order_email.pt:25
 #: ../skins/wla_publications/order_email2.pt:25
@@ -157,7 +157,7 @@ msgstr "PLZ"
 #: ../skins/wla_publications/order_email.pt:14
 #: ../skins/wla_publications/order_email2.pt:14
 msgid "data"
-msgstr "Ihre Daten:"
+msgstr "Übersicht Ihrer persönlichen Angaben:"
 
 #. Default: "Dear, ${firstname} ${lastname}"
 #: ../browser/form.py:63 ../skins/wla_publications/order_email.pt:3
@@ -173,7 +173,7 @@ msgstr "Veröffentlichungen"
 #: ../skins/wla_publications/order_email.pt:30
 #: ../skins/wla_publications/order_email2.pt:30
 msgid "regards"
-msgstr "Grüße"
+msgstr "Mit den besten Grüßen"
 
 #: ../browser/form.py:40
 msgid "select value"
@@ -183,7 +183,7 @@ msgstr "Bitte auswählen"
 #: ../skins/wla_publications/order_email.pt:5
 #: ../skins/wla_publications/order_email2.pt:5
 msgid "thank_you"
-msgstr "Vielen Dank"
+msgstr "Vielen Dank für Ihre Bestellung"
 
 #: ../browser/form.py:64
 msgid "title"
