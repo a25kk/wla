@@ -18,6 +18,9 @@
 	background: #fff;
 	@include make-col(12);
     @include media-breakpoint-up(md) {
+    @include make-col(2); 
+    }
+    @include media-breakpoint-up(xl) {
     @include make-col(1); 
     }
 }
@@ -27,7 +30,10 @@
 	background: #fff;
 	@include make-col(12);
     @include media-breakpoint-up(md) {
-    @include make-col(11); 
+    @include make-col(10); 
+    }
+    @include media-breakpoint-up(xl) {
+    @include make-col(11)
     }
     @include make-row();
 	flex-wrap: wrap;
@@ -64,4 +70,9 @@
 
 .publications-link {
 	margin-top:auto;
+}
+
+
+.app-form-wrapper {
+	margin-top: 2rem;
 }

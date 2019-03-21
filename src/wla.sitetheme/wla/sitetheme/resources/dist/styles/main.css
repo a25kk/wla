@@ -13455,7 +13455,7 @@ div.riform .label {
 }
 
 .form__actions {
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .autotoc-section {
@@ -16099,6 +16099,14 @@ input[type="color"] {
 
 @media (min-width: 768px) {
   .publications-list-quantity {
+    -ms-flex: 0 0 16.6666666667%;
+        flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .publications-list-quantity {
     -ms-flex: 0 0 8.3333333333%;
         flex: 0 0 8.3333333333%;
     max-width: 8.3333333333%;
@@ -16123,6 +16131,14 @@ input[type="color"] {
 }
 
 @media (min-width: 768px) {
+  .publications-list-info {
+    -ms-flex: 0 0 83.3333333333%;
+        flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
+  }
+}
+
+@media (min-width: 1200px) {
   .publications-list-info {
     -ms-flex: 0 0 91.6666666667%;
         flex: 0 0 91.6666666667%;
@@ -16174,6 +16190,10 @@ input[type="color"] {
 
 .publications-link {
   margin-top: auto;
+}
+
+.app-form-wrapper {
+  margin-top: 2rem;
 }
 
 .app-main {
