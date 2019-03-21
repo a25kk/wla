@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-03-21 09:57+0000\n"
+"POT-Creation-Date: 2019-03-21 12:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -170,13 +170,22 @@ msgstr ""
 
 #. Default: "Dear, ${firstname} ${lastname}"
 #: ./../browser/form.py:63
+msgid "greeting"
+msgstr ""
+
+#. Default: "Dear, ${firstname} ${lastname}"
 #: ./../skins/wla_publications/order_email.pt:3
 #: ./../skins/wla_publications/order_email2.pt:3
-msgid "greeting"
+msgid "greeting_msg"
 msgstr ""
 
 #: ./../browser/form.py:81
 msgid "publications"
+msgstr ""
+
+#: ./../skins/wla_publications/order_email.pt:10
+#: ./../skins/wla_publications/order_email2.pt:10
+msgid "quantity:"
 msgstr ""
 
 #. Default: "king regards"

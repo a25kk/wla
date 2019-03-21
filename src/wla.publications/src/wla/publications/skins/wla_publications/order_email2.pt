@@ -1,5 +1,5 @@
 <tal:x tal:define="data python:options['data'];" i18n:domain="wla.publications">
-	<p i18n:translate="greeting">
+	<p i18n:translate="greeting_msg">
 		Dear, <span tal:content="data/firstname" i18n:name="firstname"></span> <span i18n:name="lastname" tal:content="data/lastname"></span> 
 	</p>
 	<p i18n:translate="thank_you">
@@ -7,7 +7,7 @@
 	</p>
     <ul>
 	<li tal:repeat = "p data/publications">
-	    quantity: <tal:x tal:content="python:p[1]"></tal:x>
+	    <tal:x i18n:translate="">quantity:</tal:x> <tal:x tal:content="python:p[1]"></tal:x>
 		<a href="" tal:attributes="href python:p[0].absolute_url()" tal:content="python:p[0].Title()"></a>
 	</li>
 	</ul>

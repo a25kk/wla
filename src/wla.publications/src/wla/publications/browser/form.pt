@@ -61,9 +61,7 @@
         			</div>
             </tal:x>
         		</div>
-            <div class="app-form-wrapper">
             <metal:block use-macro="context/@@ploneform-macros/titlelessform" />
-          </div>
         </div>
 
     </metal:block>
