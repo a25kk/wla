@@ -16146,6 +16146,12 @@ input[type="color"] {
   font-weight: 700;
 }
 
+#search-results {
+  border: 10px solid #dee2e6;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
 .publications-list {
   background: #efefef;
   padding: 1rem;
