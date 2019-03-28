@@ -1,16 +1,34 @@
 // Publications extra staff
 
+.publications-list-wrapper {
+    @include make-row();
+    //background: #efefef;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    @include media-breakpoint-up(md) {
+        padding: 1rem 0 1rem 1rem;
+    }
+}
+
 .publications-list {
-	background: #efefef;
-	padding: 1rem;
-	margin-bottom: 1rem;
 	@include when-inside('.no-flexbox') {
         display: table;
     }
-	@include make-row();
-	margin-left: 0;
-	margin-right: 0;
-	flex-wrap: wrap;
+	
+    margin-bottom: 1rem;
+    @include media-breakpoint-up(lg) {
+        width: 50%;
+    }
+}
+
+.publications-list-item {
+    border: 1px solid $app-primary;
+    @include make-row();
+    margin-left: 0;
+    //margin-right: 0;
+    flex-wrap: wrap;
+    height: 100%;
+    margin-right: 1rem;
 }
 
 .publications-list-quantity {
@@ -21,7 +39,7 @@
     @include make-col(2); 
     }
     @include media-breakpoint-up(xl) {
-    @include make-col(1); 
+    @include make-col(2); 
     }
 }
 
@@ -33,13 +51,15 @@
     @include make-col(10); 
     }
     @include media-breakpoint-up(xl) {
-    @include make-col(11)
+    @include make-col(10)
     }
     @include make-row();
 	flex-wrap: wrap;
 	margin-left: 0;
 	margin-right: 0;
 }
+
+
 
 .publications-list-info-image {
 	@include make-col(12);
@@ -66,6 +86,11 @@
     .description {
     	margin-bottom: 2rem;
     }
+}
+
+.publications-list-info-content-header {
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .publications-link {

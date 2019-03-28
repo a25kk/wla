@@ -22,9 +22,11 @@
 
         <div id="content-core" tal:define="publications view/getList">
 
+          <div class="publications-list-wrapper">
+
         		<div class="publications-list" tal:repeat="item publications" >
             <tal:x tal:define="obj item/getObject">
-
+            <div class="publications-list-item">
         			<div class="publications-list-quantity">
                 <input class="qty" type="number" value="0" tal:attributes="data-id python:item.UID" size="5"/>
               </div>
@@ -44,7 +46,7 @@
               </tal:check>
             </div>
             <div class="publications-list-info-content">
-        				<h3 tal:content="item/Title"></h3>
+        				<h3 class="publications-list-info-content-header" tal:content="item/Title"></h3>
 
         				<div class="publications-description" tal:content="item/Description"></div>
                 <div class="publications-link">
@@ -59,8 +61,10 @@
               </div>
                 </div>				
         			</div>
+            </div>
             </tal:x>
         		</div>
+          </div>
             <metal:block use-macro="context/@@ploneform-macros/titlelessform" />
         </div>
 

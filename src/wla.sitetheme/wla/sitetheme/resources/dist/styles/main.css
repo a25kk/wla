@@ -14964,12 +14964,6 @@ body.template-front-page-view .app-pathbar {
   width: 100%;
   color: #fff;
   height: 100%;
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, black 0%, transparent 30%, transparent 72%, black 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 );
-  /* IE6-9 */
 }
 
 .app-banner-item-body {
@@ -16152,10 +16146,39 @@ input[type="color"] {
   padding: 1rem;
 }
 
-.publications-list {
-  background: #efefef;
+.publications-list-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
   padding: 1rem;
   margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .publications-list-wrapper {
+    padding: 1rem 0 1rem 1rem;
+  }
+}
+
+.publications-list {
+  margin-bottom: 1rem;
+}
+
+.no-flexbox .publications-list {
+  display: table;
+}
+
+@media (min-width: 992px) {
+  .publications-list {
+    width: 50%;
+  }
+}
+
+.publications-list-item {
+  border: 1px solid #8dbf42;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -16163,12 +16186,9 @@ input[type="color"] {
   margin-right: -15px;
   margin-left: -15px;
   margin-left: 0;
-  margin-right: 0;
   flex-wrap: wrap;
-}
-
-.no-flexbox .publications-list {
-  display: table;
+  height: 100%;
+  margin-right: 1rem;
 }
 
 .publications-list-quantity {
@@ -16189,9 +16209,9 @@ input[type="color"] {
 
 @media (min-width: 1200px) {
   .publications-list-quantity {
-    -ms-flex: 0 0 8.3333333333%;
-        flex: 0 0 8.3333333333%;
-    max-width: 8.3333333333%;
+    -ms-flex: 0 0 16.6666666667%;
+        flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
   }
 }
 
@@ -16222,9 +16242,9 @@ input[type="color"] {
 
 @media (min-width: 1200px) {
   .publications-list-info {
-    -ms-flex: 0 0 91.6666666667%;
-        flex: 0 0 91.6666666667%;
-    max-width: 91.6666666667%;
+    -ms-flex: 0 0 83.3333333333%;
+        flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
   }
 }
 
@@ -16268,6 +16288,11 @@ input[type="color"] {
 
 .publications-list-info-content .description {
   margin-bottom: 2rem;
+}
+
+.publications-list-info-content-header {
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .publications-link {
