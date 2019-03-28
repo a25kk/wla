@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2019-03-21 12:18+0000\n"
-"PO-Revision-Date: 2019-03-28 11:59+0100\n"
+"PO-Revision-Date: 2019-03-28 13:05+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -164,11 +164,11 @@ msgstr "Übersicht Ihrer persönlichen Angaben:"
 msgid "greeting"
 msgstr "Anrede"
 
-#. Default: "Dear, ${firstname} ${lastname}"
+#. Default: "Dear, ${greeting} ${firstname}"
 #: ../skins/wla_publications/order_email.pt:3
 #: ../skins/wla_publications/order_email2.pt:3
 msgid "greeting_msg"
-msgstr "Sehr geehrte/r ${firstname} ${lastname}"
+msgstr "Sehr geehrte/r ${greeting} ${firstname}"
 
 #: ../browser/form.py:81
 msgid "publications"
