@@ -1,14 +1,6 @@
 <tal:x tal:define="data python:options['data'];" i18n:domain="wla.publications">
 	<p i18n:translate="greeting_msg">
-
-
-
-		Dear, 
-
-
-		<span i18n:translate="">Greeting</span> <span tal:content="data/greeting"></span>
-
-		<span i18n:name="firstname" tal:content="data/firstname"></span> 
+		Dear, <span tal:content="data/greeting" i18n:name="greeting"></span> <span i18n:name="firstname" tal:content="data/firstname"></span> 
 	</p>
 	<p i18n:translate="thank_you">
 		Thank you for yout order! 
