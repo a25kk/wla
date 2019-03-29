@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2019-03-21 12:18+0000\n"
-"PO-Revision-Date: 2019-03-28 13:05+0100\n"
+"PO-Revision-Date: 2019-03-29 10:18+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -146,7 +146,7 @@ msgstr "Titel"
 #: ../skins/wla_publications/order_email.pt:31
 #: ../skins/wla_publications/order_email2.pt:31
 msgid "Your Team"
-msgstr "Ihr Wittelsbacherland-Team"
+msgstr "Ihr Tourismus-Team im Wittelsbacher Land"
 
 #: ../browser/form.py:73 ../skins/wla_publications/order_email.pt:25
 #: ../skins/wla_publications/order_email2.pt:25
@@ -183,7 +183,7 @@ msgstr "Menge:"
 #: ../skins/wla_publications/order_email.pt:30
 #: ../skins/wla_publications/order_email2.pt:30
 msgid "regards"
-msgstr "Mit den besten Grüßen"
+msgstr "Mit freundlichen Grüßen"
 
 #: ../browser/form.py:40
 msgid "select value"
