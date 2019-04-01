@@ -13861,7 +13861,7 @@ div.riform .label {
   max-width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .app-header-panel.app-header-quickbar {
     -ms-flex: 0 0 50%;
         flex: 0 0 50%;
@@ -15280,7 +15280,7 @@ body.template-front-page-view .app-pathbar {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 1rem;
-  margin-top: 0;
+  margin-top: .2rem;
   background: transparent;
   color: #fff;
 }
@@ -15294,6 +15294,7 @@ body.template-front-page-view .app-pathbar {
 .app-nav-bar__title {
   text-transform: uppercase;
   font-size: 1rem;
+  display: none;
 }
 
 @media (min-width: 576px) {
@@ -15315,8 +15316,9 @@ body.template-front-page-view .app-pathbar {
 
 .app-nav__toggle {
   display: block;
-  width: 1.2rem;
+  width: 9rem;
   color: #8dbf42;
+  text-align: left;
 }
 
 .app-nav__toggle--close {
@@ -15333,6 +15335,10 @@ body.template-front-page-view .app-pathbar {
 .app-nav__toggle--open {
   height: 1.2rem;
   color: #fff;
+}
+
+.app-nav__toggle--open::before {
+  content: "NAVIGATION";
 }
 
 .app-nav-bar--overlay .app-nav__toggle--open {
@@ -16000,6 +16006,13 @@ input[type="color"] {
   padding: .5rem 2rem;
 }
 
+@media (min-width: 576px) {
+  .quickbar__item {
+    padding: 0 0 1rem 0;
+    text-align: center;
+  }
+}
+
 @media (min-width: 768px) {
   .quickbar__item {
     padding: .5rem 0;
@@ -16011,6 +16024,13 @@ input[type="color"] {
   padding: .5rem 2rem;
 }
 
+@media (min-width: 576px) {
+  .quickbar__item--events {
+    padding: 0 0 1rem 0;
+    text-align: center;
+  }
+}
+
 @media (min-width: 768px) {
   .quickbar__item--events {
     padding: .5rem 0;
@@ -16019,7 +16039,7 @@ input[type="color"] {
 
 .quickbar__link {
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   font-weight: 400;
 }

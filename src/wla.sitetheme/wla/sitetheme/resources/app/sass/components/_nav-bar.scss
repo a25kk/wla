@@ -61,12 +61,9 @@
 .app-nav-bar__header {
     display: flex;
     margin-bottom: 1rem;
-    margin-top: 0;
+    margin-top: .2rem;
     background: transparent;
     color: #fff;
-    @include media-breakpoint-up(sm) {
-        //margin-top: 1rem;
-    }
 
     @include when-inside('.app-nav-bar--overlay') {
         display: block;
@@ -76,13 +73,12 @@
 }
 
 .app-nav-bar__title {
-    //width: 100%;
-    //padding: 1rem;
     text-transform: uppercase;
     font-size: 1rem;
     @include media-breakpoint-up(sm) {
         padding: 0;
     }
+    display: none;
 }
 
 .app-nav-bar__toggle {
@@ -98,8 +94,9 @@
 
 .app-nav__toggle {
     display: block;
-    width: 1.2rem;
+    width: 9rem;
     color: $app-primary;
+    text-align: left;
     &--close {
         display: none;
         height: 0;
@@ -112,6 +109,9 @@
     &--open {
         height: 1.2rem;
         color: #fff;
+        &::before {
+        content: "NAVIGATION";
+        }
         @include when-inside('.app-nav-bar--overlay') {
             display: none;
             height: 0;
@@ -146,18 +146,12 @@
         }
     }
     &--level-1 {
-        //height: 0;
         overflow-y: scroll;
     }
 }
 
 .app-nav--level-1 {
     position: relative;
-    //right: -100%;
-    //@include media-breakpoint-up(lg) {
-    //    right: 0;
-    //    display: none;
-    //}
 }
 
 .app-nav__item {
@@ -168,19 +162,8 @@
     padding: 0;
     border-bottom: 1px solid $gray-300;
     background-color: transparent;
-    //@include media-breakpoint-up(lg) {
-    //    width: auto;
-    //    flex: 1 0 0%;
-    //    padding: 1rem 0;
-    //    margin-right: 1rem;
-    //    border: none;
-    //}
-    //@include media-breakpoint-up(xl) {
-    //    margin-right: 1rem;
-    //}
     &--back-link {
         background-color: $gray-300;
-        //display: flex;
         padding: 0;
         display: none;
     }
