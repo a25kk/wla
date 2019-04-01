@@ -6,16 +6,19 @@
 @import 'utils/variables';
 @import 'utils/functions';
 @import 'utils/mixins.scss';
+@import 'utils/settings.vendor.mq';
 
 @import 'vendors/bootstrap';
 @import 'vendors/flickity';
 @import 'vendors/ionicons';
+@import 'vendors/mq';
 
 @import 'base/syntax';
 @import 'base/animation';
 @import 'base/fonts';
 @import 'base/scaffolding';
 @import 'base/brand';
+@import 'base/grid.scss';
 
 @import 'layout/header';
 @import 'layout/footer';
