@@ -13863,9 +13863,9 @@ div.riform .label {
 
 @media (min-width: 1200px) {
   .app-header-panel.app-header-quickbar {
-    -ms-flex: 0 0 50%;
-        flex: 0 0 50%;
-    max-width: 50%;
+    -ms-flex: 0 0 66.6666666667%;
+        flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
   }
 }
 

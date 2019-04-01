@@ -61,7 +61,7 @@
     &.app-header-quickbar {
         @include make-col(12);
         @include media-breakpoint-up(xl) {
-            @include make-col(6);
+            @include make-col(8);
         }
     }
 }
