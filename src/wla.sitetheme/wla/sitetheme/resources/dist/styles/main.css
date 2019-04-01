@@ -12575,44 +12575,6 @@ https://flickity.metafizzy.co
   content: "\f3aa";
 }
 
-body:before {
-  background-color: #FCF8E3;
-  border-bottom: 1px solid #FBEED5;
-  border-left: 1px solid #FBEED5;
-  color: #C09853;
-  font: small-caption;
-  padding: 3px 6px;
-  pointer-events: none;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 8001;
-}
-
-@media (min-width: 36em) {
-  body:before {
-    content: "sm ≥ 576px (36em)";
-  }
-}
-
-@media (min-width: 48em) {
-  body:before {
-    content: "md ≥ 768px (48em)";
-  }
-}
-
-@media (min-width: 62em) {
-  body:before {
-    content: "lg ≥ 992px (62em)";
-  }
-}
-
-@media (min-width: 75em) {
-  body:before {
-    content: "xl ≥ 1200px (75em)";
-  }
-}
-
 .hll {
   background-color: #ffffcc;
 }
