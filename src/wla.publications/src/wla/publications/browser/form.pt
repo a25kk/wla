@@ -65,7 +65,9 @@
             </tal:x>
         		</div>
           </div>
+
             <metal:block use-macro="context/@@ploneform-macros/titlelessform" />
+            <p>Mit Absendung dieses Bestellformulars stimme ich zu, dass die im Rahmen meiner Prospektbestellung erhobenen personenbezogenen Daten vom Landkreis Aichach-Friedberg nur zur Bearbeitung Ihrer Anfrage verwendet werden. Meine Einwilligung kann ich jederzeit widerrufen. Darüber hinaus erfolgt keine Weitergabe an Dritte. Weitere Informationen zum Datenschutz erhalten Sie <a href="/datenschutzerklaerung">hier</a>.</p>
         </div>
 
     </metal:block>
