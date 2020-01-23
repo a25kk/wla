@@ -1,0 +1,16 @@
+///* ========================================================================
+//   #CONFIG
+//   ======================================================================== */
+// Custom web font
+// $app-font-family-base:              "EB Garamond";
+$app-font-family-base:              "Raleway";
+$app-font-family-light:             "Raleway";
+$app-font-family-medium:            "Raleway";
+$app-font-family-strong:            "Raleway";
+
+// Configure site font stack
+$app-font-family-serif:             $app-font-family-base, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$app-font-family-sans-serif:        $app-font-family-base;
+
+$app-font-weight-base-custom:       $app-font-weight-base;
+$app-font-weight-strong-custom:     600;

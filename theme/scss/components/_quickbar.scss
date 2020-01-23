@@ -1,0 +1,44 @@
+.quickbar {
+    @include media-breakpoint-up(sm) {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+}
+
+.quickbar__item {
+    flex: 1;
+    padding: .5rem 2rem;
+    @include media-breakpoint-up(sm) {
+        padding: 0 0 1rem 0;
+        text-align: center;
+    }
+    @include media-breakpoint-up(md) {
+        padding: .5rem 0;
+        text-align: center;
+    }
+    &--events {
+        padding: .5rem 2rem;
+        @include media-breakpoint-up(sm) {
+        padding: 0 0 1rem 0;
+        text-align: center;
+    }
+        @include media-breakpoint-up(md) {
+            padding: .5rem 0;
+        }   
+    }
+}
+
+.quickbar__link {
+	color: #fff;
+	font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+
+	&:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+

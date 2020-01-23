@@ -1,0 +1,45 @@
+@font-face {
+	font-family: 'Raleway';
+	font-style: italic;
+	font-weight: 400;
+	font-display: auto;
+	src: local('Raleway Italic'), local('Raleway-Italic'), url(../assets/fonts/Raleway-italic-400.woff) format('woff');
+	unicode-range: U+0-10FFFF;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 100;
+	font-display: auto;
+	src: local('Raleway Thin'), local('Raleway-Thin'), url(../assets/fonts/Raleway-normal-100.woff) format('woff');
+	unicode-range: U+0-10FFFF;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 300;
+	font-display: auto;
+	src: local('Raleway Light'), local('Raleway-Light'), url(../assets/fonts/Raleway-normal-300.woff) format('woff');
+	unicode-range: U+0-10FFFF;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 400;
+	font-display: auto;
+	src: local('Raleway'), local('Raleway-Regular'), url(../assets/fonts/Raleway-normal-400.woff) format('woff');
+	unicode-range: U+0-10FFFF;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 600;
+	font-display: auto;
+	src: local('Raleway SemiBold'), local('Raleway-SemiBold'), url(../assets/fonts/Raleway-normal-600.woff) format('woff');
+	unicode-range: U+0-10FFFF;
+}
+

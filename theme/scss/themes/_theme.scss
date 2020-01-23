@@ -1,0 +1,98 @@
+//
+// Main site theme
+// --------------------------------------
+//== Main content area
+//
+//## Provides optional fullscreen layouts
+.app-main {
+  @include make-container();
+  @include make-container-max-widths();
+  //border: 1px solid red;
+}
+
+.app-content {
+    //border: 1px solid green;
+}
+
+//** Add full height to layout components
+.app-aside,
+.app-content-main {
+    //@include make-col-ready();
+    //@include make-col(12)
+    width: 100%;
+}
+
+.app-aside {
+    @include media-breakpoint-up(lg) {
+        @include make-col(4);
+        //padding: 0 1rem 1rem 1rem;
+    }
+}
+
+.app-content-main,
+.app-content--main {
+  //padding: 0 1rem 0 1rem;
+  &-sm {
+    @include media-breakpoint-up(lg) {
+      @include make-col(8);
+    }
+  }
+}
+
+.app-content-main-full {
+  @include make-col(12);
+    @include media-breakpoint-up(lg) {
+        @include make-col(12);
+        //padding: 0 1rem 0 0;
+    }
+}
+
+// Basic grid
+.app-grid {
+    margin-bottom: 1rem;
+    @include make-row();
+}
+//== Teaser grid column sizes
+$grid-item-sizes: (
+    w12: 1,
+    w16: 2,
+    w25: 3,
+    w33: 4,
+    w50: 6,
+    w66: 8,
+    w75: 9,
+    w100: 12,
+);
+
+@each $grid-item-size, $size-value in $grid-item-sizes {
+    .app-grid__item--#{$grid-item-size} {
+        @include when-inside('.app-grid') {
+            @include make-col-ready();
+            @include make-col(12);
+            @include media-breakpoint-up(lg) {
+                @include make-col($size-value);
+            }
+        }
+    }
+}
+
+.app-svg-icon {
+  display: inline;
+  width: 25px;
+  height: 25px;
+  @include when-inside('.app-footer') {
+      width: 15px;
+      height: 15px;
+  }
+}
+
+.app-svg-icon-heading {
+    display: inline;
+    width: 30px;
+    height: 30px;
+    margin-right: .5rem;
+
+    svg {
+      fill: $app-primary;
+    }
+}
