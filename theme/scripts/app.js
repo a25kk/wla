@@ -16,7 +16,7 @@ requirejs(['require',
         'use strict';
 
         // Trigger font face observer protection
-        var fontPrimary = new FontFaceObserver('Raleway', {
+        var fontPrimary = new FontFaceObserver('Open Sans', {
             weight: 400
         });
 

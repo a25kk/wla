@@ -4,8 +4,11 @@
 $color-cadetblue:               rgba(95,158,160,1) !default; // #5F9EA0
 
 $color-powderblue:              rgba(176,224,230,1) !default; // #B0E0E6
+$color-green-haze:				rgba(141,191,66,1) !default; // #009966
+$color-endeavour:				rgba(0,153,255,1) !default; // #005FAA
 
 $color-firebrick:               rgba(139, 0, 0, 1) !default; // #8b0000
+
 
 //== Colors
 //
@@ -48,7 +51,7 @@ $app-color-text:                       $color-shark;
 //## Used in mixin and modifier classes
 
 //** Primary brand color
-$app-color-primary-base:              $color-shark !default;
+$app-color-primary-base:              $color-green-haze !default;
 $app-color-primary-darker:            darken($app-color-primary-base, 15%)  !default;
 $app-color-primary-dark:              darken($app-color-primary-base, 7.5%) !default;
 $app-color-primary:                   $app-color-primary-base               !default; // #274d38
@@ -56,7 +59,7 @@ $app-color-primary-light:             lighten($app-color-primary-base, 7.5%) !de
 $app-color-primary-lighter:           lighten($app-color-primary-base, 15%) !default;
 
 //** Secondary brand color
-$app-color-secondary-base:              $color-powderblue !default;
+$app-color-secondary-base:              $color-endeavour !default;
 $app-color-secondary-darker:            darken($app-color-secondary-base, 15%)  !default;
 $app-color-secondary-dark:              darken($app-color-secondary-base, 7.5%) !default;
 $app-color-secondary:                   $app-color-secondary-base               !default; // #588c73

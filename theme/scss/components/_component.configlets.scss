@@ -16,7 +16,7 @@ $c-configlet-font-family-highlight:     $app-font-family-strong;
     background: $c-configlet-bg;
     font-family: $c-configlet-font-family-highlight;
     @include font-size($app-font-size-h2);
-    text-transform: uppercase;
+    text-transform: none;
     line-height: 1;
 }
 

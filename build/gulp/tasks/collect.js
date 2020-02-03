@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import pump from 'pump';
+import babel from 'gulp-babel';
 import gulpLoadPlugins from 'gulp-load-plugins';
 const $ = gulpLoadPlugins();
 
@@ -51,9 +51,9 @@ gulp.task('collect:scripts:vendor',
 scriptCollectionApp.forEach(function (libName) {
     gulp.task( 'scripts:'+libName, function () {
         return gulp.src(scriptSourcesApp[libName], {'cwd': cfg.paths.app })
-        // .pipe(babel({
-        //     presets: ['@babel/env']
-        // }))
+            .pipe(babel({
+                presets: ['@babel/env']
+            }))
             .pipe(gulp.dest(cfg.paths.dist + 'scripts/'));
     });
 });

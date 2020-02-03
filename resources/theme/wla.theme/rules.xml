@@ -430,8 +430,12 @@
         </replace>
 
         <replace css:content=".configlets">
-            <ul class="nav nav-list">
-                <xsl:apply-templates />
+            <ul class="o-menu">
+                <li class="o-menu__item">
+                    <div class="c-configlet">
+                        <xsl:apply-templates select="./li/*"/>
+                    </div>
+                </li>
             </ul>
         </replace>
 
@@ -473,7 +477,7 @@
         </replace>
 
         <!-- Portlets-->
-        <replace css:content=".portlet:not(.portletNavigationTree)">
+        <replace css:content=".portlet:not(.portletNavigationTree)" css:if-not-content=".template-prefs_install_products_form">
             <div class="app-card">
                 <xsl:for-each css:select=".portlet > *">
                     <div>
@@ -491,6 +495,23 @@
                 </xsl:for-each>
             </div>
         </replace>
+
+        <rules css:if-content=".template-prefs_install_products_form">
+            <replace css:content=".portlet:not(.portletNavigationTree)">
+                <xsl:copy>
+                    <xsl:copy-of select="@*" />
+                    <xsl:attribute name="class"><xsl:value-of select="./@class" /> c-control-panel</xsl:attribute>
+                    <xsl:apply-templates />
+                </xsl:copy>
+            </replace>
+            <replace css:content=".portlet:not(.portletNavigationTree) .portletHeader">
+                <xsl:copy>
+                    <xsl:copy-of select="@*" />
+                    <xsl:attribute name="class">c-control-panel__header</xsl:attribute>
+                    <xsl:apply-templates />
+                </xsl:copy>
+            </replace>
+        </rules>
 
         <after css:theme-children="#app-page-contact"
                css:content-children="#app-contact-viewlet-cards" />
