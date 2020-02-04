@@ -25,14 +25,12 @@
   "sprite": {
     "mode": {
       "symbol": {
-        "dest": "sprite",
-        "sprite": "sprite.svg",
-        "example": true
+        "prefix": "o-icon__",
+        "example": true,
+        "render": {
+          "scss": true
+        }
       }
-    },
-    "svg": {
-      "xmlDeclaration": false,
-      "doctypeDeclaration": false
     }
   },
   "scripts": {
@@ -40,10 +38,10 @@
       "scripts/a25.js",
       "scripts/a25.helpers.js",
       "scripts/a25.navbar.js",
-      "scripts/app.js"
+      "scripts/app.js",
+      "scripts/paneleditor.js", "scripts/polyfills.js", "scripts/slider.js", "scripts/utils.js"
     ],
     "src": [
-      "JVFloat/jvfloat.js",
       "flickity/dist/flickity.pkgd.js",
       "fontfaceobserver/fontfaceobserver.js",
       "hideShowPassword/hideShowPassword.js",
@@ -51,11 +49,10 @@
       "lazysizes/plugins/parent-fit/ls.parent-fit.js",
       "mailcheck/src/mailcheck.js",
       "requirejs/require.js",
-      "respimage/respimage.js"
-
+      "respimage/respimage.js",
+      "sortablejs/Sortable.min.js", "svg4everybody/dist/svg4everybody.js", "vh-check/dist/vh-check.min.js", "x-ray/dist/js/x-ray.js"
     ],
     "base": [
-      "JVFloat/jvfloat.js",
       "flickity/dist/flickity.pkgd.js",
       "fontfaceobserver/fontfaceobserver.js",
       "hideShowPassword/hideShowPassword.js",

@@ -8,7 +8,7 @@
     vertical-align: middle;
     user-select: none;
     border: 1px solid transparent;
-    font-family: $app-font-family-strong;
+    font-family: $app-font-family-base;
     @include button-size($input-btn-padding-y, $input-btn-padding-x, $font-size-base, $input-btn-line-height, $btn-border-radius);
     @include transition($btn-transition);
 

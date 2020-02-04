@@ -12,6 +12,8 @@ $c-toolbar-background:          $app-color-text;
 
 $c-toolbar-item-display:        flex;
 
+$c-toolbar-font-family:         $app-font-family-base;
+
 // Grow
 @keyframes toolBarEntrance {
     from {
@@ -65,7 +67,7 @@ $c-toolbar-item-display:        flex;
 
 .c-toolbar__title {
     text-align: center;
-    font-family: $app-font-family-strong;
+    font-family: $c-toolbar-font-family;
 }
 
 .c-toolbar__actions {
