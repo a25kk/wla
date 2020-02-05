@@ -63,15 +63,17 @@
 .c-panel__main {
     position: relative;
     width: $c-panel-width;
-    margin-left: auto;
-    margin-right: auto;
     padding-top: $app-spacer-base;
     padding-bottom: $app-spacer-base;
     @include media-breakpoint-up(md) {
        padding-bottom: 0;
     }
-    &--centered {
+    &--container {
         @include make-container-max-widths();
+    }
+    &--centered {
+        margin-left: auto;
+        margin-right: auto;
     }
     @include when-inside('.c-panel--1') {
             padding-top: 0;

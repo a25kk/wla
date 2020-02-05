@@ -21927,8 +21927,6 @@ a.c-button--active-action {
 .c-panel__main {
   position: relative;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   padding-top: calc(1rem * 1.5);
   padding-bottom: calc(1rem * 1.5);
 }
@@ -21940,27 +21938,32 @@ a.c-button--active-action {
 }
 
 @media (min-width: 576px) {
-  .c-panel__main--centered {
+  .c-panel__main--container {
     max-width: 540px;
   }
 }
 
 @media (min-width: 768px) {
-  .c-panel__main--centered {
+  .c-panel__main--container {
     max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
-  .c-panel__main--centered {
+  .c-panel__main--container {
     max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
-  .c-panel__main--centered {
+  .c-panel__main--container {
     max-width: 1140px;
   }
+}
+
+.c-panel__main--centered {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .c-panel--1 .c-panel__main {
