@@ -1,7 +1,7 @@
 .o-figure {
     display: block;
     margin-bottom: 0;
-        @include when-inside('.c-widget--hph-teaser-links-external') { 
+        @include when-inside('.c-widget--hph-teaser-links-external') {
         max-width: 70%;
         margin: auto;
         @include mq($from: lg) {
@@ -23,7 +23,7 @@
 }
 
 .o-figure__content {
-    box-shadow: 4px 4px 5px 0 rgba(50,50,50,.75);
+    // box-shadow: 4px 4px 5px 0 rgba(50,50,50,.75);
 }
 
 //== Page figure element

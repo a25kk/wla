@@ -20,10 +20,6 @@ $c-slider-padding:                $app-spacer-base;
 
 .c-slider__main {
   width: 100%;
-  box-shadow: 4px 4px 5px 0 rgba(50,50,50,.75);
-  //touch-action: none;
-  //-webkit-user-select: none;
-  //-webkit-user-drag: none;
 }
 
 .c-slider__items {
@@ -83,58 +79,4 @@ $c-slider-padding:                $app-spacer-base;
         }
     }
 }
-
-/* ---- flickity overrides ---- */
-
-.flickity-prev-next-button {
-  background: transparent;
-  @include mq($from: lg) {
-    width: 100px;
-    height: 100px;
-  }
-}
-
-.flickity-prev-next-button .flickity-button-icon {
-  position: absolute;
-  left: 20%;
-  //top: -200%;
-  width: 60%;
-  height: 60%;
-  @include mq($from: md) {
-    top: 20%;
-  }
-}
-
-.flickity-prev-next-button .arrow {
-  fill: #fff;
-}
-
-.flickity-prev-next-button:hover {
-    background: none;
-}
-
-.flickity-page-dots {
-  display: none;
-  text-align: center;
-  position: absolute;
-  top: 55%;
-  padding-top: 0;
-  max-height: 30px;
-  @include mq($from: md) {
-    border: 0;
-    top: 85%;
-    bottom: 2rem;
-    padding-top: 1rem;
-  }
-  @include mq($from: xl) {
-    top: 90%;
-  }
-  .dot {
-    background-color: #fff;
-    @include mq($from: md) {
-      background-color: #fff;
-      }
-    }
-}
-
 

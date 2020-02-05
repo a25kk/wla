@@ -14037,6 +14037,73 @@ https://flickity.metafizzy.co
   opacity: 1;
 }
 
+/* ---- flickity overrides ---- */
+.flickity-prev-next-button {
+  background: transparent;
+}
+
+@media (min-width: 62em) {
+  .flickity-prev-next-button {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.flickity-prev-next-button .flickity-button-icon {
+  position: absolute;
+  left: 20%;
+  width: 60%;
+  height: 60%;
+}
+
+@media (min-width: 48em) {
+  .flickity-prev-next-button .flickity-button-icon {
+    top: 20%;
+  }
+}
+
+.flickity-prev-next-button .arrow {
+  fill: #fff;
+}
+
+.flickity-prev-next-button:hover {
+  background: none;
+}
+
+.flickity-page-dots {
+  display: none;
+  text-align: center;
+  position: absolute;
+  top: 55%;
+  padding-top: 0;
+  max-height: 30px;
+}
+
+@media (min-width: 48em) {
+  .flickity-page-dots {
+    border: 0;
+    top: 85%;
+    bottom: 2rem;
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .flickity-page-dots {
+    top: 90%;
+  }
+}
+
+.flickity-page-dots .dot {
+  background-color: #fff;
+}
+
+@media (min-width: 48em) {
+  .flickity-page-dots .dot {
+    background-color: #fff;
+  }
+}
+
 html {
   overflow-y: scroll;
   /* [2] */
@@ -14153,6 +14220,8 @@ img[data-sizes="auto"] {
 }
 
 .o-image--loaded {
+  -webkit-filter: blur(0);
+          filter: blur(0);
   opacity: 1;
 }
 
@@ -16093,11 +16162,6 @@ input, button, select, textarea {
   width: 100%;
   height: 100%;
   background-color: #efefef;
-}
-
-.o-figure__content {
-  -webkit-box-shadow: 4px 4px 5px 0 rgba(50, 50, 50, 0.75);
-          box-shadow: 4px 4px 5px 0 rgba(50, 50, 50, 0.75);
 }
 
 .o-figure__embedded {
@@ -18723,20 +18787,6 @@ fieldset[disabled] a.searchButton {
 img[data-sizes="auto"] {
   display: block;
   width: 100%;
-}
-
-.image--lazy-load {
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
-  -webkit-transition: -webkit-filter 400ms;
-  transition: -webkit-filter 400ms;
-  transition: filter 400ms;
-  transition: filter 400ms, -webkit-filter 400ms;
-}
-
-.image--loaded {
-  -webkit-filter: blur(0);
-          filter: blur(0);
 }
 
 .app-figure__embedded {
@@ -21927,6 +21977,10 @@ a.c-button--active-action {
     padding-right: 0;
     padding-left: 0;
   }
+}
+
+.c-panel--editable .c-panel__main {
+  min-height: 2rem;
 }
 
 .c-panels--view .c-panel__footer {

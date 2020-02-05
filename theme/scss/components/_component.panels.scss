@@ -12,7 +12,7 @@
             padding-top: 0;
             @include mq($from: md) {
                 padding-top: 1rem;
-            }    
+            }
         }
     }
 }
@@ -83,6 +83,9 @@
             padding-right: 0;
             padding-left: 0;
         }
+    }
+    @include when-inside('.c-panel--editable') {
+        min-height: 2rem;
     }
 }
 
