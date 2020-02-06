@@ -1,4 +1,4 @@
-{
+  {
   "name": "wla",
   "paths": {
     "app": "../../theme/",
@@ -47,9 +47,9 @@
       "hideShowPassword/hideShowPassword.js",
       "lazysizes/lazysizes-umd.js",
       "lazysizes/plugins/parent-fit/ls.parent-fit.js",
-      "mailcheck/src/mailcheck.js",
       "requirejs/require.js",
       "respimage/respimage.js",
+      "choices.js/public/assets/scripts/choices.min.js",
       "sortablejs/Sortable.min.js", "svg4everybody/dist/svg4everybody.js", "vh-check/dist/vh-check.min.js", "x-ray/dist/js/x-ray.js"
     ],
     "base": [

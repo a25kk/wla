@@ -1,6 +1,6 @@
 "use strict";
 
-requirejs(['require', '/scripts/svg4everybody.js', '/scripts/flickity.pkgd.js', '/scripts/slider.js', '/scripts/paneleditor.js', '/scripts/x-ray.js', '/scripts/Sortable.min.js', '/scripts/fontfaceobserver.js', '/scripts/respimage.js', '/scripts/ls.parent-fit.js', '/scripts/lazysizes-umd.js', '/scripts/a25.js', '/scripts/a25.navbar.js'], function (require, svg4everybody, Flickity, slider, panelEditor, xrays, SortableJS) {
+requirejs(['require', '/scripts/svg4everybody.js', '/scripts/flickity.pkgd.js', '/scripts/slider.js', '/scripts/paneleditor.js', '/scripts/x-ray.js', '/scripts/Sortable.min.js', '/scripts/choices.min.js', '/scripts/fontfaceobserver.js', '/scripts/respimage.js', '/scripts/ls.parent-fit.js', '/scripts/lazysizes-umd.js', '/scripts/a25.js', '/scripts/a25.navbar.js'], function (require, svg4everybody, Flickity, slider, panelEditor, xrays, SortableJS, Choices) {
   'use strict'; // Trigger font face observer protection
 
   var fontPrimary = new FontFaceObserver('Open Sans', {
@@ -21,7 +21,16 @@ requirejs(['require', '/scripts/svg4everybody.js', '/scripts/flickity.pkgd.js', 
 
   svg4everybody(); // Panel page and widget editor
 
-  panelEditor.init(); // Panel Editor Sortable
+  panelEditor.init(); // Choices select
+
+  var choicesSelector = document.querySelector('.js-choices-selector');
+
+  if (choicesSelector !== null) {
+    var choices = new Choices(choicesSelector, {
+      itemSelectText: 'auswählen'
+    });
+  } // Panel Editor Sortable
+
 
   var sortableSection = document.querySelector('.js-sortable');
 

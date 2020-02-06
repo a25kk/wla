@@ -56,6 +56,7 @@
 @import 'vendors/bootstrap';
 @import 'vendors/x-ray';
 @import 'vendors/flickity';
+@import 'vendors/choices';
 
 // Elements
 @import 'elements/element.html';
@@ -135,6 +136,7 @@
 @import 'components/component.listing.tiles';
 
 @import 'components/component.cards';
+@import 'components/component.snippet';
 @import 'components/component.slider';
 
 // Widget Component

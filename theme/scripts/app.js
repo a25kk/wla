@@ -5,6 +5,7 @@ requirejs(['require',
         '/scripts/paneleditor.js',
         '/scripts/x-ray.js',
         '/scripts/Sortable.min.js',
+        '/scripts/choices.min.js',
         '/scripts/fontfaceobserver.js',
         '/scripts/respimage.js',
         '/scripts/ls.parent-fit.js',
@@ -12,7 +13,7 @@ requirejs(['require',
         '/scripts/a25.js',
         '/scripts/a25.navbar.js'
     ],
-    function(require, svg4everybody, Flickity, slider, panelEditor, xrays, SortableJS) {
+    function(require, svg4everybody, Flickity, slider, panelEditor, xrays, SortableJS, Choices) {
         'use strict';
 
         // Trigger font face observer protection
@@ -39,6 +40,14 @@ requirejs(['require',
 
         // Panel page and widget editor
         panelEditor.init();
+
+        // Choices select
+        let choicesSelector = document.querySelector('.js-choices-selector');
+        if (choicesSelector !== null) {
+            const choices = new Choices(choicesSelector, {
+                itemSelectText: 'auswählen',
+            });
+        }
 
         // Panel Editor Sortable
         let sortableSection = document.querySelector('.js-sortable');
