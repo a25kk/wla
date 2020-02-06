@@ -22546,6 +22546,12 @@ a.c-button--active-action {
   margin-left: 5rem;
 }
 
+.c-widget-editor__item--reverse {
+  background-color: #212529;
+  border-color: #212529;
+  color: #fff;
+}
+
 .c-widget-editor__item-aside {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 4rem;
@@ -22555,6 +22561,10 @@ a.c-button--active-action {
   height: 3rem;
   border-right: 1px solid #999999;
   color: #999999;
+}
+
+.c-widget-editor__item--reverse .c-widget-editor__item-aside {
+  color: #fff;
 }
 
 .c-widget-editor__item-actions {

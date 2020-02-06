@@ -17,6 +17,11 @@ $c-widget-font-family-highlight:          $app-font-family-base;
     &--secondary {
         margin-left: 5rem;
     }
+    &--reverse {
+        background-color: $app-color-text;
+        border-color: $app-color-text;
+        color: $app-color-white;
+    }
 }
 
 .c-widget-editor__item-aside {
@@ -25,6 +30,9 @@ $c-widget-font-family-highlight:          $app-font-family-base;
     height: 3rem;
     border-right: 1px solid $app-color-gray-lighter;
     color: $app-color-gray-lighter;
+    @include when-inside('.c-widget-editor__item--reverse') {
+        color: $app-color-white;
+    }
 }
 
 .c-widget-editor__item-actions {
