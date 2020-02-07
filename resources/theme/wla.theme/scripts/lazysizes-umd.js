@@ -1,4 +1,4 @@
-	(function(window, factory) {
+(function(window, factory) {
 	var lazySizes = factory(window, window.document, Date);
 	if(typeof module == 'object' && module.exports){
 		module.exports = lazySizes;

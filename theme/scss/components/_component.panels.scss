@@ -81,6 +81,8 @@
     @include when-inside('.c-panel--full-width') {
         padding-right: $app-spacer-base;
         padding-left: $app-spacer-base;
+        padding-right: 0;
+        padding-left: 0;
         @include mq($from: lg) {
             padding-right: 0;
             padding-left: 0;

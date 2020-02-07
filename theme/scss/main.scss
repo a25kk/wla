@@ -115,7 +115,7 @@
 @import 'components/newsletter';
 @import 'components/quickbar';
 @import 'components/gallery';
-@import 'components/configlets';
+// @import 'components/configlets';
 @import 'components/callouts';
 
 @import 'pages/signin';
@@ -138,6 +138,8 @@
 @import 'components/component.cards';
 @import 'components/component.snippet';
 @import 'components/component.slider';
+
+@import 'components/component.page-header';
 
 // Widget Component
 @import 'components/component.widget.alias';
