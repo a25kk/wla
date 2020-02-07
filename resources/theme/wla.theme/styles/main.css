@@ -8550,6 +8550,7 @@ textarea.is-invalid {
   color: #212529;
   text-align: center;
   vertical-align: middle;
+  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -8586,10 +8587,6 @@ textarea.is-invalid {
 
 .btn.disabled, .btn:disabled {
   opacity: 0.65;
-}
-
-.btn:not(:disabled):not(.disabled) {
-  cursor: pointer;
 }
 
 a.btn.disabled,
@@ -18106,7 +18103,7 @@ div.riform .label {
   max-width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .app-header-panel.app-header-brandbar {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 16.6666666667%;
@@ -22324,6 +22321,8 @@ a.c-button--active-action {
 .c-panel--full-width .c-panel__main {
   padding-right: calc(1rem * 1.5);
   padding-left: calc(1rem * 1.5);
+  padding-right: 0;
+  padding-left: 0;
 }
 
 @media (min-width: 62em) {
@@ -23076,8 +23075,7 @@ c-list--bordered .c-list__item:last-of-type {
 @media (min-width: 62em) {
   .c-slider {
     width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    margin-top: -144px;
   }
 }
 
@@ -23160,6 +23158,64 @@ c-list--bordered .c-list__item:last-of-type {
 @media (min-width: 62em) {
   .c-widget--5187ee78-39c4-4814-b49f-b83fc9e121d3 {
     margin-top: -144px;
+  }
+}
+
+.c-page-header {
+  margin: 0 auto 1.5rem;
+}
+
+@media (min-width: 576px) {
+  .c-page-header {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .c-page-header {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .c-page-header {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .c-page-header {
+    max-width: 1140px;
+  }
+}
+
+.c-page-header__title {
+  margin-bottom: 1.5rem;
+}
+
+.c-page-header__headline {
+  padding: .125rem 0;
+  color: #000;
+  line-height: 1.25;
+  font-size: 2rem;
+  font-family: "Marck Script";
+}
+
+@media (min-width: 992px) {
+  .c-page-header__headline {
+    font-size: 3.6rem;
+  }
+}
+
+.c-page-header__abstract {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+@media (max-width: 1200px) {
+  .c-page-header__abstract {
+    font-size: calc(1.275rem + 0.3vw) ;
   }
 }
 
