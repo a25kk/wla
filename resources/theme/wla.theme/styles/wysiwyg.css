@@ -8550,6 +8550,7 @@ textarea.is-invalid {
   color: #212529;
   text-align: center;
   vertical-align: middle;
+  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -8586,10 +8587,6 @@ textarea.is-invalid {
 
 .btn.disabled, .btn:disabled {
   opacity: 0.65;
-}
-
-.btn:not(:disabled):not(.disabled) {
-  cursor: pointer;
 }
 
 a.btn.disabled,
@@ -17639,19 +17636,19 @@ div.riform .label {
   }
 }
 
-.template-front-page-view .app-header {
+.section-startseite .app-header {
   min-height: 320px;
   background: #8dbf42;
 }
 
 @media (min-width: 576px) {
-  .template-front-page-view .app-header {
+  .section-startseite .app-header {
     min-height: 100px;
   }
 }
 
 @media (min-width: 576px) and (min-width: 1200px) {
-  .template-front-page-view .app-header {
+  .section-startseite .app-header {
     background-color: transparent;
   }
 }
@@ -18927,6 +18924,10 @@ img[data-sizes="auto"] {
   display: none;
 }
 
+.section-startseite .app-pathbar {
+  display: none;
+}
+
 .app-pathbar .breadcrumb {
   background-color: transparent;
   margin-bottom: 0;
@@ -19014,6 +19015,9 @@ body.template-front-page-view .app-pathbar {
   top: 0;
   height: 100%;
   width: 100%;
+  padding: 0 2rem;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .app-brandname {
@@ -19504,6 +19508,7 @@ body.template-front-page-view .app-pathbar {
 }
 
 .app-banner {
+  border: 1px solid red;
   overflow: hidden;
   margin-bottom: 2rem;
   background: #fff;
