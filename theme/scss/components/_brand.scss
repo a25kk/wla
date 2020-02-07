@@ -7,11 +7,8 @@
 .app-brand {
     display: flex;
     padding: 1rem;
-    //background: #fff;
     border: 0px solid #fff;
     border-radius: 3px;
-    // align-items: center;
-    //margin-right: $spacer;
 }
 
 //** Inline svg logo
@@ -54,6 +51,8 @@
     top: 0;
     height: 100%;
     width: 100%;
+    padding: 0 2rem;
+    object-fit: contain;
 }
 
 .app-brandname-logo-image {

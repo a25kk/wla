@@ -15,7 +15,7 @@
     @include media-breakpoint-up(lg) {
         background-size: cover !important;
     }
-        @include when-inside('.template-front-page-view') {
+        @include when-inside('.section-startseite') {
             min-height: 320px;
             background: $app-primary;
         @include media-breakpoint-up(sm) {
