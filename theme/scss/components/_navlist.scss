@@ -1,0 +1,88 @@
+//
+// Navigation Card Styles
+// ------------------------------------------------------
+
+
+.app-nav-tree {
+    //display: none;
+    background-color: transparent;
+    font-weight: 500;
+    @include media-breakpoint-up(lg) {
+        display: block;
+    }
+}
+
+.app-nav__list {
+    padding-left: 0;
+    list-style: none;
+    &--level-1,
+    &--level-2 {
+        margin-left: .5rem;
+    }
+}
+
+.app-nav-list {
+    .app-card__header {
+        display: none;
+    }
+}
+
+.app-nav-tree-list {
+    padding-left: 0;
+    list-style: none;
+    li {
+        width: 100%;
+    }
+}
+
+.app-nav__list-item {
+    margin-left: 0;
+    &:not(last) {
+        margin-bottom: .25rem;
+        border-bottom: 1px solid #000;
+    }
+    &:last-of-type {
+        border-bottom: 0px;
+    }
+}
+
+.app-nav__list-link {
+    color: #000;
+    line-height: 2rem;
+    font-size: 1rem;
+    &:hover {
+        color: darken($app-primary, 10%);
+    }
+    &.navTreeCurrentNode {
+        color: $app-gray;
+    }
+    &:after {
+        content: ">";
+        float: right;
+    }
+}
+
+.app-nav__list-link--open {
+    color: $app-primary;
+}
+
+.app-nav__list-link--active {
+    color: $app-primary;
+}
+
+.app-nav__list--level-0 {
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.app-nav__list--level-1 {
+    margin-left: 1rem;
+    text-transform: none;
+    @include when-inside('.section-news') {
+        display: none;
+    }
+}
+
+.contenttype-plone-site {
+    display: none;
+}

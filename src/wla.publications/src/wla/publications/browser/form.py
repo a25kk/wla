@@ -1,46 +1,34 @@
 # -*- coding: utf-8 -*-
 
-from plone.directives import form
-
-from zope import schema
-import z3c.form
-from zope.schema.interfaces import IContextSourceBinder
-from zope.interface import directlyProvides
-
-from Products.CMFCore.interfaces import ISiteRoot
-from Products.statusmessages.interfaces import IStatusMessage
-
-from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
-
-from zope.browserpage.viewpagetemplatefile import ViewPageTemplateFile as Zope3PageTemplateFile
-
-from plone.autoform import directives
-
-
-from wla.publications import _ 
-
-
-from wla.publications.utils import validateaddress, trusted
-
-from zope.interface import invariant, Invalid
-from zope.component import getUtility, getMultiAdapter
 from smtplib import SMTPException, SMTPRecipientsRefused
-from plone.registry.interfaces import IRegistry
-from Products.CMFPlone.interfaces.controlpanel import IMailSchema
 
-
-from Products.CMFCore.utils import getToolByName
-from Products.CMFCore.interfaces import ISiteRoot
-
+import z3c.form
 from plone.app.uuid.utils import uuidToObject
+from plone.autoform import directives
+from plone.autoform.form import AutoExtensibleForm
+from plone.registry.interfaces import IRegistry
+from plone.supermodel import model
+from Products.CMFCore.interfaces import ISiteRoot
+from Products.CMFCore.utils import getToolByName
+from Products.CMFPlone.interfaces.controlpanel import IMailSchema
+from Products.statusmessages.interfaces import IStatusMessage
+from z3c.form import button, form
+from zope import schema
+from zope.browserpage.viewpagetemplatefile import \
+    ViewPageTemplateFile as Zope3PageTemplateFile
+from zope.component import getMultiAdapter, getUtility
+from zope.interface import Invalid, invariant
+from zope.schema.vocabulary import SimpleTerm, SimpleVocabulary
 
+from wla.publications import _
+from wla.publications.utils import trusted, validateaddress
 
 greetings = SimpleVocabulary(
     [
      SimpleTerm(value='--NOVALUE--', title=_(u'select value')),
      SimpleTerm(value='An', title=_(u'An')),
      SimpleTerm(value='Ehepaar', title=_(u'Ehepaar')),
-     SimpleTerm(value='Familie', title=_(u'Familie')), 
+     SimpleTerm(value='Familie', title=_(u'Familie')),
      SimpleTerm(value='Firma', title=_(u'Firma')),
      SimpleTerm(value='Frau', title=_(u'Frau')),
      SimpleTerm(value='Herr', title=_(u'Herr')),
@@ -58,16 +46,16 @@ titles = SimpleVocabulary(
      ]
     )
 
-class IOrderForm(form.Schema):
+class IOrderForm(model.Schema):
     """ Define form fields """
-    greeting = schema.List(title = _(u'greeting'), required = True, value_type=schema.Choice(source=greetings)) 
-    titles = schema.List(title = _(u'title'), required = True, value_type=schema.Choice(source=titles)) 
-    
+    greeting = schema.List(title = _(u'greeting'), required = True, value_type=schema.Choice(source=greetings))
+    titles = schema.List(title = _(u'title'), required = True, value_type=schema.Choice(source=titles))
+
     organization = schema.TextLine(title=_(u'Organization'), required=False)
-    
+
     lastname = schema.TextLine(title=_(u'Lastname'), required=True)
     firstname = schema.TextLine(title=_(u'Firstname'), required=True)
-    
+
     street = schema.TextLine(title=_(u'Street'), required=True)
     number = schema.TextLine(title=_(u'Number'), required=True)
     zipcode = schema.TextLine(title=_(u'Zipcode'), required=True)
@@ -76,14 +64,14 @@ class IOrderForm(form.Schema):
 
     email = schema.TextLine(title=_(u'Email'), required=True, constraint=validateaddress)
     phone = schema.TextLine(title=_(u'Phone'), required=False)
-  
+
     publications = schema.Text(
             title=_(u"publications")
         )
-    form.widget(greeting=z3c.form.browser.select.SelectFieldWidget)
-    form.widget(titles=z3c.form.browser.select.SelectFieldWidget)
+    directives.widget(greeting=z3c.form.browser.select.SelectFieldWidget)
+    directives.widget(titles=z3c.form.browser.select.SelectFieldWidget)
 
-class OrderForm(form.SchemaForm):
+class OrderForm(AutoExtensibleForm, form.Form):
     """ Define Form handling
 
     This form can be accessed as http://yoursite/@@greeting-form
@@ -157,9 +145,9 @@ class OrderForm(form.SchemaForm):
         mail_settings = registry.forInterface(IMailSchema, prefix='plone')
         m_to = mail_settings.email_from_address
 
-        # to admin 
+        # to admin
 
-        m_from = m_to 
+        m_from = m_to
 
 
         try:

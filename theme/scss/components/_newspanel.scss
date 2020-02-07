@@ -1,0 +1,112 @@
+//
+// Frontpage NewsItems listing
+// -----------------------------------------
+
+
+.app-news-panel-wrapper {
+    margin-top: 0;
+    @include make-container();
+    @include make-container-max-widths();
+    @include media-breakpoint-up(sm) {
+        //margin-top: 5rem;
+    }
+}
+
+// News listing
+.app-news-list {
+    @include make-row();
+    //padding: $spacer;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: .5rem;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.app-news-list-item {
+    //margin-bottom: $spacer;
+    padding: 1rem;
+	@include media-breakpoint-up(sm) {
+        @include make-col(6);
+        //float: left;
+        //max-width: 33%;
+        padding: 1rem;
+	}
+
+
+}
+
+.app-news-list-item-aside,
+.app-news-list-item-main {
+	@include media-breakpoint-up(sm) {
+    }
+}
+
+.app-news-list-item-aside {
+	@include media-breakpoint-up(sm) {
+    	//@include make-col(4);
+        padding-right: 0;
+    }
+    .app-page-image-container{
+        margin-bottom: 0;
+    }
+}
+
+.app-news-list-item-main {
+	@include media-breakpoint-up(sm) {
+    	//@include make-col(8);
+    }
+    padding: 1rem;
+    background: $app-gray-light;
+    position: relative;
+    //min-height: 180px;
+}
+
+.app-news-list-item-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    //a {
+    //    color: #fff;
+    //}
+}
+
+.app-news-list-item-abstract {
+    margin-bottom: 1rem;
+    font-size: .8rem;
+}
+
+.app-news-list-item-actions {
+    text-align: left;
+    @include media-breakpoint-up(md) {
+        //position: absolute;
+        //bottom: 1rem;
+        //right: 1rem;
+        }
+
+    //a {
+    //    color: #fff;
+    //}
+
+}
+.app-news-list-link {
+    font-size: 2rem;
+}
+
+.app-news-list-item-anchor {
+    &:hover {
+        transition: all 0.5s ease;
+        filter: grayscale(100%);
+    }
+}
+
+.app-trenner {
+    min-height: 1rem;
+    background: #000;
+}

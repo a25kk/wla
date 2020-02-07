@@ -1,0 +1,13 @@
+.social-bar {
+    display: none;
+    @include media-breakpoint-up(lg) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.social-bar__item {
+    padding: .75rem .25rem;
+}
+
+

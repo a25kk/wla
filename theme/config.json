@@ -1,0 +1,147 @@
+{
+  "name": "bfa",
+  "paths": {
+    "app": "../../theme/",
+    "base": "../../resources/theme/bfa.theme/",
+    "dev": "../../theme/_site/",
+    "dist": "../../resources/theme/bfa.theme/",
+    "diazoPrefix": "/++theme++bfa.theme/",
+    "src": "node_modules/",
+    "theme": "../../theme/"
+  },
+  "favicon": {
+    "dataFile": "faviconData.json",
+    "masterPicture": "favicon.png",
+    "iconPath": "assets/ico/",
+    "ios": "#ffffff",
+    "windows": "#2d89ef",
+    "androidBackground": "#ffffff",
+    "androidColor": "#ffffff",
+    "safariColor": "#5bbad5",
+    "revisionKey": "iet7OjeChoz1",
+    "html": "_includes/base/head.html",
+    "htmlDist": "_includes/base/"
+  },
+  "sprite": {
+    "mode": {
+      "symbol": {
+        "prefix": "o-icon__",
+        "example": true,
+        "render": {
+          "scss": true
+        }
+      }
+    }
+  },
+  "styles": {
+    "src": [
+      "rfs/scss/_rfs.scss",
+      "sass-mq/_mq.scss"
+    ]
+  },
+  "scripts": {
+    "app": [
+      "scripts/a25.helpers.js",
+      "scripts/a25.js",
+      "scripts/a25.navbar.js",
+      "scripts/app.js",
+      "scripts/paneleditor.js",
+      "scripts/polyfills.js",
+      "scripts/slider.js",
+      "scripts/utils.js"
+    ],
+    "src": [
+      "flickity/dist/flickity.pkgd.js",
+      "fontfaceobserver/fontfaceobserver.js",
+      "lazysizes/lazysizes-umd.js",
+      "lazysizes/plugins/parent-fit/ls.parent-fit.js",
+      "requirejs/require.js",
+      "respimage/respimage.js",
+      "sortablejs/Sortable.min.js",
+      "svg4everybody/dist/svg4everybody.js",
+      "vh-check/dist/vh-check.min.js",
+      "x-ray/dist/js/x-ray.js"
+
+    ],
+    "base": [
+      "JVFloat/jvfloat.js",
+      "flickity/dist/flickity.pkgd.js",
+      "fontfaceobserver/fontfaceobserver.js",
+      "hideShowPassword/hideShowPassword.js",
+      "jquery/dist/jquery.js",
+      "lazysizes/lazysizes.js",
+      "lazysizes/plugins/ls.parent-fit.js",
+      "mailcheck/src/mailcheck.js",
+      "requirejs/require.js",
+      "respimage/respimage.js"
+    ]
+  },
+  "replacementPatterns": {
+    "base": [
+      {
+        "match": "/../../resources/theme/bfa.theme/styles/",
+        "replacement": "/styles/"
+      },
+      {
+        "match": "/dist/styles/",
+        "replacement": "/styles/"
+      }
+    ],
+    "server": [
+      {
+        "match": "../../assets/",
+        "replacement": "../assets/"
+      },
+      {
+        "match": "../../dist/styles/",
+        "replacement": "/styles/"
+      },
+      {
+        "match": "../dist/styles/",
+        "replacement": "/styles/"
+      },
+      {
+        "match": "../../dist/scripts/",
+        "replacement": "/scripts/"
+      },
+      {
+        "match": "../dist/scripts/",
+        "replacement": "/scripts/"
+      }
+    ],
+    "pat": [
+      {
+        "match": "/../dist/",
+        "replacement": "/++theme++dhp.sitetheme/dist/++theme++dhp.sitetheme/dist/"
+      },
+      {
+        "match": "../assets/",
+        "replacement": "assets/"
+      },
+      {
+        "match": "assets/",
+        "replacement": "/++theme++dhp.sitetheme//dist/assets/"
+      },
+      {
+        "match": "../styles/",
+        "replacement": "/++theme++dhp.sitetheme/dist/styles/"
+      },
+      {
+        "match": "styles/",
+        "replacement": "/++theme++dhp.sitetheme/dist/styles/"
+      },
+      {
+        "match": "/styles/",
+        "replacement": "/++theme++dhp.sitetheme/dist/styles/"
+      },
+      {
+        "match": "../scripts/",
+        "replacement": "/++theme++dhp.sitetheme/scripts/"
+      },
+      {
+        "match": "scripts/",
+        "replacement": "/++theme++dhp.sitetheme/scripts/"
+      }
+    ]
+  }
+}
