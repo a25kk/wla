@@ -11,8 +11,7 @@ $c-slider-padding:                $app-spacer-base;
   //margin-right: -($app-spacer-base);
   @include mq($from: lg) {
     width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    margin-top: -144px;
   }
 }
 
