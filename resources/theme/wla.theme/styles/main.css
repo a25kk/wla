@@ -8550,7 +8550,6 @@ textarea.is-invalid {
   color: #212529;
   text-align: center;
   vertical-align: middle;
-  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -8587,6 +8586,10 @@ textarea.is-invalid {
 
 .btn.disabled, .btn:disabled {
   opacity: 0.65;
+}
+
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
 }
 
 a.btn.disabled,
@@ -20539,40 +20542,6 @@ body.template-front-page-view .app-pathbar {
   background: #fff;
 }
 
-.configlets {
-  list-style: none;
-}
-
-.inner-configlet {
-  margin-bottom: .5rem;
-  padding: .25rem;
-  border: 1px solid #8dbf42;
-  background: #8dbf42;
-  text-align: center;
-  font-size: 1rem;
-}
-
-.inner-configlet a {
-  color: #fff;
-  font-size: .8rem;
-}
-
-.inner-configlet > a > span {
-  display: block;
-  color: #fff;
-}
-
-.template-overview-controlpanel ul {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  list-style: none !important;
-}
-
-.template-overview-controlpanel ul li {
-  display: inline;
-  width: 25%;
-}
-
 .app-callout {
   padding: 0.5rem 1rem 1rem;
   margin: 1rem 0;
@@ -22115,6 +22084,7 @@ a.c-button--active-action {
   padding-top: 1rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  float: none !important;
 }
 
 .c-configlet > form:not(:first-child),

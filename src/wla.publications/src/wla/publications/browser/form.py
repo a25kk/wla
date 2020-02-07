@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from __future__ import print_function
 from smtplib import SMTPException, SMTPRecipientsRefused
 
 import z3c.form
@@ -154,7 +155,7 @@ class OrderForm(AutoExtensibleForm, form.Form):
             host.send(mail_text, m_to, m_from, subject=subject,
                       charset=encoding, immediate=True, msg_type="text/html")
 
-            print m_to
+            print(m_to)
 
         except SMTPRecipientsRefused:
 

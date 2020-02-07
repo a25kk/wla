@@ -136,7 +136,7 @@ class OrderForm(AutoExtensibleForm, form.Form):
 
         subject = self.context.translate(_(u"New order"))
 
-        if isinstance(mail_text, unicode):
+        if isinstance(mail_text, str):
             mail_text = mail_text.encode(encoding)
 
         host = getToolByName(self, 'MailHost')
@@ -172,7 +172,7 @@ class OrderForm(AutoExtensibleForm, form.Form):
 
         subject = self.context.translate(_(u"New order"))
 
-        if isinstance(mail_text, unicode):
+        if isinstance(mail_text, str):
             mail_text = mail_text.encode(encoding)
 
 
