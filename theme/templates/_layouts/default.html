@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    {% include base/head.html %}
+  </head>
+  <body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    {% include components/toolbar.html %}
+    {% include layout/header.html %}
+    {% include components/pathbar.html %}
+    <main class="app-main" role="main">
+        <section class="app-content">
+            <aside class="app-aside" id="app-aside">
+                {% include layout/sidebar.html %}
+            </aside>
+            <article class="app-content-main" id="app-content-main">
+                {{ content }}
+            </article>
+        </section>
+    </main>
+    {% include layout/footer.html %}
+    <div>{% include base/piwik.html %}</div>
+  </body>
+</html>
+

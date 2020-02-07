@@ -1,0 +1,82 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="wla.publications"
+      metal:use-macro="context/main_template/macros/master">
+
+    <metal:block fill-slot="main">
+
+         <div class="app-page-header app-page__header">
+            <div class="app-page__title">
+                <h1 class="app-page__headline">
+                        ${context/Title}
+                </h1>
+            </div>
+            <p class="app-page__abstract" tal:condition="context/Description">
+                    ${context/Description}
+            </p>
+        </div>
+
+        <div class="app-page-text" id="parent-fieldname-text">
+          <p>Nachfolgend haben wir eine Auswahl an Flyer und Broschüren zusammengestellt. Diese können Sie entweder per Download anschauen oder über das Bestellformular direkt bei uns anfordern. Die Publikationen der Städte <a href="https://www.aichach.de/Freizeit/Informationsmaterial" data-linktype="external" data-val="https://www.aichach.de/Freizeit/Informationsmaterial">Aichach</a> und <a href="https://www.friedberg.de/staticsite/staticsite.php?menuid=1541&amp;topmenu=1488&amp;keepmenu=inactive" data-linktype="external" data-val="https://www.friedberg.de/staticsite/staticsite.php?menuid=1541&amp;topmenu=1488&amp;keepmenu=inactive">Friedberg</a> erhalten Sie über das jeweilige Tourismusbüro.</p>
+        </div>
+
+
+        <div id="content-core" tal:define="publications view/getList">
+
+          <div class="publications-list-wrapper">
+
+        		<div class="publications-list" tal:repeat="item publications" >
+            <tal:x tal:define="obj item/getObject">
+            <div class="publications-list-item">
+        			<div class="publications-list-quantity">
+                <input class="qty" type="number" value="0" tal:attributes="data-id python:item.UID" size="5"/>
+              </div>
+
+        			<div class="publications-list-info">
+                <div class="publications-list-info-image">
+              <tal:check tal:define="has_img obj/image|nothing;
+                   scales obj/@@images|nothing;
+                   leadsize python:'large'"
+                    tal:condition="python:has_img and scales and leadsize and leadsize != 'none'" >
+
+                <a class="pat-plone-modal" data-pat-plone-modal="image: true" data-modal-srcset="" tal:attributes="href string:${obj/absolute_url}/@@images/image/large">
+
+                  <img class="product-image-preview" alt="" tal:attributes="src string:${obj/absolute_url}/@@images/image/large" />
+                </a>
+
+              </tal:check>
+            </div>
+            <div class="publications-list-info-content">
+        				<h3 class="publications-list-info-content-header" tal:content="item/Title"></h3>
+
+        				<div class="publications-description" tal:content="item/Description"></div>
+                <div class="publications-link">
+                <tal:if define="pdf_file nocall:obj/file"
+                        tal:condition="nocall:pdf_file">
+                  <a class="" 
+                     tal:attributes="href string:${obj/absolute_url}/@@download/file/${obj/file/filename}">
+                     <p> Download als PDF</p>
+                      <!--<tal:name tal:content="obj/file/filename" >Filename</tal:name>-->
+                  </a>
+                </tal:if> 
+              </div>
+                </div>				
+        			</div>
+            </div>
+            </tal:x>
+        		</div>
+          </div>
+
+            <metal:block use-macro="context/@@ploneform-macros/titlelessform" />
+            <p>Mit Absendung dieses Bestellformulars stimme ich zu, dass die im Rahmen meiner Prospektbestellung erhobenen personenbezogenen Daten vom Landkreis Aichach-Friedberg nur zur Bearbeitung Ihrer Anfrage verwendet werden. Meine Einwilligung kann ich jederzeit widerrufen. Darüber hinaus erfolgt keine Weitergabe an Dritte. Weitere Informationen zum Datenschutz erhalten Sie <a href="/datenschutzerklaerung">hier</a>.</p>
+        </div>
+
+    </metal:block>
+
+</html>
+
+
+

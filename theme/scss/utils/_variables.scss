@@ -1,0 +1,59 @@
+//
+// Application settings and variables
+// -------------------------------------------------
+
+
+//== Colors
+//
+//## Brand colors used across the project
+$color-green-haze:				rgba(141,191,66,1) !default; // #009966
+$color-endeavour:				rgba(0,153,255,1) !default; // #005FAA
+$color-firebrick:               rgba(139, 0, 0, 1) !default; // #8b0000
+
+//$color-green-haze:				rgba(0,153,102,1) !default; // #009966
+//$color-endeavour:				rgba(0,95,170,1) !default; // #005FAA
+//$color-firebrick:               rgba(139, 0, 0, 1) !default; // #8b0000
+
+
+// Gray baseline
+$app-gray:                      rgba(88, 88, 88, 1);
+$app-red:                       $color-firebrick !default;
+
+//== Brand and Section specific variables
+//
+//## Used in mixin and modifier classes
+
+//** Primary brand color
+$app-primary-base:              $color-green-haze !default;
+$app-primary-darker:            darken($app-primary-base, 15%)  !default;
+$app-primary-dark:              darken($app-primary-base, 7.5%) !default;
+$app-primary:                   $app-primary-base               !default; // #009966
+$app-primary-light:             lighten($app-primary-base, 7.5%) !default;
+$app-primary-lighter:           lighten($app-primary-base, 15%) !default;
+
+//** Secondary brand color
+$app-secondary-base:			$color-endeavour !default;
+$app-secondary-darker:			darken($app-secondary-base, 15%)  !default;
+$app-secondary-dark:			darken($app-secondary-base, 7.5%) !default;
+$app-secondary:					$app-secondary-base               !default; // #005FAA
+$app-secondary-light:			lighten($app-secondary-base, 7.5%) !default;
+$app-secondary-lighter:			lighten($app-secondary-base, 15%) !default;
+
+
+//** Brand primary color schema used as default
+$app-default:					$app-primary-base;
+
+// Brand danger
+$app-danger:                    $app-red;
+
+// Project webfonts
+$app-font-path:                  "../assets/fonts";
+
+// Custom web font
+$app-font-family-base:			"Open Sans";
+$app-font-family-light:     	"Open Sans Condensed";
+$app-font-family-medium:    	"Open Sans Condensed";
+$app-font-family-strong:    	"Marck Script";
+
+// Ionicons
+$ionicons-font-path:            "../assets/fonts";

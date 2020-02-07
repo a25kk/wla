@@ -1,0 +1,67 @@
+//
+// Header
+// ------------------------------------------
+
+
+.app-header {
+    width: 100%;
+    position: relative;
+    overflow: visible;
+    z-index: 50;
+    min-height: 320px;
+    background: url("../assets/images/wave-top.svg") no-repeat $app-primary;
+    background-size: contain !important;
+    background-position: bottom center;
+    @include media-breakpoint-up(lg) {
+        background-size: cover !important;
+    }
+        @include when-inside('.section-startseite') {
+            min-height: 320px;
+            background: $app-primary;
+        @include media-breakpoint-up(sm) {
+            min-height: 100px;
+        @include media-breakpoint-up(xl) {
+            background-color: transparent;
+            }   
+        } 
+    }
+}
+
+.app-header-content {
+    @include make-container();
+    @include make-container-max-widths();
+}
+
+
+// Header panels
+.app-header-panels {
+    // Fallback for browsers lacking flexbox support
+    @include when-inside('.no-flexbox') {
+        display: table;
+    }
+    @include make-row();
+        flex-wrap: wrap;
+        flex-direction: row-reverse
+}
+
+//** Base card styles
+.app-header-panel {
+    @include when-inside('.no-flexbox') {
+        display: table-cell;
+    }
+    @include when-inside('.app-header-panels') {
+        @include make-col(12);
+    }
+    &.app-header-brandbar {
+        @include make-col(12);
+        @include media-breakpoint-up(md) {
+            @include make-col(2);     
+        }
+    }
+    &.app-header-quickbar {
+        @include make-col(12);
+        @include media-breakpoint-up(xl) {
+            @include make-col(8);
+        }
+    }
+}

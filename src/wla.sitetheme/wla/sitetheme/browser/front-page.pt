@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="wla.sitetheme">
+    <body>
+
+        <metal:main fill-slot="main">
+            <metal:content-core define-macro="main">
+                <section class="app-front-page" id="app-front-page">
+
+                  <div class="app-intro" id="app-intro">
+                    <div class="app-page__header">
+                      <div class="app-page__title">
+                        <h1 class="app-page-headline">Der Landkreis Aichach-Friedberg</h1>
+                      </div>
+                      <p class="app-page-abstract">Natur trifft altbairische Lebensart</p>
+                    </div>
+                    <div class="app-intro-content">
+                    <p>Eingebettet in sanfte Hügel und verträumte Täler  liegt das Wittelsbacher Land – hier trifft reizvolle Natur auf altbairische Kultur und Lebensart. Das Paartal und viele Bäche(lein) schlängeln sich malerisch durch die ursprüngliche Landschaft, vorbei an barocken Wallfahrtskirchen und herrschaftlichen Schlössern. Die Geschichte der Wittelsbacher begann hier, an deren ehemaligem Stammsitz in Oberwittelsbach. Burgplatz und Burgkirche erzählen davon. Geschichte(n) erzählen können auch das Wittelsbacher Schloss und das Sisi-Schloss. Und natürlich die beiden Herzogstädte Aichach und Friedberg mit ihren historischen Stadtkernen – so lebensfroh wie beschaulich.</p>
+                    </div>
+                  </div>
+
+                  <div class="app-page__header">
+                      <div class="app-page__title">
+                        <h2 class="app-page-sub-headline">Das können Sie bei uns erleben!</h2>
+                      </div>
+                    </div>
+
+                    <div class="app-page-body app-page__teasers" id="front-page-teasers">
+                        <tal:block tal:condition="view/has_preview_cards">
+                            <div class="app-teaser-boxes" tal:define="preview_cards python:view.cards(search_limit=12)">
+                                <tal:teasers tal:repeat="item preview_cards">
+                                    <div class="app-teaser-box teaser-box teaser-box--${item/item_size}">
+                                        <span tal:replace="structure python:item['template']" />
+                                    </div>
+                                </tal:teasers>
+                            </div>
+                        </tal:block>
+                    </div>
+
+                </section>
+            </metal:content-core>
+        </metal:main>
+    </body>
+</html>

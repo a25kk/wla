@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+    name="wla.publications"
+    interface="wla.publications.interfaces.IWlaPublicationsLayer"
+  />
+</layers>

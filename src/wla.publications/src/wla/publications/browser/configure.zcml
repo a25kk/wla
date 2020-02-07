@@ -1,0 +1,26 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="wla.publications">
+
+    <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+    <include package="z3c.jbot" file="meta.zcml" />
+    <browser:jbot
+        directory="overrides"
+        layer="wla.publications.interfaces.IWlaPublicationsLayer"
+        />
+
+    <!-- Publish static files -->
+    <browser:resourceDirectory
+        name="wla.publications"
+        directory="static"
+        />
+  <browser:page
+      for="*"
+      name="order-form"
+      class=".form.OrderForm"
+      permission="zope2.View"
+      layer="..interfaces.IWlaPublicationsLayer"
+      />
+</configure>

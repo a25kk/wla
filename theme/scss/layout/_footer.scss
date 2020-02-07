@@ -1,0 +1,124 @@
+//
+// Footer
+// -----------------------------------
+
+.app-footer {
+    padding-top: 14rem;
+    padding-bottom: $spacer;
+    background: url("../assets/images/wave.svg") no-repeat $app-primary;
+    background-size: contain !important;
+    background-position: top center;
+    //@include media-breakpoint-up(xl) {
+    //    min-height: 25rem;
+    //}
+
+    h3 {
+        color: #000;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        //font-family: $app-font-family-strong;
+    }
+}
+
+.app-footer__content {
+    @include make-container();
+    @include make-container-max-widths();
+}
+
+.app-footer-cards-wrapper {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+    @include make-container();
+    @include make-container-max-widths();
+}
+
+.app-footer-cards {
+    @include make-row();
+    //margin-right: -15px;
+    //margin-left: -15px;
+    //padding-right: 1.5rem;
+    //padding-left: 1.5rem;
+    flex-wrap: wrap;
+        @include media-breakpoint-up(lg) {
+        //padding-right: 1rem;
+        //padding-left: 1rem;
+    }
+}
+
+.app-footer-card {
+    @include make-col(12);
+    padding: 1rem;
+    @include media-breakpoint-up(md) {
+    @include make-col(4);
+        padding: 0;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+        line-height: 1.58rem;
+    }
+
+    ol {
+        padding-left: 0;
+        list-style-position: inside;
+    }
+
+    li:before {
+        content: "• ";
+        display: inline;
+        color: #fff;
+    }
+    
+    a   {
+        color: #fff;
+    }
+
+    a:hover {
+        transition: color 0.5s linear;
+        color: #000;
+        text-decoration: none;
+    }
+}
+
+
+.app-partner {
+    margin-top: 2rem;
+    padding: 1rem;
+    @include media-breakpoint-up(sm) {
+        padding: 0;
+    }
+}
+
+.app-copyright-wrapper {
+    @include make-container();
+    @include make-container-max-widths();
+}
+
+.app-copyright {
+    font-weight: 500;
+    @include make-row();
+    padding: .5rem 1rem;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    font-size: 1rem;
+    a {
+        color: #fff;
+    }
+}
+
+.app-copyright-signature {
+    text-align: left;
+    @include make-col(12);
+    @include media-breakpoint-up(md) {
+    @include make-col(10);
+    }
+}
+
+.app-copyright-info {
+    text-align: right;
+    @include make-col(12);
+    @include media-breakpoint-up(md) {
+    @include make-col(2);
+    }
+}

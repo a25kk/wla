@@ -1,0 +1,172 @@
+//
+// Banner
+// -----------------------------------------
+
+//** Fullscreen container bar
+.app-bannerbar {
+    padding-top: 0;
+    margin-top: 0;
+    display: none;
+    @include when-inside('.template-front-page-view') {
+        display: block;
+        margin-top: 0px;
+        @include media-breakpoint-up(xl) {
+        margin-top: -130px;
+        }
+    }
+}
+
+.app-banner {
+    overflow: hidden;
+    margin-bottom: 2rem;
+    background: #fff;
+    width: 100%;
+        @include media-breakpoint-up(md) {
+        margin-left: auto;
+        margin-left: auto;
+        margin-bottom: 1rem;
+        }
+        height: 213px;
+        @include media-breakpoint-up(sm) {
+            height: 315px;
+        }
+        @include media-breakpoint-up(md) {
+            height: 435px;
+        }
+        @include media-breakpoint-up(lg) {
+            height: 574px;
+        }
+        @include media-breakpoint-up(xl) {
+            height: 100vh;
+        }
+}
+
+
+
+.app-banner-image {
+    @extend.img-fluid;
+}
+
+/* ---- Single banner item ---- */
+//
+//## This part will be filled dynamically with
+//## content and a lazyloaded background image
+.app-banner-item {
+    position: relative;
+    height: 213px;
+        @include media-breakpoint-up(sm) {
+            height: 315px;
+        }
+        @include media-breakpoint-up(md) {
+            height: 435px;
+        }
+        @include media-breakpoint-up(lg) {
+            height: 574px;
+        }
+        @include media-breakpoint-up(xl) {
+            height: 100vh;
+        }
+    width: 100%;
+    background-size: cover !important;
+    background-position: top center;
+}
+
+.app-banner-item-content {
+    width: 100%;
+    color: #fff;
+    height: 100%;
+    background: -moz-linear-gradient(top,  rgba(0,95,170,1) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 72%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,95,170,1) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 72%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,95,170,1) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 72%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+.app-banner-item-body {
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    bottom: 1rem;
+    margin: 0 auto;
+    color: #fff;
+    padding: 2rem 2rem 1rem 2rem;
+    //background: url("../assets/images/wave.svg") 0 0 no-repeat;
+        @include make-container();
+        @include make-container-max-widths();
+            @include media-breakpoint-up(sm) {
+            padding: 2rem 2rem 0 2rem;
+            bottom: 3rem;
+        }
+}
+
+.app-baner-item-title,
+.app-banner-item-headline {
+    font-size: 2rem;
+    //font-weight: 400;
+    font-family: $app-font-family-strong;
+        @include media-breakpoint-up(md) {
+        font-size: 3.6rem;
+    }
+}
+
+.app-banner-item-description {
+    font-size: 0.9rem;
+}
+
+.app-banner-item-abstract {
+    //text-transform: uppercase;
+}
+
+.app-banner-text {
+    font-size: 1rem;
+    a {
+        color: #fff;
+    }
+}
+
+/* ---- flickity transform overrides ---- 
+
+.flickity-slider { 
+    transform: none !important; 
+}
+
+.app-banner-item {
+    left: 0 !important;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.app-banner-item.is-selected {
+    opacity: 1;
+}
+
+*/
+
+/* ---- flickity overrides ---- */
+
+.flickity-prev-next-button {
+    background: transparent;
+}
+
+.flickity-prev-next-button.previous {
+    left: 20px;
+}
+
+.flickity-prev-next-button.next {
+    right: 20px;
+}
+
+.flickity-prev-next-button .arrow {
+    fill: #fff;
+}
+
+.flickity-prev-next-button:hover {
+    background: none;
+}
+
+.flickity-page-dots {
+    //display: none;
+        @include media-breakpoint-up(sm) {
+        display: block;
+        text-align: right;
+        padding-right: 1rem;
+    }
+}

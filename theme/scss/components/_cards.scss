@@ -1,0 +1,161 @@
+//
+// Cards displaying thumbnails and data collections
+// ------------------------------------------------------
+
+
+//== Card lists
+//
+//## Use a grid layout for card listings
+
+.app-page-cards {
+    margin-top: 2rem;
+}
+
+.app-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+//== Gutter
+//
+//## Add fpacing to cards
+.app-card-gutter {
+    margin-right: -1rem;
+    margin-left: -1rem;
+    .app-card {
+        border: 1rem solid #fff;
+        &-featured {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+}
+
+.app-cards-page-previews {
+
+}
+
+//== Card layout
+//
+//## Reflow card contents based on viewport size
+
+//** Base card styles
+.app-card {
+    background: #92c93a;
+    @include when-inside('.app-content-aside') {
+        background: #fff;
+    }
+
+    @include when-inside('.template-overview-controlpanel') {
+        background: #fff;
+    }
+
+    @include when-inside('.no-flexbox') {
+        // Fallback
+        display: table-cell;
+    }
+    @include when-inside('.app-cards') {
+        @include make-col(12);
+        @include media-breakpoint-up(md) {
+            @include make-col(6);
+        }
+        @include media-breakpoint-up(lg) {
+            @include make-col(4);
+        }
+    }
+
+    // Featured front page cards need hidden overflows
+    &-featured {
+        overflow: hidden;
+        position: relative;
+    }
+}
+
+.app-card__header {
+    &--hidden {
+        @include sr-only();
+    }
+}
+
+.app-card__figure {
+    transition: all 0.2s linear;
+    background: #fff;
+    a:hover {
+        .app-figure__content {
+           opacity: 0.7;
+        }   
+    }
+}
+
+.app-card__link {
+    color: #fff;
+    line-height: 1.5rem;
+    &:hover {
+        transition: none;
+        color: #000;
+        text-decoration: none;
+    }
+}
+
+.app-card__link {
+    &--figure {
+
+    }
+}
+
+.app-page__figure {
+
+}
+
+.app-figure {
+
+}
+
+
+.app-card__main {
+    padding: 0 2rem 1rem 2rem;
+    @include when-inside('.app-content-aside') {
+        padding: 1rem;
+        @include media-breakpoint-up(sm) {
+            padding: 2rem 0;
+        }   
+    }
+
+    @include when-inside('.template-front-page-view') {
+        min-height: 160px;
+    }
+}
+
+.app-card__section {
+
+}
+
+//== Card title
+//
+//## Title is used inside the card header
+.app-card__title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: $app-font-family-strong;
+    @include media-breakpoint-up(sm) {
+        font-size: 2.2rem;
+    }
+    a:hover {
+        transition: color 0.5s linear;
+        color: #000;
+        text-decoration: none;
+    }
+}
+
+.app-card__abstract {
+    color: $black;
+}
+
+.app-card__footer {
+    display: none;
+    a {
+        color: $app-primary;
+        font-weight: 400;
+    }
+}

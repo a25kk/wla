@@ -1,0 +1,52 @@
+//
+// Main application stylesheet
+// ----------------------------------------------
+
+
+@import 'utils/variables';
+@import 'utils/functions';
+@import 'utils/mixins.scss';
+@import 'utils/settings.vendor.mq';
+
+@import 'vendors/bootstrap';
+@import 'vendors/flickity';
+@import 'vendors/ionicons';
+@import 'vendors/mq';
+
+@import 'base/syntax';
+@import 'base/animation';
+@import 'base/fonts';
+@import 'base/scaffolding';
+@import 'base/brand';
+@import 'base/grid.scss';
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/forms';
+//@import 'layout/navbar';
+
+@import 'components/toolbar';
+@import 'components/buttons';
+@import 'components/media';
+@import 'components/alerts';
+@import 'components/pathbar';
+@import 'components/brand';
+@import 'components/navlist';
+@import 'components/nav-bar';
+@import 'components/banner';
+@import 'components/cards';
+@import 'components/newsletter';
+@import 'components/quickbar';
+@import 'components/gallery';
+@import 'components/configlets';
+@import 'components/callouts';
+
+@import 'pages/signin';
+@import 'pages/contentpage';
+@import 'pages/frontpage';
+@import 'pages/search';
+@import 'pages/publications';
+
+@import 'themes/theme';
+
+@import 'shame.scss';

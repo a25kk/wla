@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<object name="portal_skins" meta_type="Plone Skins Tool">
+ <object name="wla_publications" meta_type="Filesystem Directory View"
+    directory="wla.publications:skins/wla_publications"/>
+
+ <skin-path name="*">
+  <layer name="wla_publications" insert-after="custom" />
+ </skin-path>
+</object>
