@@ -13,13 +13,12 @@ $c-slider-padding:                $app-spacer-base;
     width: 100%;
     margin-left: 0;
     margin-right: 0;
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 }
 
 .c-slider__main {
   width: 100%;
+  height: 100%;
 }
 
 .c-slider__items {
@@ -32,6 +31,12 @@ $c-slider-padding:                $app-spacer-base;
   display: block;
   position: relative;
   width: 100%;
+}
+
+.c-slide__aside {
+  width: 100%;
+    color: #fff;
+    height: 100%;
 }
 
 .c-slide__main {
@@ -73,10 +78,19 @@ $c-slider-padding:                $app-spacer-base;
 .o-figure__card {
     @include when-inside('.c-slide__figure') {
         &::before {
-            //@include mq($until: sm) {
-            //    padding-bottom: 100%;
-            //}
+            background: -moz-linear-gradient(top,  rgba(0,95,170,1) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 72%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  rgba(0,95,170,1) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 72%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  rgba(0,95,170,1) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 72%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+            z-index: 10000;
+            position: relative;
         }
     }
+}
+
+.c-widget--5187ee78-39c4-4814-b49f-b83fc9e121d3 {
+  @include mq($from: lg) {
+    margin-top: -144px;
+  }
 }
 
