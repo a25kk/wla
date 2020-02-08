@@ -1,6 +1,4 @@
 .app-page {
-  //@include make-container();
-  //@include make-container-max-widths();
   width: 100%;
     @include media-breakpoint-up(sm) {
         margin-bottom: 1rem;
