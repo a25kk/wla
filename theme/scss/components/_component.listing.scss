@@ -64,8 +64,8 @@ $c-list-separator-height:                   .25rem;
     margin-bottom: calc(#{$c-list-spacer} * 1.5);
     @include when-inside('.c-list--gutter') {
         @include mq($from: lg) {
-            padding-left: 2rem;
-            padding-right: 2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
             //&:not(:first-of-type) {
             //padding-left: $c-list-margin-x;
             //}
@@ -157,5 +157,29 @@ $c-list-separator-height:                   .25rem;
         &:last-of-type {
             border-right: 0;
         }
+    }
+}
+
+.c-listing {
+}
+
+.c-listing__header {
+    margin-bottom: 2rem;
+}
+
+.c-listing__title {
+    font-size: 1.5rem;
+    font-family: $app-font-family-strong;
+    @include media-breakpoint-up(lg) {
+      font-size: 3rem;
+    }
+}
+
+.c-listing__main {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    @include mq($from: lg) {
+        margin-left: -1rem;
+        margin-right: -1rem;
     }
 }
