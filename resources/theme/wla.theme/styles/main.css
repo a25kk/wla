@@ -8550,7 +8550,6 @@ textarea.is-invalid {
   color: #212529;
   text-align: center;
   vertical-align: middle;
-  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -8587,6 +8586,10 @@ textarea.is-invalid {
 
 .btn.disabled, .btn:disabled {
   opacity: 0.65;
+}
+
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
 }
 
 a.btn.disabled,
@@ -22854,6 +22857,10 @@ c-list--bordered .c-list__item:last-of-type {
 .c-card--video .c-card__main {
   display: block;
   height: auto;
+}
+
+.c-card__main--plain {
+  background-color: #fff;
 }
 
 .c-card__footer {
