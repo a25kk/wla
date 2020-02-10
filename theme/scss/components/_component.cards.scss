@@ -6,16 +6,18 @@ $c-card-width-default:                  100%;
 $c-card-font-family-base:               $app-font-family-strong;
 $c-card-font-family-highlight:          $c-card-font-family-base;
 
+$c-card-bg:                             $app-color-primary;
 $c-card-cap-bg:                         transparent;
 
-$c-card-color:                          $app-color-text;
-$c-card-color-link:                     $app-color-primary;
-$c-card-color-link-hover:               darken($c-card-color, 10%);
+$c-card-color:                          #fff;
+$c-card-color-link:                     #fff;
+$c-card-color-link-hover:               #000;
 
 $c-card-spacer:                         $app-spacer-sm;
 
 
 .c-card {
+    background: $c-card-bg;
     display: $c-card-display-default;
     @if $c-card-display-default == 'flex' {
         height: 100%;
@@ -51,6 +53,7 @@ $c-card-spacer:                         $app-spacer-sm;
     font-family: $c-card-font-family-highlight;
     margin-bottom: 1rem;
     margin-top: 1rem;
+    padding:0 1rem;
     &--faculty {
         display: none;
     }
@@ -90,6 +93,7 @@ $c-card-spacer:                         $app-spacer-sm;
 
 //** Card footer
 .c-card__footer {
+    padding: 1rem;
     margin-top: auto;
     font-family: $c-card-font-family-base;
     @include when-inside('.c-card--news') {
@@ -145,14 +149,24 @@ $c-card-spacer:                         $app-spacer-sm;
 // TODO: evaluate wether these could be moved to generalized rules
 // Card contents
 .c-card__title {
-    font-family: $c-card-font-family-base;
     color: $c-card-color-link;
-    text-transform: uppercase;
     font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: $app-font-family-strong;
+    @include media-breakpoint-up(sm) {
+        font-size: 2.2rem;
+    }
+    a:hover {
+        transition: color 0.5s linear;
+        color: #000;
+        text-decoration: none;
+    }
 }
 
 .c-card__section {
-    //margin-bottom: $app-spacer-base;
+    padding: 0 1rem;
     &--centered {
         text-align: center;
     }
