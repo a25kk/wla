@@ -17727,7 +17727,7 @@ div.riform .label {
   max-width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .app-header-panel.app-header-brandbar {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 16.6666666667%;
@@ -21739,6 +21739,7 @@ a.c-button--active-action {
   padding-top: 1rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  float: none !important;
 }
 
 .c-configlet > form:not(:first-child),
@@ -21978,6 +21979,8 @@ a.c-button--active-action {
 .c-panel--full-width .c-panel__main {
   padding-right: calc(1rem * 1.5);
   padding-left: calc(1rem * 1.5);
+  padding-right: 0;
+  padding-left: 0;
 }
 
 @media (min-width: 62em) {

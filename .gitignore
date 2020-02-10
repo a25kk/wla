@@ -48,4 +48,5 @@ src/kk.tiles
 src/plone.*
 src/sauna.reload
 src/vwc.*
+src/zodbupdate
 var
