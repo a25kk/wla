@@ -22757,6 +22757,7 @@ c-list--bordered .c-list__item:last-of-type {
 }
 
 .c-card {
+  background: #8dbf42;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22800,6 +22801,7 @@ c-list--bordered .c-list__item:last-of-type {
   font-family: "Marck Script";
   margin-bottom: 1rem;
   margin-top: 1rem;
+  padding: 0 1rem;
 }
 
 .c-card__header--faculty {
@@ -22855,6 +22857,7 @@ c-list--bordered .c-list__item:last-of-type {
 }
 
 .c-card__footer {
+  padding: 1rem;
   margin-top: auto;
   font-family: "Marck Script";
   font-size: 1rem;
@@ -22888,31 +22891,50 @@ c-list--bordered .c-list__item:last-of-type {
   display: inline-block;
   padding: 0 0 0 .5rem;
   margin-top: .5rem;
-  color: #8dbf42;
+  color: #fff;
 }
 
 .c-card__link {
   display: block;
-  color: #8dbf42;
+  color: #fff;
   text-decoration: none;
 }
 
 .c-card__link:hover {
-  color: #0a0c0d;
+  color: #000;
   text-decoration: none;
 }
 
 .c-card__date {
   font-weight: 100;
   font-size: 1rem;
-  color: #8dbf42;
+  color: #fff;
 }
 
 .c-card__title {
-  font-family: "Marck Script";
-  color: #8dbf42;
-  text-transform: uppercase;
+  color: #fff;
   font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: "Marck Script";
+}
+
+@media (min-width: 576px) {
+  .c-card__title {
+    font-size: 2.2rem;
+  }
+}
+
+.c-card__title a:hover {
+  -webkit-transition: color 0.5s linear;
+  transition: color 0.5s linear;
+  color: #000;
+  text-decoration: none;
+}
+
+.c-card__section {
+  padding: 0 1rem;
 }
 
 .c-card__section--centered {
