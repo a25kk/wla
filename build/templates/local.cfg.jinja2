@@ -1,0 +1,43 @@
+# Host names/IP addresses for local environment
+[hosts]
+# The public hostname used in virtual hosting, i.e. the public facing domain
+public          = web.{{ config.project.key }}.${traefik:domain}
+public1         = web.{{ config.project.key }}.${traefik:domain}
+private         = private.{{ config.project.key }}.${traefik:domain}
+static          = static.{{ config.project.key }}.${traefik:domain}
+
+[host-rewrites]
+public_prefix   = www.
+public_rewrite  =
+
+[http-auth]
+basic           = off
+basic_user_file = ${buildout:directory}/etc/.htpasswd
+
+[ssl]
+certificate = ${buildout:directory}/etc/fullchain.pem
+key = ${buildout:directory}/etc/privkey.
+
+[site]
+sitename = {{ config.project.key }}
+
+[plone-site]
+site-id = {{ config.project.key }}
+
+[settings]
+i18nize-domain = ade25.widgets
+i18nize-packagepath = ${buildout:directory}/src/ade25.widgets/ade25/widgets
+
+##########################
+# Development configuration
+###########################
+
+[instance-debug]
+zope-conf-additional =
+    <product-config beaker>
+    session.type            file
+    session.data_dir        ${buildout:directory}/var/sessions/data
+    session.lock_dir        ${buildout:directory}/var/sessions/lock
+    session.key             beaker.session.{{ config.project.key }}
+    session.secret          AeZo5aex0quiquu1aungiejei0quic9e-{{ config.project.key }}
+    </product-config>

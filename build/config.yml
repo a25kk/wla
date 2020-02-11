@@ -29,5 +29,4 @@ modules:
           bin: jekyll
           service: jekyll
   pipenv:
-  npm:
-    base_path: ../src/wla.sitetheme/wla/sitetheme/resources
+  template:
