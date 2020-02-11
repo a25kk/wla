@@ -3,7 +3,6 @@
 WEBROOT="../"
 SITE_THEME="${CONFIG_paths_site_theme:-'I have no theme configuration'}"
 GULP_LOCATION="${CONFIG_paths_gulp_location:-'I have no gulp location'}"
-PROJECT_SECRET=`pwgen -s 32 1`
 
 task:setup() {
     cp ${SITE_THEME}/package.json ${GULP_LOCATION}
