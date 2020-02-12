@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # b5 Taskfile, see https://git.team23.de/build/b5 for details
+WEBROOT="../"
 SITE_THEME="${CONFIG_paths_site_theme:-'I have no theme configuration'}"
 GULP_LOCATION="${CONFIG_paths_gulp_location:-'I have no gulp location'}"
 
@@ -60,6 +61,10 @@ task:status() {
         b5:abort "Argument missing: server name"
     fi
     virtualenv:run fab "$1" server_status
+}
+
+task:build:init() {
+  template:render templates/local.cfg.jinja2 ${WEBROOT}/local.cfg
 }
 
 task:build() {
