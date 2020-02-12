@@ -54,7 +54,7 @@
     }
     &.app-header-brandbar {
         @include make-col(12);
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up(xl) {
             @include make-col(2);     
         }
     }
