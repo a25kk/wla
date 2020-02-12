@@ -1,3 +1,5 @@
+$c-control-panel-spacer:                $app-spacer-base;
+
 $c-configlet-spacer-y:                  .5rem;
 $c-configlet-spacer-x:                  1rem;
 $c-configlet-color:                     $app-color-white;
@@ -6,6 +8,13 @@ $c-configlet-font-family-highlight:     $app-font-family-strong;
 
 // Site setup configlets - plone control panel
 .c-control-panel {
+    margin-bottom: $c-control-panel-spacer;
+    &--primary {
+        @include mq($from: lg) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
 }
 
 .c-control-panel__header {
@@ -18,6 +27,26 @@ $c-configlet-font-family-highlight:     $app-font-family-strong;
     @include font-size($app-font-size-h2);
     text-transform: none;
     line-height: 1;
+    @include mq($from: lg) {
+        flex: 1 0 100%;
+        max-width: 100%;
+    }
+}
+
+.c-control-panel__main {
+    padding: $c-control-panel-spacer $c-control-panel-spacer $c-control-panel-spacer 0;
+    @include mq($from: lg) {
+        flex: 1 0 75%;
+        max-width: 75%;
+    }
+}
+
+.c-control-panel__aside {
+    padding: $c-control-panel-spacer;
+    @include mq($from: lg) {
+        flex: 1 0 25%;
+        max-width: 25%;
+    }
 }
 
 .c-configlet,
