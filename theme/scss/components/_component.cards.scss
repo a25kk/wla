@@ -89,6 +89,9 @@ $c-card-spacer:                         $app-spacer-sm;
         display: block;
         height: auto;
     }
+    &--plain {
+        background-color: $app-color-white;
+    }
 }
 
 //** Card footer
@@ -222,6 +225,6 @@ $c-card-spacer:                         $app-spacer-sm;
 .app-page-cards {
     @include mq($from: lg) {
         margin-left: -2rem;
-        margin-right: -2rem;   
+        margin-right: -2rem;
     }
 }
