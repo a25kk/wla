@@ -23316,6 +23316,71 @@ c-list--bordered .c-list__item:last-of-type {
   position: relative;
 }
 
+.c-poster {
+  display: block;
+  width: 100%;
+}
+
+.c-poster__content {
+  position: relative;
+  width: 100%;
+}
+
+.c-poster__link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.c-poster__link:hover {
+  color: #fff;
+}
+
+.c-poster__main {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  color: #fff;
+  background: #8dbf42;
+}
+
+@media (min-width: 48em) {
+  .c-poster__main {
+    padding: 3rem;
+  }
+}
+
+.c-poster__title {
+  font-family: "Marck Script";
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 48em) {
+  .c-poster__title {
+    line-height: 1.5;
+  }
+}
+
+.c-poster__abstract {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 47.99em) {
+  .c-poster__aside .o-figure__card::before {
+    padding-bottom: 100%;
+  }
+}
+
+.c-poster__text a {
+  color: #fff;
+}
+
+.c-poster__text a:hover {
+  color: #fff;
+}
+
 .c-page-header {
   margin: 0 auto 1.5rem;
 }
