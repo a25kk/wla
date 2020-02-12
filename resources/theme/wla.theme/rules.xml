@@ -69,13 +69,10 @@
 
 
     <!-- Setup custom login form -->
+    <theme href="signin/index.html" css:if-content="body.template-login" />
     <theme href="signin/index.html" css:if-content="body.template-login_form" />
-    <theme href="signin/index.html" css:if-content="body.template-logged_out" />
-    <theme href="signin/index.html" css:if-content="body.template-login_failed" />
-    <theme href="signin/index.html" css:if-content="body.template-mail_password_form" />
-    <theme href="signin/index.html" css:if-content="body.template-mail_password_response" />
-    <theme href="signin/index.html" css:if-content="body.template-pwreset_form" />
-    <theme href="signin/index.html" css:if-content="body.template-pwreset_finish" />
+    <theme href="signin/index.html" css:if-content="body.template-login-help" />
+    <theme href="signin/index.html" css:if-content="body.template-passwordreset" />
     <theme href="full/index.html" css:if-content="body.subsection-radfahren" />
 
     <!--<theme href="dist/frontpage/index.html" css:if-content="body.template-front-page-view" />-->
@@ -170,29 +167,6 @@
         </replace>
         <replace css:theme-children="#app-pathbar" css:content="#portal-breadcrumbs" />
 
-        <!-- Login form rules -->
-        <replace css:content-children="#content-core"
-                 css:theme-children="#app-signin-content"
-                 css:if-content="body.template-login_form" />
-        <replace css:content-children="#content-core"
-                 css:theme-children="#app-signin-content"
-                 css:if-content="body.template-login_failed" />
-        <replace css:content-children="#content-core"
-                 css:theme-children="#app-signin-content"
-                 css:if-content="body.template-logged_out" />
-        <replace css:content-children="#content"
-                 css:theme-children="#app-signin-content"
-                 css:if-content="body.template-mail_password_form" />
-        <replace css:content-children="#content"
-                 css:theme-children="#app-signin-content"
-                 css:if-content="body.template-mail_password_response" />
-        <replace css:content-children="#content"
-                 css:theme-children="#app-signin-content"
-                 css:if-content="body.template-pwreset_form" />
-        <replace css:content-children="#content"
-                 css:theme-children="#app-signin-content"
-                 css:if-content="body.template-pwreset_finish" />
-
         <!-- Document First Heading -->
         <replace css:content=".documentFirstHeading">
             <div class="app-page-header">
@@ -226,6 +200,14 @@
             <xsl:copy>
                 <xsl:copy-of select="@*" />
                 <xsl:attribute name="class">app-img app-page__image</xsl:attribute>
+                <xsl:apply-templates />
+            </xsl:copy>
+        </replace>
+
+        <replace css:content=".link-parent">
+            <xsl:copy>
+                <xsl:copy-of select="@*" />
+                <xsl:attribute name="class">c-button c-button--default c-button--link-parent</xsl:attribute>
                 <xsl:apply-templates />
             </xsl:copy>
         </replace>

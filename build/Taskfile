@@ -75,6 +75,10 @@ task:build:full() {
     cd ../ && bin/buildout -c development.cfg
 }
 
+task:build:develop() {
+    cd ../ && bin/develop up
+}
+
 task:plone() {
     cd ../ && bin/instance-debug fg
 }
@@ -118,6 +122,11 @@ task:theme:assets() {
 
 task:theme:sprite() {
     docker:command:gulp sprite:collect
+}
+
+task:theme:build() {
+  docker:command:jekyll build -q
+  docker:command:gulp styles
 }
 
 task:theme:dist() {
