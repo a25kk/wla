@@ -8,6 +8,9 @@
   @include make-container();
   @include make-container-max-widths();
   //border: 1px solid red;
+  &--fullscreen {
+    max-width: 100%;
+  }
 }
 
 .app-content {
