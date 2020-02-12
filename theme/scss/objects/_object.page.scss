@@ -77,10 +77,18 @@
     }
 }
 
+.o-page__title {
+    margin: 2rem 0;
+    border-bottom: 1px solid $app-primary;
+}
+
 .o-page__headline {
     padding: .125rem 0;
-    color: #000;
-    line-height: 1.25;
+    font-size: 1.5rem;
+    font-family: $app-font-family-strong;
+    @include media-breakpoint-up(lg) {
+        font-size: 3.6rem;
+    }
 }
 
 
