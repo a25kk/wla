@@ -8550,6 +8550,7 @@ textarea.is-invalid {
   color: #212529;
   text-align: center;
   vertical-align: middle;
+  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -8586,10 +8587,6 @@ textarea.is-invalid {
 
 .btn.disabled, .btn:disabled {
   opacity: 0.65;
-}
-
-.btn:not(:disabled):not(.disabled) {
-  cursor: pointer;
 }
 
 a.btn.disabled,
@@ -18011,6 +18008,16 @@ div.riform .label {
             flex: 0 0 16.6666666667%;
     max-width: 16.6666666667%;
   }
+}
+
+@media (min-width: 768px) {
+  .app-social {
+    margin-top: 3rem;
+  }
+}
+
+.app-social-item {
+  padding: 1rem 0;
 }
 
 .form__group {
