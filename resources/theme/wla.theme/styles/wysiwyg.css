@@ -16164,6 +16164,7 @@ input, button, select, textarea {
   font-size: 1rem;
   color: #000;
   font-weight: 400;
+  text-align: right;
 }
 
 .o-figure__placeholder {
