@@ -122,3 +122,13 @@
     @include make-col(2);
     }
 }
+
+.app-social {
+    @include media-breakpoint-up(md) {
+    margin-top: 3rem;
+    }
+}
+
+.app-social-item {
+    padding: 1rem 0;
+}
