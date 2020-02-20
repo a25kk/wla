@@ -22263,6 +22263,10 @@ a.c-button--active-action {
   text-align: right;
 }
 
+.c-panel-overlay__action {
+  color: #212529;
+}
+
 .c-widget--hph-content-alias {
   margin-top: -calc(1rem * 1.5);
   margin-bottom: -calc(1rem * 1.5);
