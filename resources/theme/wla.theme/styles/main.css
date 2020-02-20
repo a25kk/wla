@@ -22605,6 +22605,10 @@ a.c-button--active-action {
   text-align: right;
 }
 
+.c-panel-overlay__action {
+  color: #212529;
+}
+
 .c-list {
   display: block;
 }
