@@ -265,3 +265,7 @@ $c-panel-controls-display:  flex;
     padding: $app-spacer-base calc(#{$app-spacer-base} * 1.5) 0;
     text-align: right;
 }
+
+.c-panel-overlay__action {
+    color: $c-panel-primary-color;
+}
