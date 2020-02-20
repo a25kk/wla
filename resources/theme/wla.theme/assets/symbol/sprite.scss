@@ -103,9 +103,19 @@ o-icon__ui--globe-europe-solid-dims {
 	height: 512px;
 }
 
+o-icon__ui--hidden-dims {
+	width: 512px;
+	height: 512px;
+}
+
 o-icon__ui--information-dims {
 	width: 512px;
 	height: 512px;
+}
+
+o-icon__ui--lock-dims {
+	width: 36px;
+	height: 36px;
 }
 
 o-icon__ui--minus-dims {
@@ -229,6 +239,11 @@ o-icon__widget--listing-cards-dims {
 }
 
 o-icon__widget--page-header-dims {
+	width: 1px;
+	height: 1px;
+}
+
+o-icon__widget--section-header-dims {
 	width: 1px;
 	height: 1px;
 }
