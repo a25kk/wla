@@ -291,6 +291,15 @@
             </table>
         </replace>
 
+
+        <replace css:content="form">
+            <xsl:copy>
+                <xsl:copy-of select="@*" />
+                <xsl:attribute name="class"><xsl:value-of select="./@class" /> o-form</xsl:attribute>
+                <xsl:apply-templates />
+            </xsl:copy>
+        </replace>
+
         <replace css:content=".formHelp">
             <xsl:copy>
                 <xsl:copy-of select="@*" />
