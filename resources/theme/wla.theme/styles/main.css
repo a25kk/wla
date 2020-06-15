@@ -24020,6 +24020,5 @@ c-list--bordered .c-list__item:last-of-type {
 }
 
 .app-signet {
-  border: 1px solid red;
   width: 150px;
 }
