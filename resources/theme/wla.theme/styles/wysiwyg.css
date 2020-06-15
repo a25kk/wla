@@ -22788,3 +22788,8 @@ a.c-button--active-action {
 .listingCheckbox .form__control--checkbox {
   position: initial;
 }
+
+.app-signet {
+  border: 1px solid red;
+  width: 150px;
+}
