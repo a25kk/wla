@@ -60,8 +60,19 @@
     }
     &.app-header-quickbar {
         @include make-col(12);
+        min-height: 260px;
+        @media (min-width: 576px) {
+            min-height: 100px;
+        }
+        @include media-breakpoint-up(md) {
+            min-height: 100px;
+        }
+        @include media-breakpoint-up(lg) {
+            min-height: 100px;
+        }
         @include media-breakpoint-up(xl) {
             @include make-col(8);
+            min-height: 100px;
         }
     }
 }

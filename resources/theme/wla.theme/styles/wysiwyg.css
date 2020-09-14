@@ -17722,6 +17722,25 @@ div.riform .label {
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
   max-width: 100%;
+  min-height: 260px;
+}
+
+@media (min-width: 576px) {
+  .app-header-panel.app-header-quickbar {
+    min-height: 100px;
+  }
+}
+
+@media (min-width: 768px) {
+  .app-header-panel.app-header-quickbar {
+    min-height: 100px;
+  }
+}
+
+@media (min-width: 992px) {
+  .app-header-panel.app-header-quickbar {
+    min-height: 100px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -17731,6 +17750,7 @@ div.riform .label {
         -ms-flex: 0 0 66.6666666667%;
             flex: 0 0 66.6666666667%;
     max-width: 66.6666666667%;
+    min-height: 100px;
   }
 }
 
@@ -20027,7 +20047,7 @@ body.template-front-page-view .app-pathbar {
 
 @media (min-width: 768px) {
   .quickbar__item--events {
-    padding: .5rem 0;
+    padding: .5rem 1rem .5rem 0;
   }
 }
 
@@ -22787,4 +22807,8 @@ a.c-button--active-action {
 
 .listingCheckbox .form__control--checkbox {
   position: initial;
+}
+
+.app-signet {
+  width: 150px;
 }

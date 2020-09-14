@@ -24,7 +24,7 @@
         text-align: center;
     }
         @include media-breakpoint-up(md) {
-            padding: .5rem 0;
+            padding: .5rem 1rem .5rem 0;
         }   
     }
 }
