@@ -1,6 +1,7 @@
 requirejs(['require',
         '/scripts/svg4everybody.js',
         '/scripts/flickity.pkgd.js',
+        '/scripts/navbar.js',
         '/scripts/slider.js',
         '/scripts/paneleditor.js',
         '/scripts/x-ray.js',
@@ -8,12 +9,9 @@ requirejs(['require',
         '/scripts/choices.min.js',
         '/scripts/fontfaceobserver.js',
         '/scripts/respimage.js',
-        '/scripts/ls.parent-fit.js',
-        '/scripts/lazysizes-umd.js',
-        '/scripts/a25.js',
-        '/scripts/a25.navbar.js'
+        '/scripts/lazysizes-umd.js'
     ],
-    function(require, svg4everybody, Flickity, slider, panelEditor, xrays, SortableJS, Choices) {
+    function(require, svg4everybody, Flickity, navbar, slider, panelEditor, xrays, SortableJS, Choices) {
         'use strict';
 
         // Trigger font face observer protection
@@ -37,6 +35,11 @@ requirejs(['require',
 
         // SVG Sprite polyfill
         svg4everybody();
+
+        // Nav Bar
+        navbar.init({
+            backdropDisplay: true
+        });
 
         // Panel page and widget editor
         panelEditor.init();
@@ -110,7 +113,7 @@ requirejs(['require',
         slider.init({
             autoPlay: 6000
         });
-        
+
         // Support legacy content page galleries
         slider.init({
             sliderElement: '.js-gallery',

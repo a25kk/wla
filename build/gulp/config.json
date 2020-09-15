@@ -39,7 +39,7 @@
       "scripts/a25.helpers.js",
       "scripts/a25.navbar.js",
       "scripts/app.js",
-      "scripts/paneleditor.js", "scripts/polyfills.js", "scripts/slider.js", "scripts/utils.js"
+      "scripts/paneleditor.js", "scripts/polyfills.js", "scripts/slider.js", "scripts/utils.js", "scripts/navbar.js"
     ],
     "src": [
       "flickity/dist/flickity.pkgd.js",

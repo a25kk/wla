@@ -12,7 +12,7 @@ $c-nav-font-size-secondary:             $app-font-size-sm;
     overflow: visible;
     padding: 0 1rem;
     list-style: none;
-    background-color: $app-color-primary;
+    background-color: $app-color-white;
     @include mq($from: md) {
         padding-right: 2rem;
         padding-left: 2rem;
@@ -38,11 +38,12 @@ $c-nav-font-size-secondary:             $app-font-size-sm;
 .c-nav__item {
     position: relative;
     overflow: visible;
+    display: block;
     width: 100%;
     margin: 0;
     padding: 0;
     border-bottom: 2px solid rgba(255,255,255, 0.1);
-    background-color: $app-color-primary;
+    background-color: $app-color-white;
     @include mq($from: navbar) {
         width: auto;
         flex: 1 0 0;
@@ -78,8 +79,8 @@ $c-nav-font-size-secondary:             $app-font-size-sm;
     padding-top: .75rem;
     padding-bottom: .75rem;
     text-decoration: none;
-    color: $white;
-    font-family: $app-font-family-strong;
+    color: $app-color-primary;
+    font-family: $app-font-family-base;
     text-transform: none;
     font-weight: 400;
     line-height: .7rem;

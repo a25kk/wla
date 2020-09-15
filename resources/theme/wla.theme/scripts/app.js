@@ -1,6 +1,6 @@
 "use strict";
 
-requirejs(['require', '/scripts/svg4everybody.js', '/scripts/flickity.pkgd.js', '/scripts/slider.js', '/scripts/paneleditor.js', '/scripts/x-ray.js', '/scripts/Sortable.min.js', '/scripts/choices.min.js', '/scripts/fontfaceobserver.js', '/scripts/respimage.js', '/scripts/ls.parent-fit.js', '/scripts/lazysizes-umd.js', '/scripts/a25.js', '/scripts/a25.navbar.js'], function (require, svg4everybody, Flickity, slider, panelEditor, xrays, SortableJS, Choices) {
+requirejs(['require', '/scripts/svg4everybody.js', '/scripts/flickity.pkgd.js', '/scripts/navbar.js', '/scripts/slider.js', '/scripts/paneleditor.js', '/scripts/x-ray.js', '/scripts/Sortable.min.js', '/scripts/choices.min.js', '/scripts/fontfaceobserver.js', '/scripts/respimage.js', '/scripts/lazysizes-umd.js'], function (require, svg4everybody, Flickity, navbar, slider, panelEditor, xrays, SortableJS, Choices) {
   'use strict'; // Trigger font face observer protection
 
   var fontPrimary = new FontFaceObserver('Open Sans', {
@@ -19,7 +19,11 @@ requirejs(['require', '/scripts/svg4everybody.js', '/scripts/flickity.pkgd.js', 
 
   ; // SVG Sprite polyfill
 
-  svg4everybody(); // Panel page and widget editor
+  svg4everybody(); // Nav Bar
+
+  navbar.init({
+    backdropDisplay: true
+  }); // Panel page and widget editor
 
   panelEditor.init(); // Choices select
 

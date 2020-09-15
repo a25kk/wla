@@ -8550,7 +8550,6 @@ textarea.is-invalid {
   color: #212529;
   text-align: center;
   vertical-align: middle;
-  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -8587,6 +8586,10 @@ textarea.is-invalid {
 
 .btn.disabled, .btn:disabled {
   opacity: 0.65;
+}
+
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
 }
 
 a.btn.disabled,
@@ -15423,19 +15426,7 @@ body:not(.portaltype-ade25-panelpage-page) .o-page:not(.o-page--panels) {
 
 .o-burger {
   display: block;
-  margin-top: 3rem;
-}
-
-@media (min-width: 48em) {
-  .o-burger {
-    margin-top: 5.5rem;
-  }
-}
-
-@media (min-width: 75em) {
-  .o-burger {
-    margin-top: 0;
-  }
+  margin-top: 0;
 }
 
 .o-burger__button {
@@ -15444,10 +15435,10 @@ body:not(.portaltype-ade25-panelpage-page) .o-page:not(.o-page--panels) {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -webkit-flex-direction: row-reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   line-height: 1;
   background: transparent;
   border: 1px solid transparent;
@@ -15466,25 +15457,25 @@ body:not(.portaltype-ade25-panelpage-page) .o-page:not(.o-page--panels) {
   -webkit-align-self: flex-end;
       -ms-flex-item-align: end;
           align-self: flex-end;
-  font-family: "Marck Script";
+  font-family: "Open Sans";
   font-size: 1rem;
-  color: #8dbf42;
+  color: #fff;
   text-transform: uppercase;
   padding-bottom: 0.25rem;
 }
 
 @media (min-width: 48em) {
   .o-burger__text {
-    font-size: 1.45rem;
+    font-size: 1.2rem;
     padding-bottom: 0;
   }
 }
 
 .o-burger__icon {
-  margin-right: .5rem;
-  margin-bottom: -.25rem;
+  margin-left: .5rem;
+  margin-bottom: -.125rem;
   font-size: 1rem;
-  color: #8dbf42;
+  color: #fff;
 }
 
 @media (min-width: 48em) {
