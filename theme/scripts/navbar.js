@@ -17,6 +17,7 @@ define([
         menuContainer: ".app-header",
         menuContainerActive: "app-header--overlay",
         menuContainerOffsetMarker: "app-header--offset",
+        menuDropDownEnabled: false,
         menuDropdown: ".c-nav__dropdown",
         menuDropdownOpen: "c-nav__dropdown--open",
         menuDropdownDisabled: "c-nav__dropdown--hidden",
@@ -186,7 +187,9 @@ define([
         // Add navigation marker
         navigationOffsetMarker(options);
         // Sub Navigation drawer
-        navigationDrawer(options);
+        if (options.menuDropDownEnabled) {
+            navigationDrawer(options);
+        }
         // Close navigation via ESC key
         document.addEventListener('keydown', function (event) {
             if ((event.key === 'Escape' || event.key === 'Esc' || event.keyCode === 27)) {

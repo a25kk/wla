@@ -38,7 +38,8 @@ requirejs(['require',
 
         // Nav Bar
         navbar.init({
-            backdropDisplay: true
+            backdropDisplay: true,
+            menuDropDownEnabled: false
         });
 
         // Panel page and widget editor

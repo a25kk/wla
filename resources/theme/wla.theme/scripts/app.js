@@ -22,7 +22,8 @@ requirejs(['require', '/scripts/svg4everybody.js', '/scripts/flickity.pkgd.js', 
   svg4everybody(); // Nav Bar
 
   navbar.init({
-    backdropDisplay: true
+    backdropDisplay: true,
+    menuDropDownEnabled: false
   }); // Panel page and widget editor
 
   panelEditor.init(); // Choices select

@@ -151,6 +151,10 @@ $c-nav-font-size-secondary:             $app-font-size-sm;
     }
 }
 
+.c-nav__link-item--icon {
+    display: none;
+}
+
 .app-nav__tab {
     display: inline-block;
     width: 100%;
@@ -216,21 +220,9 @@ $c-nav-font-size-secondary:             $app-font-size-sm;
 
 // Dropdown menus
 .c-nav__dropdown {
-    display: none;
-    z-index: 1002;
-    width: 100%;
-    // height: calc(100vh - 60px);
-    margin: 0;
-    padding: 0;
-    background-color: $app-color-primary;
-    &--open {
-        display: block;
-        height: auto;
-        margin-bottom: 1rem;
-        @include when-inside('.c-quick-links') {
-        margin-bottom: 0;
-        }
-    }
+    display: block;
+    height: auto;
+    margin-bottom: 1rem;
 }
 
 .c-nav__dropdown--hidden {
