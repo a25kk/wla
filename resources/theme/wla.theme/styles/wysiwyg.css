@@ -15425,8 +15425,16 @@ body:not(.portaltype-ade25-panelpage-page) .o-page:not(.o-page--panels) {
 }
 
 .o-burger {
+  position: relative;
+  z-index: 9001;
   display: block;
   margin-top: 0;
+}
+
+@media (min-width: 75em) {
+  .o-burger {
+    margin-top: 0;
+  }
 }
 
 .o-burger__button {
@@ -15451,6 +15459,13 @@ body:not(.portaltype-ade25-panelpage-page) .o-page:not(.o-page--panels) {
   .o-burger__button {
     padding-right: 0;
   }
+}
+
+.o-burger__button.js-nav-toggle--active {
+  position: fixed;
+  z-index: 9002;
+  top: calc(calc(1rem * 1.5) * .75);
+  right: 0;
 }
 
 .o-burger__text {
@@ -15482,6 +15497,107 @@ body:not(.portaltype-ade25-panelpage-page) .o-page:not(.o-page--panels) {
   .o-burger__icon {
     font-size: 1.5rem;
   }
+}
+
+.js-nav-toggle--active .o-burger__icon {
+  color: #8dbf42;
+}
+
+.o-burger__icon--default {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.o-burger__symbol {
+  content: "";
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.o-burger__symbol, .o-burger__symbol::before, .o-burger__symbol::after {
+  width: 40px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+  position: absolute;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+.o-burger__symbol::before, .o-burger__symbol::after {
+  content: "";
+  display: block;
+}
+
+.o-burger__symbol::before {
+  top: -10px;
+}
+
+.o-burger__symbol::after {
+  bottom: -10px;
+}
+
+.o-burger__symbol--animated {
+  -webkit-transition-duration: 0.075s;
+          transition-duration: 0.075s;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.js-nav-toggle--active .o-burger__symbol--animated {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition-delay: 0.12s;
+          transition-delay: 0.12s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  background-color: #8dbf42;
+}
+
+.o-burger__symbol--animated::before {
+  -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+  transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+}
+
+.js-nav-toggle--active .o-burger__symbol--animated::before {
+  top: 0;
+  opacity: 0;
+  -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+  transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+  background-color: #8dbf42;
+}
+
+.o-burger__symbol--animated::after {
+  -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.js-nav-toggle--active .o-burger__symbol--animated::after {
+  bottom: 0;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: bottom 0.075s ease, -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.075s ease, -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  background-color: #8dbf42;
+}
+
+.o-burger__symbol-content {
+  display: none;
 }
 
 .o-icon {
