@@ -8550,6 +8550,7 @@ textarea.is-invalid {
   color: #212529;
   text-align: center;
   vertical-align: middle;
+  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -8586,10 +8587,6 @@ textarea.is-invalid {
 
 .btn.disabled, .btn:disabled {
   opacity: 0.65;
-}
-
-.btn:not(:disabled):not(.disabled) {
-  cursor: pointer;
 }
 
 a.btn.disabled,
@@ -23530,6 +23527,8 @@ c-list--bordered .c-list__item:last-of-type {
 @media (min-width: 48em) {
   .c-nav-bar--overlay {
     width: 100vw;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 
@@ -23593,8 +23592,8 @@ c-list--bordered .c-list__item:last-of-type {
 
 @media (min-width: 48em) {
   .c-nav {
-    padding-right: 2rem;
-    padding-left: 2rem;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -23697,12 +23696,22 @@ c-list--bordered .c-list__item:last-of-type {
   text-decoration: none;
   color: #8dbf42;
   font-family: "Open Sans";
-  text-transform: none;
-  font-weight: 400;
+  text-transform: uppercase;
+  font-weight: 700;
   line-height: .7rem;
   -webkit-transition: background-color 0.5s ease;
   transition: background-color 0.5s ease;
-  font-size: 1.3rem;
+  font-size: 2rem;
+}
+
+.c-nav--level-1 .c-nav__link {
+  font-size: 1.5rem !important;
+  font-weight: 400;
+}
+
+.c-nav--level-2 .c-nav__link {
+  font-size: 1rem !important;
+  font-weight: 400;
 }
 
 .c-nav-bar__toggle .c-nav__link {
@@ -23716,13 +23725,13 @@ c-list--bordered .c-list__item:last-of-type {
 }
 
 .c-nav__item--current > .c-nav__link {
-  color: #0099ff;
+  color: #8dbf42;
 }
 
 .c-nav__link:hover {
   text-decoration: none;
   background: transparent;
-  color: #0099ff;
+  color: #000 !important;
 }
 
 .c-nav__link--active, .c-nav__link--open {
@@ -23753,6 +23762,7 @@ c-list--bordered .c-list__item:last-of-type {
           flex: 1 0 calc(100% - 2rem);
   max-width: calc(100% - 2rem);
   line-height: 1.5;
+  border-bottom: 1px solid #dee2e6 !important;
 }
 
 .c-nav__link--action {
@@ -23919,15 +23929,15 @@ c-list--bordered .c-list__item:last-of-type {
 }
 
 .c-nav-list--level-0 .c-nav-list__link {
-  padding-left: calc(0.5rem * 2);
+  padding-left: 0;
 }
 
 .c-nav-list--level-1 .c-nav-list__link {
-  padding-left: calc(0.5rem * 3);
+  padding-left: 0;
 }
 
 .c-nav-list--level-2 .c-nav-list__link {
-  padding-left: calc(0.5rem * 4);
+  padding-left: 0;
 }
 
 .c-widget--hph-content-alias {

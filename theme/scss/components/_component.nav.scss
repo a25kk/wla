@@ -1,5 +1,5 @@
 $c-nav-color:                           $app-color-white;
-$c-nav-color-highlight:                 $app-color-secondary;
+$c-nav-color-highlight:                 #000;
 $c-nav-font-size-base:                  $app-font-size-base;
 $c-nav-font-size-secondary:             $app-font-size-sm;
 
@@ -14,8 +14,8 @@ $c-nav-font-size-secondary:             $app-font-size-sm;
     list-style: none;
     background-color: $app-color-white;
     @include mq($from: md) {
-        padding-right: 2rem;
-        padding-left: 2rem;
+        padding-right: 0;
+        padding-left: 0;
     }
     @include mq($from: navbar) {
         display: flex;
@@ -72,6 +72,14 @@ $c-nav-font-size-secondary:             $app-font-size-sm;
     position: relative;
 }
 
+//.js-dropdown-toggle {
+//    text-transform: uppercase !important;
+//    font-weight: 700 !important;
+//    font-size: 2rem !important;
+//    margin-top: 3rem !important;
+//    color: $app-color-primary !important;
+//}
+
 .c-nav__link {
     display: flex;
     align-items: center;
@@ -81,11 +89,19 @@ $c-nav-font-size-secondary:             $app-font-size-sm;
     text-decoration: none;
     color: $app-color-primary;
     font-family: $app-font-family-base;
-    text-transform: none;
-    font-weight: 400;
+    text-transform: uppercase;
+    font-weight: 700;
     line-height: .7rem;
     transition: background-color 0.5s ease;
-    font-size: $app-font-size-md;
+    font-size: $app-font-size-h2;
+    @include when-inside('.c-nav--level-1') {
+        font-size: 1.5rem !important;
+        font-weight: 400;
+    }
+    @include when-inside('.c-nav--level-2') {
+        font-size: 1rem !important;
+        font-weight: 400;
+    }
     @include when-inside('.c-nav-bar__toggle') {
         line-height: 1rem;
     }
@@ -93,12 +109,12 @@ $c-nav-font-size-secondary:             $app-font-size-sm;
         text-transform: uppercase;
     }
     @include when-inside('.c-nav__item--current >') {
-        color: $c-nav-color-highlight;
+        color: $app-color-primary;
     }
     &:hover {
         text-decoration: none;
         background: transparent;
-        color: $c-nav-color-highlight;
+        color: #000 !important;
     }
     &--active,
     &--open {
@@ -126,6 +142,7 @@ $c-nav-font-size-secondary:             $app-font-size-sm;
     flex: 1 0 calc(100% - 2rem);
     max-width: calc(100% - 2rem);
     line-height: $app-line-height-lg;
+    border-bottom: 1px solid #dee2e6 !important;
 }
 
 .c-nav__link--action {

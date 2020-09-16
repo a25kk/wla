@@ -34,6 +34,8 @@ $c-nav-bar-background:                  $app-color-primary;
         transition:right .5s linear;
         @include mq($from: md) {
             width: 100vw;
+            padding-left: 10%;
+            padding-right: 10%;
         }
     }
     // @include mq($from: navbar) {
