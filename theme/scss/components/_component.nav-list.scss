@@ -35,12 +35,15 @@ $c-nav-list-color-bg-highlight:                 $app-color-gray-base;
     
 
     @include when-inside('.c-nav-list--level-0') {
-        padding-left: calc(#{$c-nav-list-padding} * 2);
+        //padding-left: calc(#{$c-nav-list-padding} * 2);
+        padding-left: 0;
     }
     @include when-inside('.c-nav-list--level-1') {
-        padding-left: calc(#{$c-nav-list-padding} * 3);
+        //padding-left: calc(#{$c-nav-list-padding} * 3);
+        padding-left: 0;
     }
     @include when-inside('.c-nav-list--level-2') {
-        padding-left: calc(#{$c-nav-list-padding} * 4);
+        //padding-left: calc(#{$c-nav-list-padding} * 4);
+        padding-left: 0;
     }
 }

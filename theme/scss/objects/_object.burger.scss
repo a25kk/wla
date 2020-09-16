@@ -21,10 +21,8 @@
         padding-right: 0;
     }
     &.js-nav-toggle--active {
-        position: fixed;
+        position: relative;
         z-index: 9002;
-        top: calc(#{$app-spacer-base} * .75);
-        right: 0;
     }
 }
 

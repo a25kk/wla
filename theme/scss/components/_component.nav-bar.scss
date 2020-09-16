@@ -34,6 +34,8 @@ $c-nav-bar-background:                  $app-color-primary;
         transition:right .5s linear;
         @include mq($from: md) {
             width: 100vw;
+            padding-left: 10%;
+            padding-right: 10%;
         }
     }
     // @include mq($from: navbar) {
@@ -78,7 +80,7 @@ $c-nav-bar-background:                  $app-color-primary;
 }
 
 .c-nav-bar__toggle {
-    width: 4rem;
+    width: 7.5rem;
     // align-self: flex-end;
     line-height: 1;
     background: transparent; // remove default button style
@@ -88,7 +90,8 @@ $c-nav-bar-background:                  $app-color-primary;
 }
 
 .app-nav__toggle-icon {
+    border: none;
     > polygon {
-        fill: $app-color-primary;
+        fill: $white;
     }
 }

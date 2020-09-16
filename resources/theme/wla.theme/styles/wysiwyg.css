@@ -15462,10 +15462,8 @@ body:not(.portaltype-ade25-panelpage-page) .o-page:not(.o-page--panels) {
 }
 
 .o-burger__button.js-nav-toggle--active {
-  position: fixed;
+  position: relative;
   z-index: 9002;
-  top: calc(calc(1rem * 1.5) * .75);
-  right: 0;
 }
 
 .o-burger__text {
@@ -19419,8 +19417,8 @@ body.template-front-page-view .app-pathbar {
 }
 
 .app-nav__toggle-icon {
-  fill: #8dbf42;
-  stroke: #8dbf42;
+  fill: #fff;
+  stroke: #fff;
 }
 
 .app-nav {
