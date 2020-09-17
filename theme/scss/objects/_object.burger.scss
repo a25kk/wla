@@ -1,6 +1,5 @@
 .o-burger {
     position: $o-burger-position;
-    z-index: 9001;
     display: $o-burger-display;
     margin-top: $o-burger-margin-top;
 }
@@ -19,7 +18,6 @@
     }
     &.js-nav-toggle--active {
         position: relative;
-        z-index: 9002;
     }
     &:focus {
         outline: none;
@@ -36,6 +34,9 @@
     @include mq($from: md) {
         font-size: $o-burger-text-font-size;
         padding-bottom: 0;
+    }
+    @include when-inside('.js-nav-toggle--active') {
+        display: none;
     }
 }
 

@@ -48,9 +48,13 @@ define([
         var $elBody = document.getElementsByTagName('body')[0],
             $menuContainer = document.querySelector(options.menuContainer),
             $menuContainerActiveClass = options.menuContainerActive,
-            $navBar = document.querySelector(options.navBar);
+            $navBar = document.querySelector(options.navBar),
+            navBarToggle = Array.prototype.slice.call(document.querySelectorAll(options.navBarToggle));
         if ($navBar !== null) {
-            element.classList.add(options.navBarToggleActiveClass);
+            // element.classList.add(options.navBarToggleActiveClass);
+            navBarToggle.forEach(function(el) {
+                el.classList.add(options.navBarToggleActiveClass);
+            });
             $navBar.classList.add(options.navBarOverlay);
             $navBar.classList.remove(options.navBarHidden);
             $menuContainer.classList.add($menuContainerActiveClass);

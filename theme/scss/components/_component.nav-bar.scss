@@ -80,9 +80,11 @@ $c-nav-bar-background:                  $app-color-primary;
 }
 
 .c-nav-bar__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 14rem;
     // align-self: flex-end;
-    border: 1px solid blue;
     line-height: 1;
     background: transparent; // remove default button style
     border: 1px solid transparent; // remove default button style
