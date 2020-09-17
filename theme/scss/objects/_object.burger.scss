@@ -3,9 +3,6 @@
     z-index: 9001;
     display: $o-burger-display;
     margin-top: $o-burger-margin-top;
-    @include mq($from: xl) {
-        margin-top: 0;
-    }
 }
 
 .o-burger__button {
@@ -23,6 +20,9 @@
     &.js-nav-toggle--active {
         position: relative;
         z-index: 9002;
+    }
+    &:focus {
+        outline: none;
     }
 }
 
@@ -57,6 +57,7 @@
     height: $o-burger-layer-height * 3 + $o-burger-layer-spacing * 2;
     display: inline-block;
     position: relative;
+    margin-top: 0.2rem;
 }
 
 // Actual burger symbol with animation

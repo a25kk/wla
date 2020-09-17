@@ -15804,13 +15804,7 @@ body:not(.portaltype-ade25-panelpage-page) .o-page:not(.o-page--panels) {
   position: relative;
   z-index: 9001;
   display: block;
-  margin-top: 0;
-}
-
-@media (min-width: 75em) {
-  .o-burger {
-    margin-top: 0;
-  }
+  margin-top: 0.2rem;
 }
 
 .o-burger__button {
@@ -15840,6 +15834,10 @@ body:not(.portaltype-ade25-panelpage-page) .o-page:not(.o-page--panels) {
 .o-burger__button.js-nav-toggle--active {
   position: relative;
   z-index: 9002;
+}
+
+.o-burger__button:focus {
+  outline: none;
 }
 
 .o-burger__text {
@@ -15878,24 +15876,25 @@ body:not(.portaltype-ade25-panelpage-page) .o-page:not(.o-page--panels) {
 }
 
 .o-burger__icon--default {
-  width: 40px;
-  height: 24px;
+  width: 20px;
+  height: 14px;
   display: inline-block;
   position: relative;
+  margin-top: 0.2rem;
 }
 
 .o-burger__symbol {
   content: "";
   display: block;
   top: 50%;
-  margin-top: -2px;
+  margin-top: -1px;
 }
 
 .o-burger__symbol, .o-burger__symbol::before, .o-burger__symbol::after {
-  width: 40px;
-  height: 4px;
+  width: 20px;
+  height: 2px;
   background-color: #fff;
-  border-radius: 4px;
+  border-radius: 2px;
   position: absolute;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
@@ -15913,11 +15912,11 @@ body:not(.portaltype-ade25-panelpage-page) .o-page:not(.o-page--panels) {
 }
 
 .o-burger__symbol::before {
-  top: -10px;
+  top: -6px;
 }
 
 .o-burger__symbol::after {
-  bottom: -10px;
+  bottom: -6px;
 }
 
 .o-burger__symbol--animated {
@@ -23686,7 +23685,8 @@ c-list--bordered .c-list__item:last-of-type {
 }
 
 .c-nav-bar__toggle {
-  width: 7.5rem;
+  width: 14rem;
+  border: 1px solid blue;
   line-height: 1;
   background: transparent;
   border: 1px solid transparent;
@@ -23983,11 +23983,10 @@ c-list--bordered .c-list__item:last-of-type {
   width: 1rem;
   height: 1rem;
   line-height: 1;
-  border-radius: 50%;
 }
 
 .c-nav__toggle--close {
-  border: 1px solid transparent;
+  border: 1px solid blue;
 }
 
 @media (min-width: 562.5em) {
@@ -24001,8 +24000,9 @@ c-list--bordered .c-list__item:last-of-type {
 }
 
 .c-nav-bar__toggle .c-nav__toggle {
-  width: 2rem;
-  height: 2rem;
+  width: 12.5rem;
+  height: 3rem;
+  margin-top: 1.5rem;
 }
 
 .c-nav__item--has-dropdown .c-nav__toggle {

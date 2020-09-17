@@ -2,7 +2,7 @@ $o-burger-display:                  block;
 $o-burger-position:                 relative;
 $o-burger-flex-direction:           row;
 
-$o-burger-margin-top:               0;
+$o-burger-margin-top:               .2rem;
 $o-burger-padding-y:                .25rem;
 
 $o-burger-background-color:         transparent;    // remove default button styles
@@ -25,9 +25,9 @@ $o-burger-icon-font-size:           1.5rem;
 $o-burger-icon-font-small:          1rem;
 
 // Symbol layer used in animation
-$o-burger-layer-width:              40px;
-$o-burger-layer-height:             4px;
-$o-burger-layer-spacing:            6px;
+$o-burger-layer-width:              20px;
+$o-burger-layer-height:             2px;
+$o-burger-layer-spacing:            4px;
 $o-burger-layer-color:              $o-burger-text-color;
 $o-burger-layer-color-active:       $o-burger-text-color-highlight;
-$o-burger-layer-border-radius:      4px;
+$o-burger-layer-border-radius:      2px;
