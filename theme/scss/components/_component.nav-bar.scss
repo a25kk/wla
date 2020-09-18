@@ -1,9 +1,22 @@
+// Enable to position nav bar to the left (default is right)
+$nav-bar-overlay-ltr:           0;
+
+// Breakpoint for switching to large display mode
+$nav-bar-display-breakpoint:            9000px;
+@include mq-add-breakpoint(navbar, $nav-bar-display-breakpoint);
+
+$nav-bar-position-default:          -100%;
+$nav-bar-position-overlay:          0%;
+
+$c-nav-bar-background:                  $app-color-primary;
+
+
 // Main site nav bar
 .c-nav-bar {
     position: fixed;
     top: 0;
     z-index: 1001;
-    width: 90vw;
+    width: 100vw;
     height: 100vh;
     overflow-y: scroll;
     @if $nav-bar-overlay-ltr == true {
@@ -12,27 +25,32 @@
         right: $nav-bar-position-default;
     }
     border-top: 0px solid $gray-900;
-    background-color: $app-color-primary;
+    background-color: $app-color-white;
     box-shadow: 0 1rem 2rem rgba(0,0,0,0.25), 0 .65rem .65rem rgba(0,0,0,0.22);
     &--overlay {
+        display: block;
         pointer-events: all;
         right: 0;
         transition:right .5s linear;
         @include mq($from: md) {
-            width: 50vw;
+            width: 100vw;
+            padding-left: 10%;
+            padding-right: 10%;
         }
     }
-    @include mq($from: navbar) {
-        position: relative;
-        display: block;
-        right: 0;
-        min-height: 3rem;
-        background: $gray-600;
-    }
+    // @include mq($from: navbar) {
+    //     position: relative;
+    //     display: block;
+    //     right: 0;
+    //     min-height: 3rem;
+    //     background: $app-color-white;
+    // }
 }
 
 .c-nav-bar--hidden {
     // height: 0;
+    display: none;
+    right: -9999px;
     transition: right .5s linear;
 }
 
@@ -41,7 +59,7 @@
     padding-left: 1rem;
     padding-right: 0;
     margin-bottom: 1rem;
-    background-color: $app-color-primary;
+    background-color: $app-color-white;
     color: $white;
     border-bottom: 2px solid rgba(255,255,255, 0.1);
     @include mq($from: md) {
@@ -55,14 +73,17 @@
     // padding: 1rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    font-family: $app-font-family-strong;
+    font-family: $app-font-family-base;
     text-transform: uppercase;
     font-size: 1.25rem;
     //display: none;
 }
 
 .c-nav-bar__toggle {
-    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14rem;
     // align-self: flex-end;
     line-height: 1;
     background: transparent; // remove default button style
@@ -72,7 +93,8 @@
 }
 
 .app-nav__toggle-icon {
+    border: none;
     > polygon {
-        fill: $app-color-white;
+        fill: $white;
     }
 }

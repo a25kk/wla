@@ -50,3 +50,4 @@ src/sauna.reload
 src/vwc.*
 src/zodbupdate
 var
+.jekyll-cache
