@@ -110,6 +110,17 @@ requirejs(['require',
         slider.init({
             autoPlay: 6000
         });
+        
+        // Support legacy content page galleries
+        slider.init({
+            sliderElement: '.js-gallery',
+            autoPlay: 6000,
+            contain: true,
+            wrapAround: true,
+            imagesLoaded: true,
+            cellSelector: '.app-gallery-cell',
+            cellAlign: 'left'
+        });
 
         // Load Slider Resize
         window.addEventListener('load', function() {
