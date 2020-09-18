@@ -1,7 +1,8 @@
 $o-burger-display:                  block;
-$o-burger-flex-direction:           row-reverse;
+$o-burger-position:                 relative;
+$o-burger-flex-direction:           row;
 
-$o-burger-margin-top:               3rem;
+$o-burger-margin-top:               .2rem;
 $o-burger-padding-y:                .25rem;
 
 $o-burger-background-color:         transparent;    // remove default button styles
@@ -9,14 +10,24 @@ $o-burger-border-width:             1px;            // remove default button sty
 $o-burger-border-style:             solid;          // remove default button style
 $o-burger-border-color:             transparent;    // remove default button style
 
-$o-burger-font:                     $app-font-family-strong;
+$o-burger-font:                     $app-font-family-base;
 
 // Burger Text
-$o-burger-text-color:               $app-color-primary;
-$o-burger-text-font-size:           1.45rem;
+$o-burger-text-color:               $app-color-white;
+$o-burger-text-color-highlight:     $app-color-primary;
+$o-burger-text-font-size:           1.2rem;
 $o-burger-text-transform:           uppercase;
 
 // Burger icon
 $o-burger-icon-color:               $o-burger-text-color;
+$o-burger-icon-color-active:        $o-burger-text-color-highlight;
 $o-burger-icon-font-size:           1.5rem;
 $o-burger-icon-font-small:          1rem;
+
+// Symbol layer used in animation
+$o-burger-layer-width:              20px;
+$o-burger-layer-height:             2px;
+$o-burger-layer-spacing:            4px;
+$o-burger-layer-color:              $o-burger-text-color;
+$o-burger-layer-color-active:       $o-burger-text-color-highlight;
+$o-burger-layer-border-radius:      2px;

@@ -136,7 +136,7 @@
 
         <!-- Global navigation -->
         <!-- Off Canvas slide out navigation -->
-        <replace css:theme="#app-nav-bar" css:content="#app-nav-bar" />
+        <replace css:theme="#app-nav-bar" css:content="#c-nav-bar" />
 
         <drop css:theme="#app-banner"
               css:if-not-content="#app-banner" />
