@@ -69,6 +69,8 @@ $c-slider-padding:                $app-spacer-base;
   @include make-container();
   @include make-container-max-widths();
   a {
+    z-index: 999999999;
+    position: relative;
     color: #fff;
     &:hover {
       color: #fff;
